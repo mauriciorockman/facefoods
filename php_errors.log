@@ -1,0 +1,217 @@
+[16-Feb-2018 01:11:02 UTC] PHP Warning:  require_once(db.class.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/dashboard/notify.php on line 2
+[16-Feb-2018 01:11:02 UTC] PHP Stack trace:
+[16-Feb-2018 01:11:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/notify.php:0
+[16-Feb-2018 01:11:02 UTC] PHP Fatal error:  require_once(): Failed opening required 'db.class.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/dashboard/notify.php on line 2
+[16-Feb-2018 01:11:02 UTC] PHP Stack trace:
+[16-Feb-2018 01:11:02 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/notify.php:0
+[16-Feb-2018 01:14:49 UTC] PHP Warning:  require_once(db.class.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/dashboard/dashboard.php on line 3
+[16-Feb-2018 01:14:49 UTC] PHP Stack trace:
+[16-Feb-2018 01:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/dashboard.php:0
+[16-Feb-2018 01:14:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'db.class.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/dashboard/dashboard.php on line 3
+[16-Feb-2018 01:14:49 UTC] PHP Stack trace:
+[16-Feb-2018 01:14:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/dashboard.php:0
+[16-Feb-2018 01:15:18 UTC] PHP Warning:  include(config.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/dashboard/dashboard.php on line 4
+[16-Feb-2018 01:15:18 UTC] PHP Stack trace:
+[16-Feb-2018 01:15:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/dashboard.php:0
+[16-Feb-2018 01:15:18 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/dashboard/dashboard.php on line 4
+[16-Feb-2018 01:15:18 UTC] PHP Stack trace:
+[16-Feb-2018 01:15:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/dashboard.php:0
+[16-Feb-2018 13:34:59 UTC] PHP Warning:  require_once(db.class.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/dashboard/get_orders.php on line 3
+[16-Feb-2018 13:34:59 UTC] PHP Stack trace:
+[16-Feb-2018 13:34:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[16-Feb-2018 13:34:59 UTC] PHP Fatal error:  require_once(): Failed opening required 'db.class.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/dashboard/get_orders.php on line 3
+[16-Feb-2018 13:34:59 UTC] PHP Stack trace:
+[16-Feb-2018 13:34:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:40:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:43:56 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:45:01 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:45:30 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 27
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:47:17 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:27
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 28
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:28
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 28
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:51:11 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:28
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 28
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:28
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 28
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:52:10 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:28
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 28
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:28
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 28
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 18:53:31 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:28
+[18-Feb-2018 19:11:18 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 24
+[18-Feb-2018 19:11:18 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:11:18 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:11:18 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:24
+[18-Feb-2018 19:11:49 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 23
+[18-Feb-2018 19:11:49 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:11:49 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:11:49 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:23
+[18-Feb-2018 19:12:18 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 23
+[18-Feb-2018 19:12:18 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:12:18 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:12:18 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:23
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 31
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:31
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 31
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:15:52 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:31
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 31
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:31
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 31
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:16:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:31
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:17:10 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 19:18:15 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 25
+[18-Feb-2018 19:18:15 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:18:15 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:18:15 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:25
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 31
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:31
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 31
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:22:58 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:31
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:23:32 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 19:24:29 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:31:36 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:31:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:32
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 33
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:33
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 33
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:33:34 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:33
+[19-Feb-2018 00:37:50 UTC] PHP Parse error:  syntax error, unexpected '$sql_order_items' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/dashboard/get_orders.php on line 32
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:38:09 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 21:51:29 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 22:18:17 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP Stack trace:
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[18-Feb-2018 22:26:46 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP Stack trace:
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/dashboard/get_orders.php on line 43
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP Stack trace:
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP   1. {main}() /home/ubuntu/workspace/dashboard/get_orders.php:0
+[19-Feb-2018 11:41:34 America/Sao_Paulo] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/dashboard/get_orders.php:43
