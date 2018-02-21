@@ -1,0 +1,1 @@
+var faceFoods = angular.module('faceFoods', ['templates', 'ui.router']);
