@@ -140,6 +140,7 @@ var pedido = {
     <input id="user" hidden value="1455054381290329">
     <div class="col-xs-1 col-sm-1 col-md-2"> </div>
     <div class="col-xs-10 col-sm-10 col-md-8">
+        <i>teste</i>
         <button id="concluir" class="btn btn-primary">Concluir</button>
     </div>
     <div class="col-xs-1 col-sm-1 col-md-2"> </div>
