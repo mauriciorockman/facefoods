@@ -21,7 +21,8 @@ var path = {
     'src/js/**/*.pug',
   ],
   INDEX: [
-    'src/index.pug'
+    'src/index.pug',
+    'src/webview.pug'
   ],
   FILES: [
     'src/.htaccess', 
