@@ -16,8 +16,7 @@ var reload                = browserSync.reload;
 /* path def */
 var path = {
   TEMPLATING: [
-  	'src/views/**/*.pug', 
-    'src/views/*.pug', 
+  	'src/views/**/*.pug',
     'src/js/**/*.pug',
   ],
   INDEX: [
@@ -29,20 +28,22 @@ var path = {
     'src/favicon.png',
     'src/libs/**/*'
   ],
-  JS: [
-  	'src/js/*.js', 
+  JS: [ 
     'src/js/**/*.js',
     'src/views/**/*.js'
   ],
   CSS: [
-    'src/css/*.css'
+    'src/css/*.css',
+    'node_modules/v-accordion/dist/v-accordion.min.css'    
   ],
   IMG: [
   	'src/img/**'
   ],
   VENDOR: [
     'node_modules/angular/angular.min.js',
-    'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js'
+    'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
+    'node_modules/v-accordion/dist/v-accordion.min.js',
+    'node_modules/angular-animate/angular-animate.min.js'
 	],
   DIST: './dist'
 };
@@ -122,6 +123,7 @@ gulp.task('img', function(){
 gulp.task('watch', function () {
   gulp.watch(path.CSS, ['css']);
   gulp.watch(path.VENDOR, ['vendor']);
+  console.log(path.TEMPLATING.concat(path.JS));
   gulp.watch(path.TEMPLATING.concat(path.JS), ['js']);
   gulp.watch(path.FILES.concat(path.INDEX), ['files']);
 });

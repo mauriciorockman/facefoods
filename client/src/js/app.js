@@ -1,1 +1,1 @@
-var faceFoods = angular.module('faceFoods', ['templates', 'ui.router']);
+var faceFoods = angular.module('faceFoods', ['templates', 'ui.router', 'vAccordion', 'ngAnimate']);

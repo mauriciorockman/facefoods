@@ -8,4 +8,9 @@ faceFoods.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'Home/Home.html',
             controller: 'HomeController' 
         })
+        .state('Menu', {
+            url: '/Menu',
+            templateUrl: 'Menu/Menu.html',
+            controller: 'HomeController' 
+        })
 });

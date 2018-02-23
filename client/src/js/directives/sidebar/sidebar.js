@@ -13,7 +13,7 @@ faceFoods.directive('sidebar', function(){
 
                                 1: {
                                     name:'Cardápio', 
-                                    route: 'undef', 
+                                    route: 'Menu', 
                                     icon: 'fa-bars'
                                 }, 
                                 

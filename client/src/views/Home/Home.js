@@ -1,6 +1,6 @@
 faceFoods.controller('HomeController', function($scope){
     var data = {
-        labels: ["January", "February", "March", "April", "May"],
+        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
         datasets: [
         {
         label: "My First dataset",
@@ -29,17 +29,19 @@ faceFoods.controller('HomeController', function($scope){
         value: 300,
         color: "#46BFBD",
         highlight: "#5AD3D1",
-        label: "Complete"
+        label: "Portuguesa"
         },
         {
         value: 50,
         color:"#F7464A",
         highlight: "#FF5A5E",
-        label: "In-Progress"
+        label: "Frango com catupiry"
         }
         ]
-        var ctxl = $("#lineChartDemo").get(0).getContext("2d");
-        var lineChart = new Chart(ctxl).Line(data);
-        var ctxp = $("#pieChartDemo").get(0).getContext("2d");
-        var pieChart = new Chart(ctxp).Pie(pdata);
+            // if($("#lineChartDemo").get(0).getContext("2d")){
+            //     var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+            //     var lineChart = new Chart(ctxl).Line(data);
+            //     var ctxp = $("#pieChartDemo").get(0).getContext("2d");
+            //     var pieChart = new Chart(ctxp).Pie(pdata);
+            // }
 })
