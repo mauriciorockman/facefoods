@@ -1,6 +1,6 @@
 faceFoods.controller('HomeController', function($scope){
     var data = {
-        labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+        labels: ["Jaaneiro", "Fevereiro", "Março", "Abril", "Maio"],
         datasets: [
         {
         label: "My First dataset",

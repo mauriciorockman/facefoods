@@ -11,198 +11,51 @@
     //-         a(href='#') Bootstrap Elements
 .tile.mb-4
     .page-header
-        .row
-            .col-lg-12
-                h2.mb-3 Categorias de Pratos
-                p.line-head Adicione aqui as categorias de pratos servidos pelo seu restaurante.
-        .row
-            .col-sm
-                p.bs-component
-                    form
-                        .form-group
-                            label
-                                | Nome da categoria de prato:
-                            input.form-control(type='text', placeholder='Ex.:Pizza, Pastel, Calzone...')
-                        button.btn.btn-primary.mb-2(type='submit') Enviar
-                        //- TODO: Limite de sabores
-            .col-sm
-                //- TODO: Refatorar como diretiva
-                //- TODO: Suporte Tooltip
-                .panel-body.border(style='overflow-y: scroll; height: 160px')
-                    .mid-width.wrapItems(style='height:auto')
-                        ul.list-group
-                            li.list-group-item 
-                                | Pizza
-                                .float-right
-                                    i.fas.fa-pencil-alt.mr-2.text-info
-                                    i.fas.fa-times.text-danger
-                            li.list-group-item 
-                                | Calzone
-                                .float-right
-                                    i.fas.fa-pencil-alt.mr-2.text-info
-                                    i.fas.fa-times.text-danger
-                            li.list-group-item 
-                                | Refrigerante
-                                .float-right
-                                    i.fas.fa-pencil-alt.mr-2.text-info
-                                    i.fas.fa-times.text-danger
-                            li.list-group-item 
-                                | Porção
-                                .float-right
-                                    i.fas.fa-pencil-alt.mr-2.text-info
-                                    i.fas.fa-times.text-danger
-.tile.mb-4
-    .page-header
-        .row
-            .col-lg-12
-                h2.mb-3 Tipos de Variações
-                p.line-head Adicione aqui os tipos de variações para os seus pratos adicionados.                
-        .row
-            .col-sm
-                p.bs-component
-                    form
-                        .form-group.mb-2
-                            label
-                                | Nome do tipo de variação:
-                            input.form-control(type='text', placeholder='Ex.:Pizzas salgadas, Bordas...')
-                        .form-group.mb-2
-                            label
-                                | Categoria de prato:
-                            select.form-control
-                                option Pizza
-                    button.btn.btn-primary.mb-2(type='submit') Enviar
-            .col-sm
-                p.border-bottom
-                    | Tipos de Variações registradas
-                .panel-body(style='overflow-y: scroll; height: 200px')
-                    .mid-width.wrapItems.mr-3(style='height:auto')
-                        v-accordion.vAccordion--default(multiple='')
-                            v-pane
-                                v-pane-header
-                                    | Pizza
-                                v-pane-content
-                                    ol
-                                        li
-                                            | Pizzas salgadas
-                                        li
-                                            | Pizzas doces
-                                        li
-                                            | Bordas
-                                    i.fas.fa-pencil-alt.float-right.mb-1.text-info
-                            v-pane
-                                v-pane-header
-                                    | Calzone
-                                v-pane-content
-                                    ol
-                                        li
-                                            | Sabores
-                                    i.fas.fa-pencil-alt.float-right.mb-1.text-info
-                            v-pane
-                                v-pane-header
-                                    | Refrigerante
-                                v-pane-content
-                                    ol
-                                        li
-                                            | Doce
-                                        li
-                                            | Salgado
-                                        li
-                                            | Azedo
-                                    i.fas.fa-pencil-alt.float-right.mb-1.text-info
-.tile.mb-4
-    .page-header
-        .row
-            .col-lg-12
-                h2.mb-3 Variações
-                p.line-head Adicione aqui os tipos de variações para os seus pratos adicionados.                
-        .row
-            .col-sm
-                p.bs-component
-                    form
-                    .form-group.mb-2
-                        label
-                            | Tipo de variação:
-                        select.form-control
-                            option Borda
-                    .form-group.mb-2
-                        label
-                            | Nome da Variação:
-                        input.form-control(type='text', placeholder='Ex.:Catupiry, Cheddar...')    
-                    .form-group
-                        label
-                            | Preço:
-                        .input-group.mb-3
-                            .input-group-prepend
-                                span.input-group-text R$
-                            input.form-control(type='number')
-                            .input-group-append
-                                span.input-group-text .00
-                    button.btn.btn-primary.mb-2(type='submit') Enviar
-            .col-sm
-                p.border-bottom
-                    | Variações registradas
-                .panel-body(style='overflow-y: scroll; height: 270px')
-                    .mid-width.wrapItems.mr-3(style='height:auto')
-                        v-accordion.vAccordion--default(multiple='')
-                            v-pane
-                                v-pane-header
-                                    | Borda
-                                v-pane-content
-                                    ol
-                                        li
-                                            | Catupiry, R$5.00
-                                        li
-                                            | Cheddar, R$9.00 
-                                    i.fas.fa-pencil-alt.float-right.mb-1.text-info
-.tile.mb-4
-    .page-header
-        .row
-            .col-lg-12
-                h2.mb-3 Pratos
-                p.line-head Adicione aqui os pratos de seu restaurante.                
-        .row
-            .col-sm
-                p.bs-component
-                    form
-                    .form-group.mb-2
-                        label
-                            | Nome do Prato:
-                        input.form-control(type='text', placeholder='Ex.:Pizza Broto, Pizza Grandw...')    
-                    .form-group
-                        label
-                            | Preço:
-                        .input-group.mb-3
-                            .input-group-prepend
-                                span.input-group-text R$
-                            input.form-control(type='number')
-                            .input-group-append
-                                span.input-group-text .00
-                    .form-group.mb-2
-                        label
-                            | Categoria de Prato:
-                        select.form-control
-                            option Pizza
-                            option Calzone
-                            option Porção
-                            option Refrigerante                            
-                    .form-group.mb-2
-                        label
-                            | Descrição:
-                        textarea.form-control(rows='3') 
-                    button.btn.btn-primary.mb-2(type='submit') Enviar
-            .col-sm
-                p.border-bottom
-                    | Pratos cadastrados
-                .panel-body(style='overflow-y: scroll; height: 350px')
-                    .mid-width.wrapItems.mr-3(style='height:auto')
-                        v-accordion.vAccordion--default(multiple='')
-                            v-pane
-                                v-pane-header
-                                    | Borda
-                                v-pane-content
-                                    ol
-                                        li
-                                            | Catupiry, R$5.00
-                                        li
-                                            | Cheddar, R$9.00 
-                                    i.fas.fa-pencil-alt.float-right.mb-1.text-info
+        .container
+            .row
+                .col-sm-3.py-2
+                    .card
+                        .card-header.display
+                            i.em.em-pizza
+                            |  - Pizzas
+                        .card-body.h-100
+                            p.card-text Selecione abaixo para configurar seu cardápio de pizzas.
+                            .btn-group.float-right
+                                button.btn.btn-primary(ng-click="addPizza()", type='button', tooltips, tooltip-template="Adicionar Pizzas", tooltip-speed="fast")
+                                    i.fas.fa-plus
+                                button.btn.btn-secondary(type='button', tooltips, tooltip-template="Gerenciar Pizzas", tooltip-speed="fast")
+                                    i.fas.fa-pencil-alt
+                .col-sm-3.py-2
+                    .card
+                        .card-header.display
+                            i.em.em-hamburger
+                            |  - Hambúrgueres
+                        .card-body.h-100
+                            p.card-text Selecione abaixo para configurar seu cardápio de Hambúrgueres.
+                            .btn-group.float-right(role='group', aria-label='Basic example')
+                                button.btn.btn-primary(type='button', tooltips, tooltip-template="Adicionar Hambúrgueres", tooltip-speed="fast")
+                                    i.fas.fa-plus
+                                button.btn.btn-secondary(type='button', tooltips, tooltip-template="Gerenciar Hambúrgueres", tooltip-speed="fast")
+                                    i.fas.fa-pencil-alt
+                .col-sm-3.py-2
+                    .card
+                        .card-header.display
+                            i.em.em-green_salad
+                            |  - Outros
+                        .card-body.h-100
+                            p.card-text Selecione abaixo para configurar ou adicionar outros tipos de cardápios.
+                            .btn-group.float-right
+                                button.btn.btn-primary(type='button', tooltips, tooltip-template="Adicionar outros", tooltip-speed="fast")
+                                    i.fas.fa-plus
+                                button.btn.btn-secondary(type='button', tooltips, tooltip-template="Gerenciar outros", tooltip-speed="fast")
+                                    i.fas.fa-pencil-alt
+                .col-sm-3.py-2
+                    .card
+                        .card-header.display
+                            i.em.em-keycap_star
+                            |  - Todos
+                        .card-body.h-100
+                            p.card-text Clique abaixo para gerenciar todos teus cardápios.
+                            .btn-group.float-right
+                                button.btn.btn-primary(type='button', tooltips, tooltip-template="Gerenciar cardápios", tooltip-speed="fast")
+                                    i.fas.fa-cogs

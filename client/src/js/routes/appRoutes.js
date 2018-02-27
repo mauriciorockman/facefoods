@@ -11,6 +11,6 @@ faceFoods.config(function($stateProvider, $urlRouterProvider) {
         .state('Menu', {
             url: '/Menu',
             templateUrl: 'Menu/Menu.html',
-            controller: 'HomeController' 
+            controller: 'MenuController' 
         })
 });

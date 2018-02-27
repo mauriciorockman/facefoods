@@ -1,0 +1,32 @@
+.dialog-contents
+    .div
+        h1.display 
+            i.em.em-pizza
+            | - Pizzas
+        hr
+    section
+        h3.display
+            | Tamanhos
+        form.ml-1.mb-2(name='tamanhos', novalidate='')
+            .form-group.row
+                label.col-sm-3.col-form-label.pr-0 Tamanhos disponíveis:
+                .col-sm-4.pl-0.mr-5
+                    select.form-control
+                        option Brotinho
+                        option Médio
+                        option Família
+                    new-size.float-right(name="'Pizza'")
+        hr
+    section
+        h3.display
+            | Sabores
+        form.ml-1.mb-2(name='sabores', novalidate='')
+            .form-group.row
+                label.col-sm-3.col-form-label.pr-0 Sabores disponíveis:
+                .col-sm-4.pl-0.mr-5
+                    select.form-control
+                        option Calabresa
+                        option Marguerita
+                        option 4 Queijos
+                    new-flavor.float-right(name="'Pizza'")
+        hr
