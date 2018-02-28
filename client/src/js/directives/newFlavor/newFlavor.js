@@ -7,10 +7,14 @@ faceFoods.directive('newFlavor', function(ngDialog){
             name: '=name'
         },
         controller: function($scope, ngDialog){
+            $scope.special = function(){
+                $scope.active = !$scope.active 
+            }
             $scope.newFlavor = function(){
                 ngDialog.open({
                     template: 'newFlavor.html',
-                    className: 'ngdialog-theme-default'
+                    className: 'ngdialog-theme-default',
+                    scope: $scope
                 })
             }
         }

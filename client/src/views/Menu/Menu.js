@@ -1,4 +1,4 @@
-faceFoods.controller('MenuController', function($scope, ngDialog){
+faceFoods.controller('MenuController', function($scope, ngDialog, NgTableParams){
     $scope.addPizza = function(){
         ngDialog.open({
             template: 'Menu/Dialogs/Pizza/AddPizza/AddPizza.html',

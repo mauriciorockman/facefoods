@@ -37,7 +37,8 @@ var path = {
     'node_modules/v-accordion/dist/v-accordion.min.css',
     'node_modules/ng-dialog/css/ngDialog.min.css',
     'node_modules/angular-tooltips/dist/angular-tooltips.min.css',
-    'node_modules/ng-dialog/css/ngDialog-theme-default.min.css'
+    'node_modules/ng-dialog/css/ngDialog-theme-default.min.css',
+    'node_modules/ng-table/bundles/ng-table.min.css'
   ],
   IMG: [
   	'src/img/**'
@@ -49,7 +50,7 @@ var path = {
     'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/ng-dialog/js/ngDialog.js',
     'node_modules/angular-tooltips/dist/angular-tooltips.min.js'
-	],
+  ],
   DIST: './dist'
 };
 

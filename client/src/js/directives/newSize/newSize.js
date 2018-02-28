@@ -10,7 +10,8 @@ faceFoods.directive('newSize', function(ngDialog){
             $scope.newSize = function(){
                 ngDialog.open({
                     template: 'newSize.html',
-                    className: 'ngdialog-theme-default'
+                    className: 'ngdialog-theme-default',
+                    scope: $scope
                 })
             }
         }
