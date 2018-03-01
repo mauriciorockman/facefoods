@@ -27,6 +27,23 @@
                                 i.fas.fa-trash
     section
         h3.display
+            | Bordas
+        new-border.float-left
+        table.table.table-bordered.table-hover(ng-table='tablePizzaBorders')
+            tbody
+                tr(ng-repeat='pizzaBorder in $data')
+                    td(class="col-sm-1", title="'Nome'", ng-attr-title="{{pizzaBorder.name}}", sortable="'name'")
+                        | {{pizzaBorder.name}}
+                    td(class="col-sm-1", title="'Preço'", ng-attr-title="{{pizzaBorder.price}}", sortable="'price'")
+                        | R${{pizzaBorder.price}}                  
+                    td(class="col-sm-1")
+                        .btn-group.float-right
+                            button.btn.btn-primary(type='button')
+                                i.fas.fa-pencil-alt
+                            button.btn.btn-secondary(type='button')
+                                i.fas.fa-trash
+    section
+        h3.display
             | Sabores
         new-flavor.float-left(name="'Pizza'")
         table.table.table-bordered.table-hover(ng-table='tablePizzaFlavors')

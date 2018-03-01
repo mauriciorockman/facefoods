@@ -1,8 +1,8 @@
 faceFoods.controller('MenuController', function($scope, ngDialog, NgTableParams){
-    $scope.addPizza = function(){
+    $scope.managePizza = function(){
         ngDialog.open({
-            template: 'Menu/Dialogs/Pizza/AddPizza/AddPizza.html',
-            controller: 'AddPizzaController',
+            template: 'Menu/Dialogs/Pizza/ManagePizza/ManagePizza.html',
+            controller: 'ManagePizzaController',
             width: 900,
             className: 'ngdialog-theme-default'
         })
