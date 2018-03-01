@@ -1,5 +1,5 @@
 faceFoods.controller('AddPizzaController', function($scope, NgTableParams){
-    var data = [{name: "Broto", slices: 5, price: 20.00},{name: "Média", slices: 10, price: 30.00},{name: "Família", slices: 20, price: 40.00}];
+    var data = [{name: "Broto", slices: 5, price: 20.00, radius: 25},{name: "Média", slices: 10, price: 30.00, radius: 30},{name: "Família", slices: 20, price: 40.00, radius: 40}];
     $scope.tablePizzaSizes = new NgTableParams(
             {}, {
                 dataset: data,
@@ -14,8 +14,4 @@ faceFoods.controller('AddPizzaController', function($scope, NgTableParams){
                 counts: []
             }
         );
-    
-    $scope.confirm = function(formData){
-        $scope.closeThisDialog(formData);
-    }
 }) 

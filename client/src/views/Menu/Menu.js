@@ -5,8 +5,6 @@ faceFoods.controller('MenuController', function($scope, ngDialog, NgTableParams)
             controller: 'AddPizzaController',
             width: 900,
             className: 'ngdialog-theme-default'
-        }).closePromise.then(function(dialogResult){
-            console.log(dialogResult);
         })
     }
 }) 
