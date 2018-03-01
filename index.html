@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.17/angular-animate.min.js"></script>
+
+<script src="app.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<h2 class="titulo"> Promoções </h2>
+
+
+
+<div ng-repeat= "x in combos" class="item-menu">
+
+	<div class="promo-left">
+		<img src="{{x.imagem}}">
+	</div>
+
+	<div class="promo-right">
+		<h2 class="combo-titulo">{{x.titulo}}</h2>
+		<p class="combo-descricao"> {{x.descricao}}</p>
+		<p class="combo-preco"> {{x.preco}}</p>
+
+	</div>
+<div class="clear"></div>
+</div>
+
+
+
+
+<h2 class="titulo"> Pizzas </h2>
+
+
+
+<div ng-repeat= "x in pizzas" class="item-menu">
+
+	<div class="prato-left">
+		<h2 class="prato-titulo">{{x.titulo}}</h2>
+		<p class="prato-descricao"> {{x.descricao}}</p>
+	</div>
+
+	<div class="prato-right">
+		<p class="prato-preco"> {{x.preco}}</p>
+	</div>
+
+<div class="clear"></div>
+	
+</div>
+
+
+
+
+<h2 class="titulo"> Bebidas </h2>
+
+
+
+
+<div ng-repeat= "x in bebidas" class="item-menu" >
+
+	<div class="prato-left">
+		<h2 class="prato-titulo">{{x.titulo}}</h2>
+	</div>
+
+	<div class="prato-right">
+		<p class="prato-preco"> {{x.preco}}</p>
+	</div>
+
+<div class="clear"></div>
+
+</div>
+
+<ui-view></ui-view>
+
+<div class="space-bottom"></div>
+
+<a ui-sref="pizza1">
+<div class="fixed-button">
+	<p>TESTE</p>
+</div>
+</a>
+
+</div>
+
+</body>
+</html>

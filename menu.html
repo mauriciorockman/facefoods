@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css"> 
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.17/angular-animate.min.js"></script>
+
+<script src="app.js"></script>
+<body>
+
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<h2> Promoções </h2>
+<div ng-repeat= "x in combos" class="item-menu">
+	<img src="{{x.imagem}}">
+	<h2>{{x.titulo}}</h2>
+	<p> {{x.descricao}}</p>
+	<p> {{x.preco}}</p>
+</div>
+
+<h2> Pizzas </h2>
+<div ng-repeat= "x in pizzas" class="item-menu">
+	<h2>{{x.titulo}}</h2>
+	<p> {{x.descricao}}</p>
+	<p> {{x.preco}}</p>
+</div>
+
+<h2> Bebidas </h2>
+
+<div ng-repeat= "x in bebidas" class="item-menu" >
+	<h2>{{x.titulo}}</h2>
+	<p> {{x.preco}}</p>
+</div>
+
+<ui-view></ui-view>
+
+<div class="space-bottom"></div>
+
+<a ui-sref="pizza1">
+<div class="fixed-button">
+	<p>TESTE</p>
+</div>
+</a>
+
+</div>
+
+</body>
+</html>

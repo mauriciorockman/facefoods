@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+
+}
+
+body{
+	width: 100%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.item-menu:hover{
+	cursor: pointer;
+	background-color: #ccc;
+}
+
+
+.item-menu{
+	border-bottom: 1px solid black;
+	padding: 10px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.titulo{
+	text-align: center;
+	padding-bottom: 3px;
+	border-bottom: 2px solid red;
+	width: 80%;
+	margin: 5px auto 10px auto;
+
+}
+
+.fixed-button{
+	color: white;
+	font-size: 20px;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	background-color: red;
+	border-top: 3px solid white;
+}
+
+.fixed-button:hover{
+	cursor: pointer;
+	background-color: red;
+}
+
+.space-bottom{
+	margin-top: 20px;
+	height: 20px;
+
+}
+
+.promo-right{
+	float: right;
+	width: 80%;
+}
+
+.promo-left{
+	float: left;
+	width: 18%;
+}
+
+.prato-right{
+	float: right;
+	width: 18%;
+	text-align: right;
+}
+
+.prato-left{
+	float: left;
+	width: 80%;
+}
+
+.clear{
+	clear: both;
+}
+
+.combo-titulo{
+	font-size: 15px;
+}
+
+.combo-descricao{
+	font-size: 12px;
+}
+
+.combo-preco{
+	font-size: 15px;
+	color: red;
+	font-weight: bold;
+}
+
+.prato-titulo{
+	font-size: 15px;
+}
+
+.prato-descricao{
+	font-size: 12px;
+}
+
+
+.prato-preco{
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
+}
