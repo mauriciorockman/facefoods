@@ -7,7 +7,7 @@ faceFoods.controller('ManagePizzaController', function($scope, NgTableParams){
             }
         );
 
-    data = [{name: "Calabresa", price: 0.00, special: false},{name: "4 Queijos", price: 0.00, special: false},{name: "Baiana", price: 0.00, special: false}, {name: "Rei", price: 5.00, special: true}];
+    data = [{name: "Calabresa", desc: "Queijo, Tomate, Calabresas...", price: 0.00, special: false},{name: "4 Queijos", desc: "Queijo, Tomate, Mais Queijo...", price: 0.00, special: false},{name: "Baiana", desc: "Queijo, Tomate, Pimentas, Descrição Longa, Descrição Longa, Descrição Longa, Descrição Longa, Descrição Longa, Descrição Longa", price: 0.00, special: false}, {name: "Rei", desc: "Queijo, Ouro, Jóias...", price: 5.00, special: true}];
     $scope.tablePizzaFlavors = new NgTableParams(
             {}, {
                 dataset: data,

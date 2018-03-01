@@ -50,7 +50,12 @@
             tbody
                 tr(ng-repeat='pizzaFlavors in $data')
                     td(class="col-sm-1", title="'Nome'", ng-attr-title="{{pizzaFlavors.name}}", sortable="'name'")
-                        | {{pizzaFlavors.name}}
+                        dl
+                            dt 
+                                | {{pizzaFlavors.name}}
+                            dd
+                                small.text-muted
+                                    | {{pizzaFlavors.desc}}
                     td(class="col-sm-1", title="'Preço'", ng-attr-title="{{pizzaFlavors.price}}", sortable="'price'", class="text-center")
                         | {{pizzaFlavors.price || '--'}}
                     td(class="col-sm-1", title="'Especial?'", ng-attr-title="{{pizzaFlavors.special}}", sortable="'special'", class="text-center")
