@@ -23,7 +23,7 @@
                         .btn-group.float-right
                             button.btn.btn-primary(type='button')
                                 i.fas.fa-pencil-alt
-                            button.btn.btn-secondary(type='button')
+                            button.btn.btn-secondary(type='button', ng-click="delete(pizzaSize)")
                                 i.fas.fa-trash
     section
         h3.display
@@ -40,7 +40,7 @@
                         .btn-group.float-right
                             button.btn.btn-primary(type='button')
                                 i.fas.fa-pencil-alt
-                            button.btn.btn-secondary(type='button')
+                            button.btn.btn-secondary(type='button', ng-click="delete(pizzaBorder)")
                                 i.fas.fa-trash
     section
         h3.display
@@ -65,5 +65,5 @@
                         .btn-group.float-right
                             button.btn.btn-primary(type='button')
                                 i.fas.fa-pencil-alt
-                            button.btn.btn-secondary(type='button')
+                            button.btn.btn-secondary(type='button', ng-click="delete(pizzaFlavors)")
                                 i.fas.fa-trash

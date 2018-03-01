@@ -22,4 +22,17 @@ faceFoods.controller('ManagePizzaController', function($scope, NgTableParams){
                 counts: []
             }
         );
+    
+    $scope.delete = function(pizzaSize){
+        swal({
+            title: "Tem certeza que deseja deletar '"+pizzaSize.name+"'?",
+            text: "Você não pode reverter isto.",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sim, delete.',
+            cancelButtonText: 'Cancelar.'
+        })
+    }
 }) 
