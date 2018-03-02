@@ -23,24 +23,22 @@
 
 <body>
 
-<div ng-app="myApp" ng-controller="customersCtrl" class="container marca"> 
+<div ng-app="myApp" ng-controller="customersCtrl" class="container "> 
 
 
 
-<h2 class="titulo"> Promoções </h2>
+<h2 class="titulo"> Escolha a borda </h2>
 
 
-<div ng-repeat= "x in combos" class="row  over-item ">
 
-	<div class="col-3 ">
-		<img src="{{x.imagem}}">
+<div ng-repeat= "x in bordas" class="row  over-item botao-opcao ">
+
+	<div class="col-9  align-vertical" >
+		{{x.borda}}
 	</div>
 
-	<div class="col-9 ">
-		<h2 class="combo-titulo">{{x.titulo}}</h2>
-		<p class="combo-descricao"> {{x.descricao}}</p>
-		<p class="combo-preco"> {{x.preco}}</p>
-
+	<div class="col-3 prato-preco align-vertical">
+		{{x.valor}}
 	</div>
 
 </div> <!-- combos -->
@@ -48,58 +46,32 @@
 
 
 
-<h2 class="titulo"> Pizzas </h2>
+<h2 class="titulo"> Escolha a Massa </h2>
 
 
 
-<div ng-repeat= "x in pizzas" class="row over-item">
+<div ng-repeat= "x in massas" class="row  over-item botao-opcao">
 
-	<div class="col">
-		<h2 class="prato-titulo">{{x.titulo}}</h2>
-		<p class="prato-descricao"> {{x.descricao}}</p>
+	<div class="col-9 align-vertical">
+		{{x.massa}}
 	</div>
 
-	<div class="col text-right">
-		<p class="prato-preco"> {{x.preco}}</p>
+	<div class="col-3 prato-preco align-vertical">
+		{{x.preco}}
 	</div>
 
-
-	
-</div>
-
-
-
-
-<h2 class="titulo"> Bebidas </h2>
-
-
-
-
-<div ng-repeat= "x in bebidas" class="row over-item" >
-
-	<div class="col">
-		<h2 class="prato-titulo">{{x.titulo}}</h2>
-	</div>
-
-	<div class="col text-right">
-		<p class="prato-preco"> {{x.preco}}</p>
-	</div>
-
-
-
-</div>
+</div> <!-- combos -->
 
 </div> <!-- ng-app -->
 
+
 <div class="space-bottom"></div>
 
-
-<a href="pizzaop.html">
+<a href="pizza_sabores.html">
 <div class="fixed-button">
-	<p>PRÓXIMO</p>
+	<p>ESCOLHA OS SABORES</p>
 </div>
 </a>
-<div class="clear-fix"></div>
 
 
 

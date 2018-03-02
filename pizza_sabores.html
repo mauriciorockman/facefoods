@@ -23,83 +23,56 @@
 
 <body>
 
-<div ng-app="myApp" ng-controller="customersCtrl" class="container marca"> 
+<div ng-app="myApp" ng-controller="customersCtrl" class="container "> 
 
 
+<h2 class="titulo"> Quantos sabores? </h2>
 
-<h2 class="titulo"> Promoções </h2>
+	<div class="row">
+		<div class="col-1"></div>
 
+		<div class="col num-sabores">1</div>
 
-<div ng-repeat= "x in combos" class="row  over-item ">
+		<div class="col num-sabores">2</div>
 
-	<div class="col-3 ">
-		<img src="{{x.imagem}}">
+		<div class="col num-sabores">3</div>
+
+		<div class="col num-sabores">4</div>
+
+		<div class="col-1"></div>
 	</div>
 
-	<div class="col-9 ">
-		<h2 class="combo-titulo">{{x.titulo}}</h2>
-		<p class="combo-descricao"> {{x.descricao}}</p>
-		<p class="combo-preco"> {{x.preco}}</p>
 
+<h2 class="titulo"> Escolha os sabores </h2>
+
+<div class="row">
+	<div class="col num-sabores">Salgadas</div>
+	<div class="col num-sabores">Doces</div>
+</div>
+
+<div ng-repeat= "x in saboresSalgados" class="row  over-item btn-sabor">
+
+	<div class="col-11 align-vertical">
+		<span class="sabor-nome">{{x.sabor}}</span>
+		<p class="descricao-sabor">{{x.descricao}}</p>
+	</div>
+
+	<div class="col-1 prato-preco align-vertical text-right">
+		{{x.valor}}
 	</div>
 
 </div> <!-- combos -->
 
-
-
-
-<h2 class="titulo"> Pizzas </h2>
-
-
-
-<div ng-repeat= "x in pizzas" class="row over-item">
-
-	<div class="col">
-		<h2 class="prato-titulo">{{x.titulo}}</h2>
-		<p class="prato-descricao"> {{x.descricao}}</p>
-	</div>
-
-	<div class="col text-right">
-		<p class="prato-preco"> {{x.preco}}</p>
-	</div>
-
-
-	
-</div>
-
-
-
-
-<h2 class="titulo"> Bebidas </h2>
-
-
-
-
-<div ng-repeat= "x in bebidas" class="row over-item" >
-
-	<div class="col">
-		<h2 class="prato-titulo">{{x.titulo}}</h2>
-	</div>
-
-	<div class="col text-right">
-		<p class="prato-preco"> {{x.preco}}</p>
-	</div>
-
-
-
-</div>
-
 </div> <!-- ng-app -->
+
 
 <div class="space-bottom"></div>
 
-
-<a href="pizzaop.html">
+<a href="">
 <div class="fixed-button">
-	<p>PRÓXIMO</p>
+	<p>ESCOLHA OS SABORES</p>
 </div>
 </a>
-<div class="clear-fix"></div>
 
 
 
