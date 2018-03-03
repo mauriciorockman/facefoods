@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles.css"> 
 	<link rel="stylesheet" type="text/css" href="loading.css"> 
@@ -32,7 +33,7 @@
 						</div>	
 					</article>
 					<article>
-						<h2 class="titulo">Pizzas</h2>
+						<h2 class="titulo"><i class="em em-pizza"></i>Pizzas</h2>
 						<div ng-repeat= "pizza in pizzas" class="row over-item">
 							<div class="col">
 								<h2 class="prato-titulo mt-3 mb-0">{{pizza.titulo}}</h2>
@@ -45,7 +46,7 @@
 						</div>
 					</article>
 					<article>
-						<h2 class="titulo"> Bebidas </h2>
+						<h2 class="titulo"><i class="em em-tropical_drink"></i>Bebidas</h2>
 						<div ng-repeat= "bebida in bebidas" class="row over-item" >
 							<div class="col">
 								<h2 class="prato-titulo mt-3">{{bebida.titulo}}</h2>
