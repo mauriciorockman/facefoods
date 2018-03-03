@@ -1,6 +1,8 @@
 var app = angular.module('myApp', ['ui.router']);
 
-app.controller('customersCtrl', function($scope, $http) {
+app.controller('customersCtrl', function($scope, $http, $timeout) {
+  $timeout(function() { $scope.loaded = true; }, 1000);
+  
   $http.get("menuData.html").then(function (response) {
       $scope.combos = response.data.combos;
       $scope.pizzas = response.data.pizzas[0].tamanhos;

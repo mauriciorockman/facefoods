@@ -5,6 +5,10 @@
 
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 body{
 	width: 100%;
 }
@@ -41,6 +45,7 @@ img {
 }
 
 .fixed-button{
+	margin-top: 50px;
 	color: white;
 	font-size: 20px;
 	position: fixed;
@@ -58,9 +63,8 @@ img {
 }
 
 .space-bottom{
-	margin-top: 20px;
+	margin-top: 40px;
 	height: 20px;
-
 }
 
 
@@ -74,12 +78,13 @@ img {
 
 .combo-preco{
 	font-size: 15px;
-	color: red;
+	color: green;
 	font-weight: bold;
 }
 
 .prato-titulo{
 	font-size: 15px;
+	font-weight: bold;
 }
 
 .prato-descricao{
@@ -89,7 +94,7 @@ img {
 
 .prato-preco{
 	font-size: 18px;
-	color: red;
+	color: green;
 	font-weight: bold;
 }
 
