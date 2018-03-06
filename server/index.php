@@ -14,10 +14,19 @@ require 'app/middleware.php';
 // Register routes
 require 'app/routes.php';
 
-require 'app/src/Entity/Agencies.php';
 require 'app/src/abstractResource.php';
-require 'app/src/Resource/AgencyResource.php';
-require 'app/src/Action/AgencyAction.php';
+
+$entities = glob('app/src/Entity/*.php');
+foreach($entities as $entity)
+    require($entity);
+
+$resources = glob('app/src/Resource/*.php');
+foreach($resources as $resource)
+    require($resource);
+
+$controllers = glob('app/src/Action/*.php');
+foreach($controllers as $controller)
+    require($controller);
 
 // Run app
 $app->run();
