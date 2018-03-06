@@ -1,16 +1,16 @@
 <?php
+namespace App\Entity;
 
-
-
+use App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ExtrasTypes
+ * BotReplies
  *
- * @ORM\Table(name="extras_types", indexes={@ORM\Index(name="extras_types_fk0", columns={"restaurant_id"})})
+ * @ORM\Table(name="bot_replies", indexes={@ORM\Index(name="bot_replies_fk0", columns={"restaurant_id"})})
  * @ORM\Entity
  */
-class ExtrasTypes
+class BotReplies
 {
     /**
      * @var integer
@@ -24,16 +24,16 @@ class ExtrasTypes
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     * @ORM\Column(name="received", type="string", length=50, nullable=false)
      */
-    private $name;
+    private $received;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=100, nullable=false)
+     * @ORM\Column(name="reply", type="string", length=255, nullable=false)
      */
-    private $description;
+    private $reply;
 
     /**
      * @var \Restaurants

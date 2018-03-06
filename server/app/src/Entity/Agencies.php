@@ -1,7 +1,7 @@
 <?php
+namespace App\Entity;
 
-
-
+use App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,6 +42,14 @@ class Agencies
      */
     private $password;
 
-
+    /**
+     * Get array copy of object
+     *
+     * @return array
+     */
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
+    }
 }
 

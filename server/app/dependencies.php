@@ -23,3 +23,8 @@ $container['em'] = function ($c) {
     );
     return \Doctrine\ORM\EntityManager::create($settings['doctrine']['connection'], $config);
 };
+
+$container['App\Action\AgencyAction'] = function ($c) {
+    $agencyResource = new \App\Resource\AgencyResource($c->get('em'));
+    return new App\Action\AgencyAction($agencyResource);
+};

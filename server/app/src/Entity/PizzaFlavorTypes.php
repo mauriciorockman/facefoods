@@ -1,16 +1,16 @@
 <?php
+namespace App\Entity;
 
-
-
+use App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * CategoryType
+ * PizzaFlavorTypes
  *
- * @ORM\Table(name="category_type")
+ * @ORM\Table(name="pizza_flavor_types")
  * @ORM\Entity
  */
-class CategoryType
+class PizzaFlavorTypes
 {
     /**
      * @var integer
@@ -24,7 +24,7 @@ class CategoryType
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=50, nullable=false)
+     * @ORM\Column(name="name", type="string", length=255, nullable=false)
      */
     private $name;
 

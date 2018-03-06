@@ -11,3 +11,5 @@ $app->get('/hello/[{name}]', function (Request $request, Response $response, arr
 
     return $response;
 });
+
+$app->get('/agency/{agency}', 'App\Action\AgencyAction:fetchOne');

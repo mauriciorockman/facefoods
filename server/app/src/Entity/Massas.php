@@ -1,16 +1,16 @@
 <?php
+namespace App\Entity;
 
-
-
+use App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Pizzas
+ * Massas
  *
- * @ORM\Table(name="pizzas", indexes={@ORM\Index(name="pizzas_fk0", columns={"restaurant_id"})})
+ * @ORM\Table(name="massas")
  * @ORM\Entity
  */
-class Pizzas
+class Massas
 {
     /**
      * @var integer
@@ -20,6 +20,13 @@ class Pizzas
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="restaurant_id", type="integer", nullable=false)
+     */
+    private $restaurantId;
 
     /**
      * @var string
@@ -41,30 +48,6 @@ class Pizzas
      * @ORM\Column(name="price", type="decimal", precision=10, scale=0, nullable=false)
      */
     private $price;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="n_max_flavors", type="integer", nullable=false)
-     */
-    private $nMaxFlavors;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="picURL", type="string", length=255, nullable=false)
-     */
-    private $picurl;
-
-    /**
-     * @var \Restaurants
-     *
-     * @ORM\ManyToOne(targetEntity="Restaurants")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="restaurant_id", referencedColumnName="fb_id")
-     * })
-     */
-    private $restaurant;
 
 
 }
