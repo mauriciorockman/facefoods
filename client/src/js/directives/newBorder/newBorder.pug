@@ -1,0 +1,24 @@
+.div
+    .font-italic
+        small                            
+            a(href="javascript:void(null);", ng-click="newBorder()") Adicionar uma nova borda de pizza
+    script(type="text/ng-template", id="newBorder.html").
+        <h3 class="display">Nova borda de pizza</h1>
+        <form>
+            <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Cheddar, Catupiry...">
+            </div> 
+            <div class="form-group">
+                <label>Preço</label>
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                    <div class="input-group-text">R$</div>
+                    </div>
+                    <input type="number" step="0.01" class="form-control">
+                </div>
+            </div>
+            <div class="ngdialog-buttons">
+                <button type="button" class="ngdialog-button ngdialog-button-primary">Enviar</button>
+            </div>
+        </form>

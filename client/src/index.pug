@@ -1,0 +1,58 @@
+doctype html
+html(lang='en', ng-app="faceFoods")
+  head
+    meta(name='description', content="Descrição FaceFood.")
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', type='text/css', href='css/styles.css')
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', type='text/css', href='https://use.fontawesome.com/releases/v5.0.6/css/all.css')
+    link(rel='stylesheet', type='text/css', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+    link(rel='stylesheet', type='text/css', href='https://afeld.github.io/emoji-css/emoji.css')
+    link(rel='icon', href='favicon.png')
+    title FaceFoods
+  body.app.sidebar-mini#body
+    // Navbar
+    header.app-header
+      a.app-header__logo(href='index.html') FaceFoods
+      // Sidebar toggle button
+      a.app-sidebar__toggle(href='#', data-toggle='sidebar', aria-label='Hide Sidebar')
+      // Navbar Right Menu
+      ul.app-nav
+        li.app-search
+          input.app-search__input(type='search', placeholder='Search')
+          button.app-search__button
+            i.fa.fa-search
+        // Notification Menu
+        notification-menu
+        // User Menu
+        li.dropdown
+          a.app-nav__item(href='#', data-toggle='dropdown', aria-label='Open Profile Menu')
+            i.fa.fa-user.fa-lg
+          ul.dropdown-menu.settings-menu.dropdown-menu-right
+            li
+              a.dropdown-item(href='page-user.html')
+                i.fa.fa-cog.fa-lg
+                |  Settings
+            li
+              a.dropdown-item(href='page-user.html')
+                i.fa.fa-user.fa-lg
+                |  Profile
+            li
+              a.dropdown-item(href='page-login.html')
+                i.fa.fa-sign-out.fa-lg
+                |  Logout
+    // Sidebar menu
+    .app-sidebar__overlay(data-toggle='sidebar')    
+    sidebar
+    main.app-content(ui-view)
+    script(src='libs/jquery-3.2.1.min.js')
+    script(src='libs/popper.min.js')
+    script(src='libs/bootstrap.min.js')
+    script(src='libs/main.js')
+    script(src='libs/plugins/pace.min.js')
+    script(src='libs/plugins/chart.js')
+    script(src='js/vendor.js')    
+    script(src='libs/ng-table/ng-table.js')    
+    script(src='js/app.js')
