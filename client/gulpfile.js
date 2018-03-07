@@ -53,7 +53,9 @@ var path = {
     'node_modules/ng-dialog/js/ngDialog.js',
     'node_modules/angular-tooltips/dist/angular-tooltips.min.js',
     'node_modules/sweetalert2/dist/sweetalert2.min.js',
-    'node_modules/angularjs-toaster/toaster.min.js'
+    'node_modules/angularjs-toaster/toaster.min.js',
+    'node_modules/angular-jwt/dist/angular-jwt.min.js',
+    'node_modules/ng-table/bundles/ng-table.js'
   ],
   DIST: './dist'
 };

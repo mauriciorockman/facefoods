@@ -1,16 +1,25 @@
 faceFoods.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/Home');
+    $urlRouterProvider.otherwise('/Login');
     
     $stateProvider
-        
-        .state('Home', {
-            url: '/Home',
-            templateUrl: 'Home/Home.html',
-            controller: 'HomeController' 
+        .state('Login', {
+            url: '/Login',
+            templateUrl: 'Login/Login.html',
+            controller: 'LoginController' 
         })
-        .state('Menu', {
+        .state('Dashboard', {
+            url: '/Dashboard',
+            templateUrl: 'Dashboard/Dashboard.html',
+            controller: 'DashboardController'
+        })
+        .state('Dashboard.Home', {
+            url: '/Home',
+            templateUrl: 'Dashboard/Home/Home.html',
+            controller: 'HomeController'
+        })
+        .state('Dashboard.Menu', {
             url: '/Menu',
-            templateUrl: 'Menu/Menu.html',
+            templateUrl: 'Dashboard/Menu/Menu.html',
             controller: 'MenuController' 
         })
 });

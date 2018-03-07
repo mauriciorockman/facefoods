@@ -7,13 +7,13 @@ faceFoods.directive('sidebar', function(){
             $scope.sideBar = {
                                 0: {
                                     name: 'Início',
-                                    route: 'Home',
+                                    route: 'Dashboard.Home',
                                     icon: 'fa-home'
                                 },
 
                                 1: {
                                     name:'Cardápio', 
-                                    route: 'Menu', 
+                                    route: 'Dashboard.Menu', 
                                     icon: 'fa-bars'
                                 }, 
                                 
