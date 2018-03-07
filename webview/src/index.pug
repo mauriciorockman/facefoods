@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+		link(href='https://afeld.github.io/emoji-css/emoji.css', rel='stylesheet')
+		link(href='https://fonts.googleapis.com/css?family=Lora', rel='stylesheet')
+		link(href='css/styles.css', rel='stylesheet')
+	body
+		div(ng-app='webviewApp', ng-controller='indexCtrl')
+			.loading-bro(ng-hide='loaded')
+				svg#load(x='0px', y='0px', viewbox='0 0 150 150')
+					circle#loading-inner(cx='75', cy='75', r='60')
+			div(ng-cloak='', ng-show='loaded')
+				ui-view
+				.space-bottom
+					a(href='pizzaop.html')
+						.fixed-button
+							p.mt-2(style="font-family: 'Lora', serif; font-size: 25px") Próximo
+		.clear-fix
+		script(src='js/vendor.js')
+		script(src='js/app.js')
+		
