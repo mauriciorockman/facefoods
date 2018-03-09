@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -67,5 +67,158 @@ class Pizzas
     private $restaurant;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Pizzas
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Pizzas
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     *
+     * @return Pizzas
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set nMaxFlavors
+     *
+     * @param integer $nMaxFlavors
+     *
+     * @return Pizzas
+     */
+    public function setNMaxFlavors($nMaxFlavors)
+    {
+        $this->nMaxFlavors = $nMaxFlavors;
+
+        return $this;
+    }
+
+    /**
+     * Get nMaxFlavors
+     *
+     * @return integer
+     */
+    public function getNMaxFlavors()
+    {
+        return $this->nMaxFlavors;
+    }
+
+    /**
+     * Set picurl
+     *
+     * @param string $picurl
+     *
+     * @return Pizzas
+     */
+    public function setPicurl($picurl)
+    {
+        $this->picurl = $picurl;
+
+        return $this;
+    }
+
+    /**
+     * Get picurl
+     *
+     * @return string
+     */
+    public function getPicurl()
+    {
+        return $this->picurl;
+    }
+
+    /**
+     * Set restaurant
+     *
+     * @param \Restaurants $restaurant
+     *
+     * @return Pizzas
+     */
+    public function setRestaurant(\Restaurants $restaurant = null)
+    {
+        $this->restaurant = $restaurant;
+
+        return $this;
+    }
+
+    /**
+     * Get restaurant
+     *
+     * @return \Restaurants
+     */
+    public function getRestaurant()
+    {
+        return $this->restaurant;
+    }
+}

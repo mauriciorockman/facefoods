@@ -1,13 +1,13 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Restaurants
  *
- * @ORM\Table(name="restaurants", indexes={@ORM\Index(name="restaurants_fk0", columns={"agency_id"})})
+ * @ORM\Table(name="restaurants", indexes={@ORM\Index(name="restaurants_fk0", columns={"agency_id"}), @ORM\Index(name="user_id", columns={"user_id"})})
  * @ORM\Entity
  */
 class Restaurants
@@ -38,20 +38,6 @@ class Restaurants
     /**
      * @var string
      *
-     * @ORM\Column(name="email", type="string", length=70, nullable=false)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=32, nullable=false)
-     */
-    private $password;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="fb_pixel_id", type="string", length=20, nullable=false)
      */
     private $fbPixelId;
@@ -73,6 +59,169 @@ class Restaurants
      */
     private $agency;
 
+    /**
+     * @var \Users
+     *
+     * @ORM\ManyToOne(targetEntity="Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user_id", referencedColumnName="userID")
+     * })
+     */
+    private $user;
 
+
+
+    /**
+     * Get fbId
+     *
+     * @return string
+     */
+    public function getFbId()
+    {
+        return $this->fbId;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     *
+     * @return Restaurants
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set postalCode
+     *
+     * @param string $postalCode
+     *
+     * @return Restaurants
+     */
+    public function setPostalCode($postalCode)
+    {
+        $this->postalCode = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * Get postalCode
+     *
+     * @return string
+     */
+    public function getPostalCode()
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * Set fbPixelId
+     *
+     * @param string $fbPixelId
+     *
+     * @return Restaurants
+     */
+    public function setFbPixelId($fbPixelId)
+    {
+        $this->fbPixelId = $fbPixelId;
+
+        return $this;
+    }
+
+    /**
+     * Get fbPixelId
+     *
+     * @return string
+     */
+    public function getFbPixelId()
+    {
+        return $this->fbPixelId;
+    }
+
+    /**
+     * Set fbPageToken
+     *
+     * @param string $fbPageToken
+     *
+     * @return Restaurants
+     */
+    public function setFbPageToken($fbPageToken)
+    {
+        $this->fbPageToken = $fbPageToken;
+
+        return $this;
+    }
+
+    /**
+     * Get fbPageToken
+     *
+     * @return string
+     */
+    public function getFbPageToken()
+    {
+        return $this->fbPageToken;
+    }
+
+    /**
+     * Set agency
+     *
+     * @param \Agencies $agency
+     *
+     * @return Restaurants
+     */
+    public function setAgency(\Agencies $agency = null)
+    {
+        $this->agency = $agency;
+
+        return $this;
+    }
+
+    /**
+     * Get agency
+     *
+     * @return \Agencies
+     */
+    public function getAgency()
+    {
+        return $this->agency;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Users $user
+     *
+     * @return Restaurants
+     */
+    public function setUser(\Users $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Users
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
-

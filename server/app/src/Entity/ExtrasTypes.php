@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,5 +46,86 @@ class ExtrasTypes
     private $restaurant;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return ExtrasTypes
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return ExtrasTypes
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set restaurant
+     *
+     * @param \Restaurants $restaurant
+     *
+     * @return ExtrasTypes
+     */
+    public function setRestaurant(\Restaurants $restaurant = null)
+    {
+        $this->restaurant = $restaurant;
+
+        return $this;
+    }
+
+    /**
+     * Get restaurant
+     *
+     * @return \Restaurants
+     */
+    public function getRestaurant()
+    {
+        return $this->restaurant;
+    }
+}

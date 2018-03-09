@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -70,5 +70,158 @@ class OrderItems
     private $menu;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set extrasDescription
+     *
+     * @param string $extrasDescription
+     *
+     * @return OrderItems
+     */
+    public function setExtrasDescription($extrasDescription)
+    {
+        $this->extrasDescription = $extrasDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get extrasDescription
+     *
+     * @return string
+     */
+    public function getExtrasDescription()
+    {
+        return $this->extrasDescription;
+    }
+
+    /**
+     * Set extrasTotal
+     *
+     * @param string $extrasTotal
+     *
+     * @return OrderItems
+     */
+    public function setExtrasTotal($extrasTotal)
+    {
+        $this->extrasTotal = $extrasTotal;
+
+        return $this;
+    }
+
+    /**
+     * Get extrasTotal
+     *
+     * @return string
+     */
+    public function getExtrasTotal()
+    {
+        return $this->extrasTotal;
+    }
+
+    /**
+     * Set menuPrice
+     *
+     * @param string $menuPrice
+     *
+     * @return OrderItems
+     */
+    public function setMenuPrice($menuPrice)
+    {
+        $this->menuPrice = $menuPrice;
+
+        return $this;
+    }
+
+    /**
+     * Get menuPrice
+     *
+     * @return string
+     */
+    public function getMenuPrice()
+    {
+        return $this->menuPrice;
+    }
+
+    /**
+     * Set quantity
+     *
+     * @param integer $quantity
+     *
+     * @return OrderItems
+     */
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+
+        return $this;
+    }
+
+    /**
+     * Get quantity
+     *
+     * @return integer
+     */
+    public function getQuantity()
+    {
+        return $this->quantity;
+    }
+
+    /**
+     * Set order
+     *
+     * @param \Orders $order
+     *
+     * @return OrderItems
+     */
+    public function setOrder(\Orders $order = null)
+    {
+        $this->order = $order;
+
+        return $this;
+    }
+
+    /**
+     * Get order
+     *
+     * @return \Orders
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * Set menu
+     *
+     * @param \Menu $menu
+     *
+     * @return OrderItems
+     */
+    public function setMenu(\Menu $menu = null)
+    {
+        $this->menu = $menu;
+
+        return $this;
+    }
+
+    /**
+     * Get menu
+     *
+     * @return \Menu
+     */
+    public function getMenu()
+    {
+        return $this->menu;
+    }
+}

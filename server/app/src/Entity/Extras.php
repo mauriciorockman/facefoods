@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -53,5 +53,110 @@ class Extras
     private $extraType;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Extras
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Extras
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set price
+     *
+     * @param string $price
+     *
+     * @return Extras
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return string
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set extraType
+     *
+     * @param \ExtrasTypes $extraType
+     *
+     * @return Extras
+     */
+    public function setExtraType(\ExtrasTypes $extraType = null)
+    {
+        $this->extraType = $extraType;
+
+        return $this;
+    }
+
+    /**
+     * Get extraType
+     *
+     * @return \ExtrasTypes
+     */
+    public function getExtraType()
+    {
+        return $this->extraType;
+    }
+}

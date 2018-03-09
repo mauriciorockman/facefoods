@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -43,5 +43,86 @@ class FoodCategories
     private $categoryTypeId;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set restaurantId
+     *
+     * @param integer $restaurantId
+     *
+     * @return FoodCategories
+     */
+    public function setRestaurantId($restaurantId)
+    {
+        $this->restaurantId = $restaurantId;
+
+        return $this;
+    }
+
+    /**
+     * Get restaurantId
+     *
+     * @return integer
+     */
+    public function getRestaurantId()
+    {
+        return $this->restaurantId;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return FoodCategories
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set categoryTypeId
+     *
+     * @param integer $categoryTypeId
+     *
+     * @return FoodCategories
+     */
+    public function setCategoryTypeId($categoryTypeId)
+    {
+        $this->categoryTypeId = $categoryTypeId;
+
+        return $this;
+    }
+
+    /**
+     * Get categoryTypeId
+     *
+     * @return integer
+     */
+    public function getCategoryTypeId()
+    {
+        return $this->categoryTypeId;
+    }
+}

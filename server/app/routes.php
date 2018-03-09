@@ -5,7 +5,7 @@ use Slim\Http\Response;
 
 // Routes
 
-$app->get('/hello/[{name}]', function (Request $request, Response $response, array $args) {
+$app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
     $name = $args['name'];
     $response->getBody()->write("Hello, $name");
 
@@ -13,3 +13,4 @@ $app->get('/hello/[{name}]', function (Request $request, Response $response, arr
 });
 
 $app->get('/agency/{agency}', 'App\Action\AgencyAction:fetchOne');
+$app->post('/login/signup', 'App\Action\LoginAction:signUp');

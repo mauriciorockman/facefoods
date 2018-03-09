@@ -1,13 +1,13 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Agencies
  *
- * @ORM\Table(name="agencies", uniqueConstraints={@ORM\UniqueConstraint(name="email", columns={"email"})})
+ * @ORM\Table(name="agencies", indexes={@ORM\Index(name="user_id", columns={"user_id"})})
  * @ORM\Entity
  */
 class Agencies
@@ -29,27 +29,72 @@ class Agencies
     private $name;
 
     /**
-     * @var string
+     * @var \Users
      *
-     * @ORM\Column(name="email", type="string", length=70, nullable=false)
+     * @ORM\ManyToOne(targetEntity="Users")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="user_id", referencedColumnName="userID")
+     * })
      */
-    private $email;
+    private $user;
+
+
 
     /**
-     * @var string
+     * Get id
      *
-     * @ORM\Column(name="password", type="string", length=32, nullable=false)
+     * @return integer
      */
-    private $password;
-
-    /**
-     * Get array copy of object
-     *
-     * @return array
-     */
-    public function getArrayCopy()
+    public function getId()
     {
-        return get_object_vars($this);
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Agencies
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \Users $user
+     *
+     * @return Agencies
+     */
+    public function setUser(\Users $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \Users
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
-

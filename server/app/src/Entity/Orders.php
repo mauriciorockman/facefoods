@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -88,5 +88,230 @@ class Orders
     private $psid;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set orderStatus
+     *
+     * @param string $orderStatus
+     *
+     * @return Orders
+     */
+    public function setOrderStatus($orderStatus)
+    {
+        $this->orderStatus = $orderStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get orderStatus
+     *
+     * @return string
+     */
+    public function getOrderStatus()
+    {
+        return $this->orderStatus;
+    }
+
+    /**
+     * Set notes
+     *
+     * @param string $notes
+     *
+     * @return Orders
+     */
+    public function setNotes($notes)
+    {
+        $this->notes = $notes;
+
+        return $this;
+    }
+
+    /**
+     * Get notes
+     *
+     * @return string
+     */
+    public function getNotes()
+    {
+        return $this->notes;
+    }
+
+    /**
+     * Set total
+     *
+     * @param string $total
+     *
+     * @return Orders
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    /**
+     * Get total
+     *
+     * @return string
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    /**
+     * Set address
+     *
+     * @param string $address
+     *
+     * @return Orders
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
+
+        return $this;
+    }
+
+    /**
+     * Get address
+     *
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * Set phone
+     *
+     * @param string $phone
+     *
+     * @return Orders
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Orders
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set paymentMethod
+     *
+     * @param string $paymentMethod
+     *
+     * @return Orders
+     */
+    public function setPaymentMethod($paymentMethod)
+    {
+        $this->paymentMethod = $paymentMethod;
+
+        return $this;
+    }
+
+    /**
+     * Get paymentMethod
+     *
+     * @return string
+     */
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
+    }
+
+    /**
+     * Set change
+     *
+     * @param string $change
+     *
+     * @return Orders
+     */
+    public function setChange($change)
+    {
+        $this->change = $change;
+
+        return $this;
+    }
+
+    /**
+     * Get change
+     *
+     * @return string
+     */
+    public function getChange()
+    {
+        return $this->change;
+    }
+
+    /**
+     * Set psid
+     *
+     * @param \Clients $psid
+     *
+     * @return Orders
+     */
+    public function setPsid(\Clients $psid = null)
+    {
+        $this->psid = $psid;
+
+        return $this;
+    }
+
+    /**
+     * Get psid
+     *
+     * @return \Clients
+     */
+    public function getPsid()
+    {
+        return $this->psid;
+    }
+}

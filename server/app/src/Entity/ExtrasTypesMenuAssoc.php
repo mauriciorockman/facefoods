@@ -1,7 +1,7 @@
 <?php
-namespace App\Entity;
 
-use App\Entity;
+
+
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -42,5 +42,62 @@ class ExtrasTypesMenuAssoc
     private $menu;
 
 
-}
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set extraType
+     *
+     * @param \ExtrasTypes $extraType
+     *
+     * @return ExtrasTypesMenuAssoc
+     */
+    public function setExtraType(\ExtrasTypes $extraType = null)
+    {
+        $this->extraType = $extraType;
+
+        return $this;
+    }
+
+    /**
+     * Get extraType
+     *
+     * @return \ExtrasTypes
+     */
+    public function getExtraType()
+    {
+        return $this->extraType;
+    }
+
+    /**
+     * Set menu
+     *
+     * @param \Menu $menu
+     *
+     * @return ExtrasTypesMenuAssoc
+     */
+    public function setMenu(\Menu $menu = null)
+    {
+        $this->menu = $menu;
+
+        return $this;
+    }
+
+    /**
+     * Get menu
+     *
+     * @return \Menu
+     */
+    public function getMenu()
+    {
+        return $this->menu;
+    }
+}

@@ -5,6 +5,8 @@ use App\Resource\AgencyResource;
 
 final class AgencyAction
 {
+    private $AgencyResource;
+
     public function __construct(AgencyResource $agencyResource)
     {
         $this->AgencyResource = $agencyResource;

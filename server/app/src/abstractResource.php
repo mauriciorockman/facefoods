@@ -2,6 +2,7 @@
     namespace App;
 
     use Doctrine\ORM\EntityManager;
+    use Doctrine\DBAL\Query;
 
     abstract class AbstractResource
     {

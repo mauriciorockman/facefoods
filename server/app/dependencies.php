@@ -11,7 +11,14 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+$container['info'] = function ($c) {
+    $settings = $c->get('settings')['info'];
+    $logger = new Monolog\Logger($settings['name']);
+    $logger->pushHandler(new Monolog\Handler\RotatingFileHandler($settings['path'], $settings['level']));
+    return $logger;
+};
 
+// doctrine
 $container['em'] = function ($c) {
     $settings = $c->get('settings');
     $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(
@@ -27,4 +34,9 @@ $container['em'] = function ($c) {
 $container['App\Action\AgencyAction'] = function ($c) {
     $agencyResource = new \App\Resource\AgencyResource($c->get('em'));
     return new App\Action\AgencyAction($agencyResource);
+};
+
+$container['App\Action\LoginAction'] = function($c) {
+    $loginResource = new \App\Resource\LoginResource($c->get('em'));
+    return new App\Action\LoginAction($loginResource);
 };

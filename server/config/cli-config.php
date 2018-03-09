@@ -3,7 +3,7 @@
 
     require __DIR__ . '/../vendor/autoload.php';
 
-    $settings = include __DIR__ . '/../src/settings.php';
+    $settings = include __DIR__ . '/../app/settings.php';
     $settings = $settings['settings']['doctrine'];
 
     $config = \Doctrine\ORM\Tools\Setup::createAnnotationMetadataConfiguration(

@@ -7,15 +7,20 @@ return [
         // Monolog settings
         'logger' => [
             'name' => 'slim-app',
-            'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
+            'path' => 'logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
+        ],
+        'info' => [
+            'name' => 'info',
+            'path' => 'logs/info.log',
+            'level' => \Monolog\Logger::INFO,
         ],
 
         // Doctrine settings
         'doctrine' => [
             'meta' => [
                 'entity_path' => [
-                    'data/Entity'
+                    'app/src/Entity'
                 ],
                 'auto_generate_proxies' => true,
                 'proxy_dir' =>  __DIR__.'/../cache/proxies',

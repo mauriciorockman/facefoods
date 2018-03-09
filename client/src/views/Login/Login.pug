@@ -11,20 +11,16 @@ div
 					| Login
 				.form-group
 					label.control-label Email
-					input.form-control(type='text', placeholder='Email', autofocus='')
+					input.form-control(ng-model='email', type='text', placeholder='Email', autofocus='')
 				.form-group
 					label.control-label Senha
-					input.form-control(type='password', placeholder='Password')
+					input.form-control(ng-model='password', type='password', placeholder='Password')
 				.form-group
 					.utility
-						//- .animated-checkbox
-						//- 	label
-						//- 		input(type='checkbox')
-						//- 		span.label-text Stay Signed in
 						p.semibold-text.mb-2.text-center
 							a(href='javascript:void(0)', ng-click="flip = !flip") Esqueceu a senha?
 				.form-group.btn-container
-					button.btn.btn-primary.btn-block
+					button.btn.btn-primary.btn-block(ng-click="signUp()")
 						i.fas.fa-sign-in-alt.mr-1
 						| Login
 			form.forget-form

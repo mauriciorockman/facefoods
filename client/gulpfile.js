@@ -58,7 +58,8 @@ var path = {
     'node_modules/ng-table/bundles/ng-table.js',
     'node_modules/angular-touch/angular-touch.js',
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
-    'node_modules/angular-jwt/dist/angular-jwt.min.js'
+    'node_modules/angular-jwt/dist/angular-jwt.min.js',
+    'node_modules/angular-resource/angular-resource.min.js'
   ],
   DIST: './dist'
 };
