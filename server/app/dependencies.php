@@ -31,12 +31,12 @@ $container['em'] = function ($c) {
     return \Doctrine\ORM\EntityManager::create($settings['doctrine']['connection'], $config);
 };
 
-$container['App\Action\AgencyAction'] = function ($c) {
-    $agencyResource = new \App\Resource\AgencyResource($c->get('em'));
-    return new App\Action\AgencyAction($agencyResource);
-};
-
 $container['App\Action\LoginAction'] = function($c) {
     $loginResource = new \App\Resource\LoginResource($c->get('em'));
     return new App\Action\LoginAction($loginResource);
+};
+
+$container['App\Action\UserAction'] = function($c) {
+    $userResource = new \App\Resource\UserResource($c->get('em'));
+    return new App\Action\UserAction($userResource);
 };

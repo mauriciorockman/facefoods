@@ -24,6 +24,6 @@ header.app-header
             i.fa.fa-sign-out.fa-lg
             |  Logout
 .app-sidebar__overlay(data-toggle='sidebar')    
-sidebar
+sidebar(user-name='userData.name', user-bio='userData.bio', user-photo='userData.photo', user-modules='userData.availableModules')
 main.app-content
   ui-view

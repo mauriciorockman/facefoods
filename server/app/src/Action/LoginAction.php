@@ -13,17 +13,17 @@ use \Firebase\JWT\JWT;
 
 final class LoginAction
 {
-    private $LoginResource;
+    private $loginResource;
 
     public function __construct(LoginResource $loginResource)
     {
-        $this->LoginResource = $loginResource;
+        $this->loginResource = $loginResource;
     }
 
     public function signUp($request, $response)
     {
         $loginData = $request->getParams();
-        $loginRecord = $this->LoginResource->getByEmail($loginData['email']);
+        $loginRecord = $this->loginResource->getByEmail($loginData['email']);
 
         if(!$loginRecord){
             return $response->withStatus(404)
@@ -39,7 +39,7 @@ final class LoginAction
 
         if($loginRecord && password_verify($loginData['password'], $loginRecord['password'])){
             $token = bin2hex(random_bytes(20));
-            $this->LoginResource->setToken($loginRecord['email'], $token);
+            $this->loginResource->setToken($loginRecord['email'], $token);
 
             $tokenEncoded = JWT::encode($token, 'supersecretkeyyoushouldnotcommittogithub', "HS384");
             return $response->withStatus(200)

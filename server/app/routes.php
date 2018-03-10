@@ -12,5 +12,12 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
     return $response;
 });
 
-$app->get('/agency/{agency}', 'App\Action\AgencyAction:fetchOne');
-$app->post('/login/signup', 'App\Action\LoginAction:signUp');
+$app->group('/login', function(){
+    $this->post('/signup', 'App\Action\LoginAction:signUp');
+});
+
+$app->group('/api', function(){
+    $this->group('/user',function(){
+       $this->get('/data', 'App\Action\UserAction:getData');
+    });
+});

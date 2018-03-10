@@ -1,4 +1,5 @@
 <?php
+//TODO: Adicionar TestCases
 require 'vendor/autoload.php';
 
 // Instantiate the app
