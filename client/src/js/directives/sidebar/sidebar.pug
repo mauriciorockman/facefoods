@@ -1,26 +1,43 @@
 //- TODO: Adicionar Loading para o texto igual do facebook
 aside.app-sidebar
-  .app-sidebar__user
-    img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
-    div
-      p.app-sidebar__user-name {{user.name}}
-      p.app-sidebar__user-designation {{user.bio}}
-  ul.app-menu
-    li(ng-repeat="module in sideBar", ng-class="{'treeview': module.isTree, 'is-expanded': active}", ng-click="active=!active && user.availableModules[$index]")
-      a.app-menu__item(ui-sref-active="active", ui-sref='{{module.route}}', ng-if="!module.isTree", ng-class="{'text-muted disabled': !user.availableModules[$index]}", ng-disabled="!user.availableModules[$index]")
-        i.app-menu__icon.fa(class="{{module.icon}}")
-        span.app-menu__label {{module.name}}
-        span.badge.badge-secondary(ng-if="!user.availableModules[$index]") Indisponível
-        | &nbsp;&nbsp;&nbsp;&nbsp;
-      div(ng-if="module.isTree")
-        a.app-menu__item(href='#', data-toggle='treeview', ng-class="{'text-muted disabled': !user.availableModules[$index]}", ng-disabled="!user.availableModules[$index]")
-          i.app-menu__icon.fa(class="{{module.icon}}")
-          span.app-menu__label {{module.name}}
-          span.badge.badge-secondary(ng-if="!user.availableModules[$index]") Indisponível
-          | &nbsp;&nbsp;
-          i.treeview-indicator.fa.fa-angle-right
-        ul.treeview-menu
-          li(ng-repeat="submodule in module.branchs")
-            a.treeview-item(ui-sref='{{submodule.route}}', href='')
-              i.icon.fa.fa-angle-right
-              |  {{submodule.name}}
+  section(ng-cloak="")
+    article(ng-hide='user.name')
+      .app-sidebar__user
+        img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
+        div
+          p.app-sidebar__user-name CARREGANDO
+          p.app-sidebar__user-designation CARREGANDO
+      ul.app-menu
+        li.app-menu__item
+          span.app-menu__label.text-white Carregando    
+        li.app-menu__item
+          span.app-menu__label.text-white Carregando    
+        li.app-menu__item
+          span.app-menu__label.text-white Carregando    
+        li.app-menu__item
+          span.app-menu__label.text-white Carregando    
+    article(ng-show='user.name')
+      .app-sidebar__user
+        img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
+        div
+          p.app-sidebar__user-name {{user.name}}
+          p.app-sidebar__user-designation {{user.bio}}
+      ul.app-menu
+        li(ng-repeat="module in sideBar", ng-class="{'treeview': module.isTree, 'is-expanded': active}", ng-click="active=!active && user.availableModules[$index]")
+          a.app-menu__item(ui-sref-active="active", ui-sref='{{module.route}}', ng-if="!module.isTree", ng-class="{'text-muted disabled': !user.availableModules[$index]}", ng-disabled="!user.availableModules[$index]")
+            i.app-menu__icon.fa(class="{{module.icon}}")
+            span.app-menu__label {{module.name}}
+            span.badge.badge-secondary(ng-if="!user.availableModules[$index]") Indisponível
+            | &nbsp;&nbsp;&nbsp;&nbsp;
+          div(ng-if="module.isTree")
+            a.app-menu__item(href='#', data-toggle='treeview', ng-class="{'text-muted disabled': !user.availableModules[$index]}", ng-disabled="!user.availableModules[$index]")
+              i.app-menu__icon.fa(class="{{module.icon}}")
+              span.app-menu__label {{module.name}}
+              span.badge.badge-secondary(ng-if="!user.availableModules[$index]") Indisponível
+              | &nbsp;&nbsp;
+              i.treeview-indicator.fa.fa-angle-right
+            ul.treeview-menu
+              li(ng-repeat="submodule in module.branchs")
+                a.treeview-item(ui-sref='{{submodule.route}}', href='')
+                  i.icon.fa.fa-angle-right
+                  |  {{submodule.name}}
