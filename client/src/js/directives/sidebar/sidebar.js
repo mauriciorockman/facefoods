@@ -4,10 +4,7 @@ faceFoods.directive('sidebar', function(){
         templateUrl: 'directives/sidebar/sidebar.html',
         replace: true,
         scope: {
-            userName    : '=userName',
-            userBio     : '=userBio',
-            userPhoto   : '=userPhoto',
-            userModules : '=userModules'
+            user : '=user'
         },
         controller: function($scope){
             // TODO: Mover informações da barra lateral para banco de dados

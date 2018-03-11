@@ -1,4 +1,5 @@
 faceFoods.config(function Config($httpProvider, jwtOptionsProvider) {
+    // TODO: Toda vez que receber um http status 401, redirecionar para a view Login
     jwtOptionsProvider.config({
         tokenGetter: function(options) {
             if (options.url.substr(options.url.length - 5) == '.html') {

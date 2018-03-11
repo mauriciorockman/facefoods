@@ -7,6 +7,7 @@ header.app-header
       button.app-search__button
         i.fa.fa-search
     notification-menu
+    //- TODO: Transformar em diretiva
     li.dropdown
       a.app-nav__item(href='#', data-toggle='dropdown', aria-label='Open Profile Menu')
         i.fa.fa-user.fa-lg
@@ -24,6 +25,10 @@ header.app-header
             i.fa.fa-sign-out.fa-lg
             |  Logout
 .app-sidebar__overlay(data-toggle='sidebar')    
-sidebar(user-name='userData.name', user-bio='userData.bio', user-photo='userData.photo', user-modules='userData.availableModules')
-main.app-content
-  ui-view
+sidebar(user='userData')
+.loading-bro(ng-hide='loaded')
+  svg.center.float#load(x='0px', y='0px', viewbox='0 0 150 150')
+    circle#loading-inner(cx='75', cy='75', r='60')
+div(ng-cloak='', ng-show='loaded')
+  main.app-content
+    ui-view

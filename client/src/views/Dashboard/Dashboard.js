@@ -1,7 +1,8 @@
 faceFoods.controller('DashboardController', ['$scope', '$state', '$rootScope', 'userFactory', 'toaster', function($scope, $state, $rootScope, userFactory, toaster){
-    // TODO: Bola de Loading    
+    // TODO: centralizar bola de Loading
     userFactory.loadData.get().$promise.then(
-        function(result){            
+        function(result){
+            $scope.loaded = true;
             $rootScope.userData.name = result.name;
             $rootScope.userData.email = result.email;
             // TODO: Mover dados para banco de dados

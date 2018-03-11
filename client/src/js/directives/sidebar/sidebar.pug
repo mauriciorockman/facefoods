@@ -1,21 +1,22 @@
+//- TODO: Adicionar Loading para o texto igual do facebook
 aside.app-sidebar
   .app-sidebar__user
-    img.app-sidebar__user-avatar(ng-src='{{userPhoto}}', alt='User Image')
+    img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
     div
-      p.app-sidebar__user-name {{userName}}
-      p.app-sidebar__user-designation {{userBio}}
+      p.app-sidebar__user-name {{user.name}}
+      p.app-sidebar__user-designation {{user.bio}}
   ul.app-menu
-    li(ng-repeat="module in sideBar", ng-class="{'treeview': module.isTree, 'is-expanded': active}", ng-click="active=!active && userModules[$index]")
-      a.app-menu__item(ui-sref-active="active", ui-sref='{{module.route}}', ng-if="!module.isTree", ng-class="{'text-muted disabled': !userModules[$index]}", ng-disabled="!userModules[$index]")
+    li(ng-repeat="module in sideBar", ng-class="{'treeview': module.isTree, 'is-expanded': active}", ng-click="active=!active && user.availableModules[$index]")
+      a.app-menu__item(ui-sref-active="active", ui-sref='{{module.route}}', ng-if="!module.isTree", ng-class="{'text-muted disabled': !user.availableModules[$index]}", ng-disabled="!user.availableModules[$index]")
         i.app-menu__icon.fa(class="{{module.icon}}")
         span.app-menu__label {{module.name}}
-        span.badge.badge-secondary(ng-if="!userModules[$index]") Indisponível
+        span.badge.badge-secondary(ng-if="!user.availableModules[$index]") Indisponível
         | &nbsp;&nbsp;&nbsp;&nbsp;
       div(ng-if="module.isTree")
-        a.app-menu__item(href='#', data-toggle='treeview', ng-class="{'text-muted disabled': !userModules[$index]}", ng-disabled="!userModules[$index]")
+        a.app-menu__item(href='#', data-toggle='treeview', ng-class="{'text-muted disabled': !user.availableModules[$index]}", ng-disabled="!user.availableModules[$index]")
           i.app-menu__icon.fa(class="{{module.icon}}")
           span.app-menu__label {{module.name}}
-          span.badge.badge-secondary(ng-if="!userModules[$index]") Indisponível
+          span.badge.badge-secondary(ng-if="!user.availableModules[$index]") Indisponível
           | &nbsp;&nbsp;
           i.treeview-indicator.fa.fa-angle-right
         ul.treeview-menu
