@@ -100,72 +100,86 @@ app.run(function($rootScope){
                             {
                                 "sabor" : "ALHO E ÓLEO",
                                 "descricao" : "feita com alho frito e molho de alho",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "1"
                             },
                             {
                                 "sabor" : "AIPIM COM BACON",
                                 "descricao" : "molho, purê de aipim e bacon",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "2"
                             },
                             {
                                 "sabor" : "BACON",
                                 "descricao" : "molho, mussarela e bacon",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "3"
                             },
                             {
                                 "sabor" : "BAIANA",
                                 "descricao" : "molho, mussarela, calabresa, molho de pimenta, ovos e cebola",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "4"
                             },
                             {
                                 "sabor" : "BOLONHESA",
                                 "descricao" : "coxão mole moído sem nenhuma gordura, milho e parmesão.",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "5"
                             },
                             {
                                 "sabor" : "BRASILEIRA",
                                 "descricao" : "frango, presunto, tomate e queijo minas",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "6"
                             },
                             {
                                 "sabor" : "BRÓCOLIS",
                                 "descricao" : "com bacon ou alho",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "7"
                             },
                             {
                                 "sabor" : "CALABRESA",
                                 "descricao" : "calabresa fatiada com ou sem cebola",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "8"
                             },
                             {
                                 "sabor" : "CATUPERU",
                                 "descricao" : "peito de peru fatiado com catupiry®",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "9"
                             },
                             {
                                 "sabor" : "CHAMPIGNON",
                                 "descricao" : "champignons de primeira fatiados.",
-                                "valor": ""
+                                "valor": "",
+                                "id" : "10"
                             },
                             {
                                 "sabor" : "ALEMÃ",
                                 "descricao" : "lombo alemão com champignon",
-                                "valor": "3"
+                                "valor": "3",
+                                "id" : "11"
                             },
                             {
                                 "sabor" : "AMALFITANA",
                                 "descricao" : "salada de alcachofra e mussarela de búfala",
-                                "valor": "2"
+                                "valor": "2",
+                                "id" : "12"
                             },
                             {
                                 "sabor" : "ARGENTINA",
                                 "descricao" : "mignon, palmito e chimichurri",
-                                "valor": "2"
+                                "valor": "2",
+                                "id" : "13"
                             },
                             {
                                 "sabor" : "GREGA",
                                 "descricao" : "mussarela de búfala, tomates secos, queijo minas, azeitonas Azapa, gorgonzola, um toque de manjericão e Catupiry.",
-                                "valor": "4"
+                                "valor": "4",
+                                "id" : "14"
                             }
                         ]
                 },

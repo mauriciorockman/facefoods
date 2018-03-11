@@ -11,11 +11,21 @@
 
 body{
 	width: 100%;
+
 }
 
 img {
     max-width: 100%;
     max-height: 100%;
+}
+
+a{
+	text-decoration: none;
+	color: inherit !important;
+}
+
+section{
+	overflow-x: hidden
 }
 
 .marca{
@@ -45,7 +55,6 @@ img {
 }
 
 .fixed-button{
-	margin-top: 50px;
 	color: white;
 	font-size: 20px;
 	position: fixed;
@@ -53,18 +62,23 @@ img {
 	width: 100%;
 	padding: 5px;
 	text-align: center !important;
-	background-color: red;
+	background-color: #BD1114;
 	border-top: 3px solid white;
 }
 
 .fixed-button:hover{
 	cursor: pointer;
-	background-color: red;
+	background-color: #BD1114;
 }
 
 .space-bottom{
 	margin-top: 40px;
 	height: 20px;
+}
+
+.space-top{
+	margin-bottom: 45px;
+
 }
 
 
@@ -146,3 +160,195 @@ img {
 	font-size: 20px;
 	font-weight: bold;
 }
+
+
+
+.fixed-button-top{
+	top: 0px;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	background-color: #BD1114;
+	color: white;
+	padding: 10px;
+	z-index: 999;
+	
+}
+
+.fa-arrow-left{
+	cursor: pointer;
+}
+
+.sabor-pizza{
+	font-size: 15px;
+	font-weight: bold;
+}
+.preco-pizza{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.descricao-pizza{
+	font-size: 15px;
+	padding: 0 5px 0 12px;
+	
+}
+/* Radio Buttons  ----------------------------------------*/
+
+.container-rb {
+	height: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+  }
+  
+  .button-wrap {
+	position: relative;
+	text-align: center;
+	top: 50%;
+	margin-top: 10px;
+  }
+
+  .button-label {
+	display: inline-block;
+	padding: 3px;
+	margin: 10px;
+	width: 90%;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #595959;
+	border-radius: 5px;
+	background: #F2F2F2;
+	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+  }
+
+  .button-label h1 {
+	font-size: 20px;
+	padding: 10px;
+  }
+  .button-label:hover {
+	background: #939393;
+	color: #101010;
+	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.32);
+  }
+  .button-label:active {
+	-webkit-transform: translateY(2px);
+			transform: translateY(2px);
+	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+  }
+
+ .rb:checked  + .button-label{
+	background: #E11A1A;
+	color: #E8E8E8;
+	box-shadow: 5px 10px 10px #888888;
+  }
+ 
+ .hidden {
+	display: none;
+  }
+  /* --------------------------------------- Radio Buttons*/
+
+
+  /*checkboxes -------------------------------------------*/
+
+.container-cb {
+	height: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+  }
+
+  input {
+	position: absolute;
+	left: -9999px;
+  }
+  
+  .cb-label {
+	display: block;
+	position: relative;
+	margin: 8px 0px;
+	padding: 3px 7px 7px 3px;
+	border-radius: 3px;
+	color: #595959;
+	background-color: #F2F2F2;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color .2s, box-shadow .2s;
+	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+		user-select: none;
+  }
+
+
+  
+  .cb-label::before {
+	content: "";
+	display: block;
+	position: absolute;
+	text-align: center;
+	top: 8px;
+	left: 10px;
+	width: 1.6em;
+	height : 1.6em;
+	border: 2px solid #B8B8B8;
+	border-radius: 5px;
+	transition: background-color .2s;
+  }
+  
+  
+  .cb:checked + label {
+	background-color: #E11A1A;
+	color: white;
+	box-shadow: 5px 10px 10px #888888;
+  }
+
+  
+  .cb:checked + label::before {
+	background-color: #fff;
+	font-family: FontAwesome;
+	content: "\f00c";
+	color: #E11A1A;
+  }
+
+
+  /* ------------------------------------------- checkboxes*/
+
+  /* radio buttons do sabores (salgado / doce )--------------------*/
+
+
+  .rb-sabores {
+  border: solid 3px #675f6b;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+  }
+
+
+.button-label-sabores {
+	color: #9a929e;
+	display: inline-block;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 20px;
+  }
+
+.rb-sabores:checked + label {
+	color: #FFFFFF;
+	background: #E11A1A;
+  }
+
+ 
+/* ----------------------radio buttons do sabores (salgado / doce )*/

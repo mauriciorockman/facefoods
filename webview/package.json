@@ -14,7 +14,9 @@
     "angular-animate": "^1.6.9",
     "angular-touch": "^1.6.9",
     "angular-ui-bootstrap": "^2.5.6",
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
     "add-stream": "^1.0.0",

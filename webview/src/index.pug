@@ -2,8 +2,11 @@ doctype html
 html
 	head
 		meta(charset='utf-8')
+		title
+			| Super Pizza
 		meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 		link(href='https://afeld.github.io/emoji-css/emoji.css', rel='stylesheet')
+		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet")
 		link(href='https://fonts.googleapis.com/css?family=Lora', rel='stylesheet')
 		link(href='css/styles.css', rel='stylesheet')
 	body
@@ -13,11 +16,7 @@ html
 					circle#loading-inner(cx='75', cy='75', r='60')
 			div(ng-cloak='', ng-show='loaded')
 				ui-view
-				.space-bottom
-					a(href='pizzaop.html')
-						.fixed-button
-							p.mt-2(style="font-family: 'Lora', serif; font-size: 25px") Próximo
-		.clear-fix
+				
 		script(src='js/vendor.js')
 		script(src='js/app.js')
-		
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js')

@@ -13,12 +13,13 @@ section.container.marca
 		h2.titulo
 			i.em.em-pizza
 			| Pizzas
-		.row.over-item(ng-repeat='pizza in pizzas')
-			.col
-				h2.prato-titulo.mt-3.mb-0 {{pizza.titulo}}
-				p.prato-descricao.ml-1 {{pizza.descricao}}
-			.col.text-right.mt-3.mb-0
-				p.prato-preco R${{pizza.preco}}
+		a(ui-sref="pizzaoptions" ng-repeat='pizza in pizzas')
+			.row.over-item
+				.col
+					h2.prato-titulo.mt-3.mb-0 {{pizza.titulo}}
+					p.prato-descricao.ml-1 {{pizza.descricao}}
+				.col.text-right.mt-3.mb-0
+					p.prato-preco R${{pizza.preco}}
 			hr
 	article
 		h2.titulo
