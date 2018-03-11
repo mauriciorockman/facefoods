@@ -6,8 +6,9 @@ faceFoods.directive('sidebar', function(){
         scope: {
             user : '=user'
         },
-        controller: function($scope){
+        controller: ['$scope', '$timeout', function($scope, $timeout){
             // TODO: Mover informações da barra lateral para banco de dados
+            $timeout(function(){ $scope.loaded = true; }, 1000);
             $scope.sideBar = {
                                 0: {
                                     name: 'Início',
@@ -75,6 +76,6 @@ faceFoods.directive('sidebar', function(){
                                             }
                                     }
                                 }    
-        }
+        }]
     }
 })

@@ -1,9 +1,10 @@
 //- TODO: Adicionar Loading para o texto igual do facebook
+//- TODO: Imagem de usuário default
 aside.app-sidebar
   section(ng-cloak="")
-    article(ng-hide='user.name')
+    article(ng-hide='user.name && loaded')
       .app-sidebar__user
-        img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
+        img.app-sidebar__user-avatar(src='img/user.png', alt='User Image')
         div
           p.app-sidebar__user-name CARREGANDO
           p.app-sidebar__user-designation CARREGANDO
@@ -16,7 +17,7 @@ aside.app-sidebar
           span.app-menu__label.text-white Carregando    
         li.app-menu__item
           span.app-menu__label.text-white Carregando    
-    article(ng-show='user.name')
+    article(ng-show='user.name && loaded')
       .app-sidebar__user
         img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
         div
