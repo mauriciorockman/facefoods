@@ -39,4 +39,13 @@ final class UserAction
                         );
         }
     }
+
+    public function isAuthed($request, $response)
+    {
+        if($this->userResource->getByToken($request->getAttribute("jwt")))
+            return $response->withStatus(200);
+        else
+            return $response->withStatus(401);
+
+    }
 }

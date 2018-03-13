@@ -14,10 +14,12 @@ $app->get('/hello/{name}', function (Request $request, Response $response, array
 
 $app->group('/login', function(){
     $this->post('/signup', 'App\Action\LoginAction:signUp');
+
 });
 
 $app->group('/api', function(){
     $this->group('/user',function(){
        $this->get('/data', 'App\Action\UserAction:getData');
+        $this->get('/authed', 'App\Action\UserAction:isAuthed');
     });
 });

@@ -24,7 +24,7 @@ class LoginResource extends AbstractResource
     public function getByToken($authToken)
     {
         $userRecord = $this->entityManager->getRepository('Users')->findOneBy(
-            array('authToken' => $authToken)
+            array('authtoken' => $authToken)
         );
         if($userRecord)
             return $userRecord->getArrayCopy();

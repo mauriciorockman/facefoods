@@ -7,8 +7,7 @@ faceFoods.directive('sidebar', function(){
             user : '=user'
         },
         controller: ['$scope', '$timeout', function($scope, $timeout){
-            // TODO: Mover informações da barra lateral para banco de dados
-            $timeout(function(){ $scope.loaded = true; }, 1000);
+            $timeout(function(){ $scope.loaded = true; }, 1500);
             $scope.sideBar = {
                                 0: {
                                     name: 'Início',
@@ -32,50 +31,50 @@ faceFoods.directive('sidebar', function(){
                                     name:'Marketing', 
                                     route: 'undef', 
                                     icon: 'fa-chart-line'
-                                }, 
+                                }
+                                // , 
                                 
-                                4: {
-                                    name: 'Agrupado', 
-                                    route: 'undef', 
-                                    icon: 'fa-tree', 
-                                    isTree: true, 
-                                    branchs: {
-                                                0:{
-                                                    name: 'Branch1', 
-                                                    route: 'undef'
-                                                }, 
-                                                1:{
-                                                    name: 'Branch2', 
-                                                    route: 'undef'
-                                                }, 
-                                                2:{
-                                                    name: 'Branch3', 
-                                                    route: 'undef'
-                                                }
-                                            }
-                                    },
+                                // 4: {
+                                //     name: 'Agrupado', 
+                                //     route: 'undef', 
+                                //     icon: 'fa-tree', 
+                                //     isTree: true, 
+                                //     branchs: {
+                                //                 0:{
+                                //                     name: 'Branch1', 
+                                //                     route: 'undef'
+                                //                 }, 
+                                //                 1:{
+                                //                     name: 'Branch2', 
+                                //                     route: 'undef'
+                                //                 }, 
+                                //                 2:{
+                                //                     name: 'Branch3', 
+                                //                     route: 'undef'
+                                //                 }
+                                //             }
+                                //     },
 
-                                5: {
-                                    name: 'Agrupado', 
-                                    route: 'undef', 
-                                    icon: 'fa-tree', 
-                                    isTree: true, 
-                                    branchs: {
-                                                0:{
-                                                    name: 'Branch1', 
-                                                    route: 'undef'
-                                                }, 
-                                                1:{
-                                                    name: 'Branch2', 
-                                                    route: 'undef'
-                                                }, 
-                                                2:{
-                                                    name: 'Branch3', 
-                                                    route: 'undef'
-                                                }
-                                            }
-                                    }
-                                }    
+                                // 5: {
+                                //     name: 'Agrupado', 
+                                //     route: 'undef', 
+                                //     icon: 'fa-tree', 
+                                //     isTree: true, 
+                                //     branchs: {
+                                //                 0:{
+                                //                     name: 'Branch1', 
+                                //                     route: 'undef'
+                                //                 }, 
+                                //                 1:{
+                                //                     name: 'Branch2', 
+                                //                     route: 'undef'
+                                //                 }, 
+                                //                 2:{
+                                //                     name: 'Branch3', 
+                                //                     route: 'undef'
+                                //                 }
+                                            // }
+                            }
         }]
     }
 })
