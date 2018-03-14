@@ -1,5 +1,4 @@
 section   
-
     .fixed-button-top
         .row.align-vertical
             .col-2
@@ -10,10 +9,8 @@ section
                 // item selecionado
                 |Pizza Gigante
     .space-top
-
     //seleção da quantidade de sabores
     h2.titulo Quantos Sabores?
-
     .container
         div.button-wrap
             .row
@@ -21,13 +18,8 @@ section
                     input(type="radio" name="nsabores" id="n_{{x.id}}" class="hidden radio-label rb")
                     label(for="n_{{x.id}}" class="button-label")
                         h1 {{x.n}}
-                    
-
-
     h2.titulo  Escolha os sabores
-
     // filtro de sabores (salgado, doce, tradicional, especial)
-
     .row.text-center
         .col    
             input(type="radio" name="salgado_doce" id="sd_1" class="hidden radio-label rb" checked)
@@ -37,7 +29,6 @@ section
             input(type="radio" name="salgado_doce" id="sd_2" class="hidden radio-label rb")
             label(for="sd_2" class="button-label")
                         h1 Doces
-
     .row.text-center
         .col    
             input(type="radio" name="trad-especial" id="sp_1" class="hidden radio-label rb" checked)
@@ -49,17 +40,13 @@ section
                         h1 Especiais
     .titulo
     div(ng-repeat="sabor in sabores")
-       .div
+        .div
             .div.float-left
                 i.fa.fa-times
             .div.float-right
                 p {{sabor}} 
-
         .clear-fix 
-
-
-    // lista de sabores
-    
+    // lista de sabores   
     .container
         div(ng-repeat="x in saboresSalgados")
             input(type='checkbox', class="cb", id="sb_{{x.id}}")
@@ -74,11 +61,6 @@ section
                                 .preco-pizza {{x.valor}}
                         .row
                             .descricao-pizza {{x.descricao}}
- 
-                   
-        
-
-
     // escolha a massa
     .space-bottom
     a(href='pizza_sabores.html')

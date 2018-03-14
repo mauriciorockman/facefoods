@@ -1,6 +1,6 @@
-var app = angular.module('webviewApp', ['ui.router', 'templates', 'ui.bootstrap']);
+var app = angular.module('webviewApp', ['ui.router', 'ngAnimate','templates', 'ui.bootstrap', 'toaster']);
 
-app.controller('indexCtrl', function($scope, $http, $timeout) {
+app.controller('indexCtrl', ['$scope', '$http', '$timeout', 'toaster', function($scope, $http, $timeout, toaster) {
   $timeout(function() { $scope.loaded = true; }, 1000);
 
   $scope.doTheBack = function() {
@@ -14,4 +14,4 @@ app.controller('indexCtrl', function($scope, $http, $timeout) {
     console.log($scope.sabores);
   }
 
-});
+}]);
