@@ -9,88 +9,6 @@ section
                 // item selecionado
                 |{{currentPizza}}
     .space-top
-<<<<<<< HEAD
-
-    
-    //seleção da quantidade de sabores
-    h2.titulo(ng-if="nsabores.length>1") Quantos Sabores?
-    h2.titulo(ng-if="nsabores.length==1") Qual Sabor?
-
-    .container(ng-if="nsabores.length>1")
-        div.button-wrap
-            .row
-                div(ng-repeat="x in nsabores" class="col")
-                    input(type="radio" name="nsabores" id="n_{{x}}" class="hidden radio-label rb")
-                    label(for="n_{{x}}" class="button-label" ng-click="setNSabores(x)")
-                        h1 {{x}}
-                    
-
-
-    #selecao-sabores(ng-show = "issetNSabores || nsabores.length == 1")
-        h2.titulo(ng-if="nsabores.length>1")  Escolha os sabores
-
-        // filtro de sabores (salgado, doce, tradicional, especial)
-        
-        .row.text-center
-            .col    
-                input(type="radio" name="salgado_doce" id="sd_1" class="hidden radio-label rb" value="salgado" ng-model="salgado_doce" ng-checked="true")
-                label(for="sd_1" class="button-label")
-                            h1 Salgadas
-            .col    
-                input(type="radio" name="salgado_doce" id="sd_2" class="hidden radio-label rb" value="doce" ng-model="salgado_doce" )
-                label(for="sd_2" class="button-label")
-                            h1 Doces
-        //-
-            .row.text-center
-                .col    
-                    input(type="radio" name="trad-especial" id="sp_1" class="hidden radio-label rb" value="tradicional" ng-model="tradicional_especial"  ng-checked="true")
-                    label(for="sp_1" class="button-label")
-                                h1 Tradicionais
-                .col    
-                    input(type="radio" name="trad-especial" id="sp_2" class="hidden radio-label rb" value="especial" ng-model="tradicional_especial" )
-                    label(for="sp_2" class="button-label")
-                                h1 Especiais
-        .titulo
-
-
-        // lista de sabores
-        
-        #sabores-salgados.container(ng-show = "salgado_doce == 'salgado'")
-            div(ng-repeat="x in sabores_salgados")
-                input(type='checkbox', class="cb", id="sb_{{x.id}}" ng-model="x.selected"  ng-change="addSaborPizza(x.selected)" ng-disabled="nSaboresSelec == nSaboresLimit && x.selected == false")
-                label(for="sb_{{x.id}}" class="cb-label" ng-click="msg_sabores(x.selected)") 
-                    .row
-                        .col-2
-                        .col-10
-                            .row
-                                .col-9    
-                                    .sabor-pizza {{x.sabor}}
-                                .col-3
-                                    .preco-pizza {{x.valor}}
-                            .row
-                                .descricao-pizza {{x.descricao}}
-
-                hr
-        #sabores-doces.container(ng-show = "salgado_doce == 'doce'")
-            div(ng-repeat="x in sabores_doces")
-                input(type='checkbox', class="cb", id="sb_{{x.id}}" ng-model="selected"  ng-change="addSaborPizza(selected)" ng-disabled="nSaboresSelec == nSaboresLimit && selected == false")
-                label(for="sb_{{x.id}}" class="cb-label" ng-click="msg_sabores(selected)") 
-                    .row
-                        .col-2
-                        .col-10
-                            .row
-                                .col-9    
-                                    .sabor-pizza {{x.sabor}}
-                                .col-3
-                                    .preco-pizza {{x.valor}}
-                            .row
-                                .descricao-pizza {{x.descricao}}
- 
-                   
-        
-
-    toast
-=======
     //seleção da quantidade de sabores
     h2.titulo Quantos Sabores?
     .container
@@ -143,7 +61,6 @@ section
                                 .preco-pizza {{x.valor}}
                         .row
                             .descricao-pizza {{x.descricao}}
->>>>>>> 75de6f6ff11450830bd568f0ab3d2de690e3d646
     // escolha a massa
     .space-bottom
     a(ui-sref='entrega')
