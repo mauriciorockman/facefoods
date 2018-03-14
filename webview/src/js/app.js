@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 var app = angular.module('webviewApp', ['ui.router', 'templates', 'ui.bootstrap', 'ngAnimate']);
 
 app.controller('indexCtrl', function($scope, $rootScope, $http, $timeout) {
+=======
+var app = angular.module('webviewApp', ['ui.router', 'ngAnimate','templates', 'ui.bootstrap', 'toaster']);
+
+app.controller('indexCtrl', ['$scope', '$http', '$timeout', 'toaster', function($scope, $http, $timeout, toaster) {
+>>>>>>> 75de6f6ff11450830bd568f0ab3d2de690e3d646
   $timeout(function() { $scope.loaded = true; }, 1000);
 
   $scope.nsabores = ["1"];
@@ -93,4 +99,4 @@ app.controller('indexCtrl', function($scope, $rootScope, $http, $timeout) {
         }
     }
 
-});
+}]);
