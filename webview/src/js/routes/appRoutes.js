@@ -32,4 +32,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'pagamento/pagamento.html',
             controller: 'MenuCtrl' 
         })
+
+        .state('resumoPedido', {
+            url: '/resumoPedido',
+            templateUrl: 'resumoPedido/resumoPedido.html',
+            controller: 'MenuCtrl' 
+        })
 });

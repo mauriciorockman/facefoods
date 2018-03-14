@@ -28,6 +28,13 @@ section{
 	overflow-x: hidden
 }
 
+
+.nopadding {
+	padding: 0 !important;
+	margin: 0 !important;
+ }
+
+
 .marca{
 	border: 1px solid red;
 }
@@ -206,6 +213,36 @@ section{
 	
 }
 
+
+.title-resumo{
+	font-size: 20px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+}
+.desc-resumo{
+	font-size: 15px;
+	margin-bottom: -5px;
+	color: #6D6D6D;
+}
+
+.title-preco{
+	font-size: 20px;
+	color: green;
+}
+
+.resumo-preco{
+	font-size: 15px;
+	margin-bottom: -5px;
+	color: green !important;
+}
+
+.card-pedido{
+	border: 1px solid #E8E8E8;
+	border-radius: 3px;
+	margin: 8px 5px;
+	padding: 8px 2px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
 
 
 /* Radio Buttons  ----------------------------------------*/
@@ -445,49 +482,3 @@ input[type=text]{
 }
 
 /* -------------------------------------- TRANSIÇÃO ENTRE VIEWS  */
-
-/* TOAST ALERT  --------------------------------- */
-
-.snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
-
-.snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-
-/* --------------------------------- TOAST ALERT   */

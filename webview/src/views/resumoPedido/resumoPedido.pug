@@ -1,0 +1,56 @@
+section   
+
+	.fixed-button-top
+		.row.align-vertical
+			.col-2
+				a(ng-click="doTheBack()")
+					i.fa.fa-arrow-left
+			.col-10.text-left
+				| Nome do Produto 
+	.space-top
+
+
+
+	h4.titulo Resumo Do Seu Pedido
+	
+	.container
+		.row.card-pedido(ng-repeat="pizza in pedido.pizzas")
+			.col-3
+				
+			.col-9
+					.row
+						.col-9
+							.title-resumo {{pizza.nome}}
+						.col-3.text-left.nopadding
+							.title-preco R${{pizza.preco}}
+					
+					.row
+						.col-9
+							.desc-resumo {{pizza.borda.nome}}
+						.col-3.text-left.nopadding
+							.resumo-preco(ng-if="pizza.borda.preco>0") +R${{pizza.borda.preco}}
+					
+					.row
+						.col-9
+							.desc-resumo {{pizza.massa.nome}}
+						.col-3.text-left.nopadding
+							.resumo-preco(ng-if="pizza.massa.preco>0") +R${{pizza.massa.preco}}
+					
+					div(ng-repeat="sabor in pizza.sabores")
+						.row
+							.col-9
+								.desc-resumo {{sabor.nome}}
+							.col-3.nopadding
+								.resumo-preco(ng-if="sabor.preco>0") +R${{sabor.preco}}
+
+
+
+	a(ui-sref='Menu')
+		button.button-label
+			p CONTINUAR COMPRANDO
+
+
+	.space-bottom
+	a(ui-sref='entrega')
+		.fixed-button
+			p CONFIRMAR PEDIDO

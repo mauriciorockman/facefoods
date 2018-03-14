@@ -1,68 +1,78 @@
-section   
-    .fixed-button-top
-        .row.align-vertical
-            .col-2
-                //botão de voltar
-                a(ng-click="doTheBack()") 
-                    i.fa.fa-arrow-left
-            .col-10.text-left
-                // item selecionado
-                |{{currentPizza}}
-    .space-top
-    //seleção da quantidade de sabores
-    h2.titulo Quantos Sabores?
-    .container
-        div.button-wrap
-            .row
-                div(ng-repeat="x in nsabores" class="col")
-                    input(type="radio" name="nsabores" id="n_{{x.id}}" class="hidden radio-label rb")
-                    label(for="n_{{x.id}}" class="button-label")
-                        h1 {{x.n}}
-    h2.titulo  Escolha os sabores
-    // filtro de sabores (salgado, doce, tradicional, especial)
-    .row.text-center
-        .col    
-            input(type="radio" name="salgado_doce" id="sd_1" class="hidden radio-label rb" checked)
-            label(for="sd_1" class="button-label")
-                        h1 Salgadas
-        .col    
-            input(type="radio" name="salgado_doce" id="sd_2" class="hidden radio-label rb")
-            label(for="sd_2" class="button-label")
-                        h1 Doces
-    .row.text-center
-        .col    
-            input(type="radio" name="trad-especial" id="sp_1" class="hidden radio-label rb" checked)
-            label(for="sp_1" class="button-label")
-                        h1 Tradicionais
-        .col    
-            input(type="radio" name="trad-especial" id="sp_2" class="hidden radio-label rb")
-            label(for="sp_2" class="button-label")
-                        h1 Especiais
-    .titulo
-    div(ng-repeat="sabor in sabores")
-        .div
-            .div.float-left
-                i.fa.fa-times
-            .div.float-right
-                p {{sabor}} 
-        .clear-fix 
-    // lista de sabores   
-    .container
-        div(ng-repeat="x in saboresSalgados")
-            input(type='checkbox', class="cb", id="sb_{{x.id}}")
-            label(for="sb_{{x.id}}" class="cb-label" ng-click="msg(x.sabor)") 
-                .row
-                    .col-2
-                    .col-10
-                        .row
-                            .col-9    
-                                .sabor-pizza {{x.sabor}}
-                            .col-3
-                                .preco-pizza {{x.valor}}
-                        .row
-                            .descricao-pizza {{x.descricao}}
-    // escolha a massa
-    .space-bottom
-    a(ui-sref='entrega')
-        .fixed-button
-            p PRÓXIMO
+section
+	.fixed-button-top
+		.row.align-vertical
+			.col-2
+				//botão de voltar
+				a(ng-click="doTheBack()") 
+					i.fa.fa-arrow-left
+			.col-10.text-left
+				// item selecionado
+				|{{currentPizza}}
+	.space-top
+
+
+	//seleção da quantidade de sabores
+	h2.titulo(ng-if='nsabores.length>1') Quantos Sabores?
+	h2.titulo(ng-if='nsabores.length==1') Qual Sabor?
+	.container(ng-if='nsabores.length>1')
+		.button-wrap
+			.row
+				.col(ng-repeat='x in nsabores')
+					input.hidden.radio-label.rb(type='radio', name='nsabores', id='n_{{x}}')
+					label.button-label(for='n_{{x}}', ng-click='setNSabores(x)')
+						h1 {{x}}
+	
+
+
+	// filtro de sabores (salgado, doce)
+	#selecao-sabores(ng-show='issetNSabores || nsabores.length == 1')
+		h2.titulo(ng-if='nsabores.length>1')  Escolha os sabores
+		.row.text-center
+			.col
+				input#sd_1.hidden.radio-label.rb(type='radio', name='salgado_doce', value='salgado', ng-model='salgado_doce', ng-checked='true')
+				label.button-label(for='sd_1')
+					h1 Salgadas
+			.col
+				input#sd_2.hidden.radio-label.rb(type='radio', name='salgado_doce', value='doce', ng-model='salgado_doce')
+				label.button-label(for='sd_2')
+					h1 Doces
+	
+   
+	// lista de sabores   
+	
+	#sabores-salgados.container(ng-show="salgado_doce == 'salgado'")
+		div(ng-repeat='sabor in sabores_salgados')
+			input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
+			label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
+				.row
+					.col-2
+					.col-10
+						.row
+							.col-9
+								.sabor-pizza {{sabor.sabor}}
+							.col-3
+								.preco-pizza {{sabor.preco}}
+						.row
+							.descricao-pizza {{sabor.descricao}}
+			hr
+
+	#sabores-salgados.container(ng-show="salgado_doce == 'doce'")
+		div(ng-repeat='sabor in sabores_doces')
+			input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
+			label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
+				.row
+					.col-2
+					.col-10
+						.row
+							.col-9
+								.sabor-pizza {{sabor.sabor}}
+							.col-3
+								.preco-pizza {{sabor.preco}}
+						.row
+							.descricao-pizza {{sabor.descricao}}
+			hr
+	// escolha a massa
+	.space-bottom
+	a(ui-sref='resumoPedido' ng-show="nSaboresSelec == nSaboresLimit")
+		.fixed-button
+			p PRÓXIMO
