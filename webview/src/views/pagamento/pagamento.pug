@@ -1,0 +1,70 @@
+section   
+
+    .fixed-button-top
+        .row.align-vertical
+            .col-2
+                a(ng-click="doTheBack()")
+                    i.fa.fa-arrow-left
+            .col-10.text-left
+                 |Pizza Gigante
+    .space-top
+
+
+
+    h3.titulo Entrega ou Retirada?
+
+    row.text-center
+        .col    
+            input(type="radio" name="pagamento" id="pag_1" class="hidden radio-label rb" value="dinheiro" ng-model="pagamento" checked)
+            label(for="pag_1" class="button-label")
+                        h1 DINHEIRO
+        .col    
+            input(type="radio" name="pagamento" id="pag_2" value="cartao" ng-model="pagamento" class="hidden radio-label rb")
+            label(for="pag_2" class="button-label")
+                        h1 CARTÃO
+
+    #pag-dinheiro(ng-show="pagamento == 'dinheiro'")
+        h5.titulo Precisa de troco?
+
+        .row
+            .col    
+                input(type="radio" name="troco" id="troco_1" class="hidden radio-label rb" value="sim" ng-model="troco" checked)
+                label(for="troco_1" class="button-label")
+                    h1 SIM
+            .col    
+                input(type="radio" name="troco" id="troco_2" class="hidden radio-label rb" value="nao" ng-model="troco" checked)
+                label(for="troco_2" class="button-label")
+                    h1 Não
+        
+        #troco-dialog(ng-show="troco == 'sim'")
+            h5.titulo Troco Para Quantos Reais?
+            .container
+                .row
+                    .col
+                    .col.text-right
+                        h3 R$
+                    .col
+                        input(type="text", ng-mode="valor_troco")
+                    .col
+            
+
+    #pag-cartao(ng-show="pagamento == 'cartao'")
+        h6.text-center Você pagará na maquininha na entrega
+        h5.titulo Cartões Aceitos
+
+        .container
+            h5 Visa
+            h5 Mastercard
+            h5 Hipercard
+            h5 Elo
+            h5 Sodexo
+
+        
+
+
+
+    // escolha a massa
+    .space-bottom
+    a(ui-sref='pagamento')
+        .fixed-button
+            p CONFIRMAR PEDIDO

@@ -33,7 +33,8 @@ var path = {
   ],
   CSS: [
     'src/css/*.css',
-    'node_modules/bootstrap/dist/css/bootstrap.css'
+    'node_modules/bootstrap/dist/css/bootstrap.css',
+    'node_modules/ng-toast/dist/ngToast.min.css'
   ],
   IMG: [
   	'src/images/**'
@@ -43,7 +44,10 @@ var path = {
     'node_modules/@uirouter/angularjs/release/angular-ui-router.min.js',
     'node_modules/angular-animate/angular-animate.min.js',
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
-    'node_modules/angular-touch/angular-touch.min.js'
+    'node_modules/angular-touch/angular-touch.min.js',
+    'node_modules/angular-sanitize/angular-sanitize.min.js',
+    'node_modules/ng-toast/ngToast.min.js'
+
   ],
   DIST: './dist'
 };

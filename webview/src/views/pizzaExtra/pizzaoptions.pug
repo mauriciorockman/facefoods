@@ -6,37 +6,39 @@ section
                 a(ng-click="doTheBack()")
                     i.fa.fa-arrow-left
             .col-10.text-left
-                 |Pizza Gigante
+                 |{{currentPizza}}
     .space-top
 
-    h2.titulo  Escolha a borda
+    .page-container
+        .info-container
+            h2.titulo  Escolha a borda
 
-    .container
-    div.button-wrap
-        
-        div(ng-repeat="x in bordas")
-            input(type="radio" name="borda" id="b_{{x.id}}" class="hidden radio-label rb")
-            label(for="b_{{x.id}}" class="button-label")
-                .row
-                    .col-8.text-left
-                        h1 {{x.borda}}
-                    .col-4.text-left
-                        .prato-preco  {{x.preco}}
+            .container
+            div.button-wrap
+                
+                div(ng-repeat="x in bordas")
+                    input(type="radio" name="borda" id="b_{{x.id}}" class="hidden radio-label rb")
+                    label(for="b_{{x.id}}" class="button-label" ng-click = "setBorda()")
+                        .row
+                            .col-8.text-left
+                                h1 {{x.borda}}
+                            .col-4.text-left
+                                h1.prato-preco  {{x.preco}}
 
 
-
-    h2.titulo  Escolha a Massa
-    // combos
-    .container
-    div.button-wrap
-        div(ng-repeat="x in massas")
-            input(type="radio" name="massa" id="m_{{x.id}}" class="hidden radio-label rb")
-            label(for="m_{{x.id}}" class="button-label")
-                .row
-                    .col-8.text-left
-                        h1 {{x.massa}}
-                    .col-4.text-left
-                        h1 {{x.preco}}
+        .info-container(ng-show = "issetBorda")
+            h2.titulo  Escolha a Massa
+            // combos
+            .container
+            div.button-wrap
+                div(ng-repeat="x in massas")
+                    input(type="radio" name="massa" id="m_{{x.id}}" class="hidden radio-label rb")
+                    label(for="m_{{x.id}}" class="button-label")
+                        .row
+                            .col-8.text-left
+                                h1 {{x.massa}}
+                            .col-4.text-left
+                                h1.prato-preco {{x.preco}}
 
 
 

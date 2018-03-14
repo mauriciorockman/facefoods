@@ -13,7 +13,7 @@ section.container.marca
 		h2.titulo
 			i.em.em-pizza
 			| Pizzas
-		a(ui-sref="pizzaoptions" ng-repeat='pizza in pizzas')
+		a(ui-sref="pizzaoptions" ng-repeat='pizza in pizzas' ng-click="addPizza(pizza)")
 			.row.over-item
 				.col
 					h2.prato-titulo.mt-3.mb-0 {{pizza.titulo}}

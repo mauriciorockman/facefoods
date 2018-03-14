@@ -24,31 +24,37 @@ app.run(function($rootScope){
                             {
                                 "titulo" : "Pizza Broto",
                                 "descricao" : "15 cm e 1 sabor",
-                                "preco" : "20"
+                                "preco" : "20",
+                                "nsabores" : "1"
+                                
                                 
                             },
                             {
                                 "titulo" : "Pizza Pequena",
                                 "descricao" : "15 cm e 1 sabor",
-                                "preco" : "20"
+                                "preco" : "20",
+                                "nsabores" : "1"
                                 
                             },
                             {
                                 "titulo" : "Pizza Média",
                                 "descricao" : "15 cm e 1 sabor",
-                                "preco" : "20"
+                                "preco" : "20",
+                                "nsabores" : "2"
                                 
                             },
                             {
                                 "titulo" : "Pizza Grande",
                                 "descricao" : "15 cm e 1 sabor",
-                                "preco" : "20"
+                                "preco" : "20",
+                                "nsabores" : "3"
                                 
                             },
                             {
                                 "titulo" : "Pizza Gigante",
                                 "descricao" : "15 cm e 1 sabor",
-                                "preco" : "20"
+                                "preco" : "20",
+                                "nsabores" : "4"
                                 
                             }
                         ]
@@ -95,121 +101,140 @@ app.run(function($rootScope){
     
                 },
                 {
-                    "saboresSalgados":
+                    "sabores_salgados":
                         [
                             {
                                 "sabor" : "ALHO E ÓLEO",
                                 "descricao" : "feita com alho frito e molho de alho",
                                 "valor": "",
-                                "id" : "1"
+                                "id" : "1",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "AIPIM COM BACON",
                                 "descricao" : "molho, purê de aipim e bacon",
                                 "valor": "",
-                                "id" : "2"
+                                "id" : "2",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "BACON",
                                 "descricao" : "molho, mussarela e bacon",
                                 "valor": "",
-                                "id" : "3"
+                                "id" : "3",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "BAIANA",
                                 "descricao" : "molho, mussarela, calabresa, molho de pimenta, ovos e cebola",
                                 "valor": "",
-                                "id" : "4"
+                                "id" : "4",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "BOLONHESA",
                                 "descricao" : "coxão mole moído sem nenhuma gordura, milho e parmesão.",
                                 "valor": "",
-                                "id" : "5"
+                                "id" : "5",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "BRASILEIRA",
                                 "descricao" : "frango, presunto, tomate e queijo minas",
                                 "valor": "",
-                                "id" : "6"
+                                "id" : "6",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "BRÓCOLIS",
                                 "descricao" : "com bacon ou alho",
                                 "valor": "",
-                                "id" : "7"
+                                "id" : "7",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "CALABRESA",
                                 "descricao" : "calabresa fatiada com ou sem cebola",
                                 "valor": "",
-                                "id" : "8"
+                                "id" : "8",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "CATUPERU",
                                 "descricao" : "peito de peru fatiado com catupiry®",
                                 "valor": "",
-                                "id" : "9"
+                                "id" : "9",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "CHAMPIGNON",
                                 "descricao" : "champignons de primeira fatiados.",
                                 "valor": "",
-                                "id" : "10"
+                                "id" : "10",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "ALEMÃ",
                                 "descricao" : "lombo alemão com champignon",
                                 "valor": "3",
-                                "id" : "11"
+                                "id" : "11",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "AMALFITANA",
                                 "descricao" : "salada de alcachofra e mussarela de búfala",
                                 "valor": "2",
-                                "id" : "12"
+                                "id" : "12",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "ARGENTINA",
                                 "descricao" : "mignon, palmito e chimichurri",
                                 "valor": "2",
-                                "id" : "13"
+                                "id" : "13",
+                                "selected" : false
                             },
                             {
                                 "sabor" : "GREGA",
                                 "descricao" : "mussarela de búfala, tomates secos, queijo minas, azeitonas Azapa, gorgonzola, um toque de manjericão e Catupiry.",
                                 "valor": "4",
-                                "id" : "14"
+                                "id" : "14",
+                                "selected" : false
                             }
                         ]
                 },
                 {
-                    "sabores-doces": 
+                    "sabores_doces": 
                         [
                                 {
-                                    "sabor" : "Alho e Óleo",
-                                    "descricao" : "ingrediente 1, ingrediente 2, ingrediente 3",
-                                    "valor": ""
+                                    "sabor" : "AMAZÔNIA",
+                                    "descricao" : "açaí com leite condensado.",
+                                    "valor": "",
+                                    "id" : "50"
                                 },
                                 {
-                                    "sabor" : "Frango com Catupiry",
-                                    "descricao" : "ingrediente 1, ingrediente 2, ingrediente 3",
-                                    "valor": "3"
+                                    "sabor" : "BANANA AO RUN",
+                                    "descricao" : "banana, chocolate preto ou branco e licor de run.",
+                                    "valor": "3",
+                                    "id" : "51"
                                 },
                                 {
-                                    "sabor" : "Calabresa",
-                                    "descricao" : "ingrediente 1, ingrediente 2, ingrediente 3",
-                                    "valor": "4"
+                                    "sabor" : "BANANA COM CANELA",
+                                    "descricao" : "banana e canela.",
+                                    "valor": "4",
+                                    "id" : "52"
                                 },
                                 {
-                                    "sabor" : "Portuguesa",
-                                    "descricao" : "ingrediente 1, ingrediente 2, ingrediente 3",
-                                    "valor": ""
+                                    "sabor" : "BANANA COM CHOCOLATE",
+                                    "descricao" : "banana, chocolate preto ou branco.",
+                                    "valor": "",
+                                    "id" : "53"
                                 },
                                 {
-                                    "sabor" : "Siciliana",
-                                    "descricao" : "ingrediente 1, ingrediente 2, ingrediente 3",
-                                    "valor": ""
+                                    "sabor" : "BANANA NEVADA",
+                                    "descricao" : "banana caramelada e claras em neve.",
+                                    "valor": "",
+                                    "id" : "54"
                                 }
                             ]
                 }

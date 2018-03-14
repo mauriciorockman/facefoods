@@ -20,4 +20,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'pizza-sabores/sabores.html',
             controller: 'MenuCtrl' 
         })
+
+        .state('entrega', {
+            url: '/entrega',
+            templateUrl: 'entrega/entrega.html',
+            controller: 'MenuCtrl' 
+        })
+
+        .state('pagamento', {
+            url: '/pagamento',
+            templateUrl: 'pagamento/pagamento.html',
+            controller: 'MenuCtrl' 
+        })
 });

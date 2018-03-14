@@ -62,7 +62,7 @@ section{
 	width: 100%;
 	padding: 5px;
 	text-align: center !important;
-	background-color: #BD1114;
+	background: linear-gradient(to bottom, #e52d27 , #b31217);
 	border-top: 3px solid white;
 }
 
@@ -161,14 +161,26 @@ section{
 	font-weight: bold;
 }
 
+.block-sabor{
+	display: inline-block;
+	background-color: #d6d6d6;
+	border: 1px solid red;
+	margin: 4px;
+	padding: 2px 4px 2px 2px;
+}
 
+.botao-x{
+	border: 1px solid black;
+	padding: 0 4px;
+	margin-right: 8px;
+}
 
 .fixed-button-top{
 	top: 0px;
 	position: fixed;
 	width: 100%;
 	text-align: center;
-	background-color: #BD1114;
+	background: linear-gradient(to bottom, #e52d27 , #b31217);
 	color: white;
 	padding: 10px;
 	z-index: 999;
@@ -193,6 +205,9 @@ section{
 	padding: 0 5px 0 12px;
 	
 }
+
+
+
 /* Radio Buttons  ----------------------------------------*/
 
 .container-rb {
@@ -218,7 +233,7 @@ section{
 	color: #595959;
 	border-radius: 5px;
 	background: #F2F2F2;
-	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
 			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0 -3px 0 rgba(0, 0, 0, 0.22);
 	-webkit-transition: 0.3s;
 	transition: 0.3s;
@@ -241,14 +256,14 @@ section{
   .button-label:active {
 	-webkit-transform: translateY(2px);
 			transform: translateY(2px);
-	-webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
-			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
+			box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2), inset 0px -1px 0 rgba(0, 0, 0, 0.22);
   }
 
  .rb:checked  + .button-label{
-	background: #E11A1A;
+	background: linear-gradient(to bottom, #e52d27 , #b31217);
 	color: #E8E8E8;
-	box-shadow: 5px 10px 10px #888888;
+	box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
   }
  
  .hidden {
@@ -265,7 +280,7 @@ section{
 	margin: 0 auto;
   }
 
-  input {
+  input[type=checkbox] {
 	position: absolute;
 	left: -9999px;
   }
@@ -309,9 +324,9 @@ section{
   
   
   .cb:checked + label {
-	background-color: #E11A1A;
+	background: linear-gradient(to top, #e52d27 , #b31217);
 	color: white;
-	box-shadow: 5px 10px 10px #888888;
+	box-shadow: 5px 10px 10px rgba(0,0,0,0.3);
   }
 
   
@@ -352,3 +367,127 @@ section{
 
  
 /* ----------------------radio buttons do sabores (salgado / doce )*/
+
+/* INPUT TEXT ----------------------------------------*/
+
+input[type=text]{
+	width: 100%;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+	padding: 4px;
+	margin-bottom: 5px;
+}
+
+/*---------------------------------------- INPUT TEXT */
+
+
+/*.slide {
+    transition: transform .7s ease-in-out;
+    transform: translateX(0);
+}
+
+.slide.ng-enter {
+    transform: translateX(100%);
+}
+
+.slide.ng-enter.ng-enter-active, .slide.ng-leave {
+    position: absolute;
+    transform: translateX(0);
+}
+
+.slide.ng-leave.ng-leave-active {
+    transform: translateX(100%);
+}*/
+
+/* TRANSIÇÃO ENTRE VIEWS --------------------------------- */
+.slide.ng-enter,
+.slide.ng-leave {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: inherit;
+  -ms-transition: .3s ease-in-out;
+  -webkit-transition: .3s ease-in-out;
+  transition:  .3s ease-in-out;
+}
+
+.slide.ng-enter {}
+.slide.ng-enter.ng-enter-active {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.slide.ng-leave {
+  z-index: 100;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.slide.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+
+.slide.ng-enter {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+} 
+
+.slide.ng-enter.ng-enter-active, 
+.slide.ng-leave {
+  position: absolute;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.slide.ng-leave.ng-leave-active {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+/* -------------------------------------- TRANSIÇÃO ENTRE VIEWS  */
+
+/* TOAST ALERT  --------------------------------- */
+
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+.snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+/* --------------------------------- TOAST ALERT   */

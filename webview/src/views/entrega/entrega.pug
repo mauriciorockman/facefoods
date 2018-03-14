@@ -1,0 +1,77 @@
+section   
+
+    .fixed-button-top
+        .row.align-vertical
+            .col-2
+                a(ng-click="doTheBack()")
+                    i.fa.fa-arrow-left
+            .col-10.text-left
+                 |Pizza Gigante
+    .space-top
+
+
+
+    h3.titulo Entrega ou Retirada?
+
+    row.text-center
+        .col    
+            input(type="radio" name="entrega" id="ent_1" class="hidden radio-label rb" value="entrega" ng-model="entrega" checked)
+            label(for="ent_1" class="button-label")
+                        h1 ENTREGA
+        .col    
+            input(type="radio" name="entrega" id="ent_2" value="balcao" ng-model="entrega" class="hidden radio-label rb")
+            label(for="ent_2" class="button-label")
+                        h1 RETIRADA NO BALCÃO
+
+    #entrega-dados(ng-show="entrega == 'entrega'")
+        h5.titulo Dados Para Entrega
+
+        .container
+            .row
+                .col
+                    h5 Nome
+                    input(type="text" ng-model='user_nome')
+            .row
+                .col
+                    h5 CEP 
+                    input(type="text" ng-model='user_cep' ng-blur="check_cep(user_cep)")
+                    h6 {{cep_msg}}
+            .row    
+                .col-8
+                    h5 Rua
+                    input(type="text" ng-model='user_rua')
+                .col-4
+                    h5 Nº
+                    input(type="text" ng-model='user_numero_casa')
+            .row
+                .col
+                    h5 Complemento
+                    input(type="text" ng-model='user_complemento')
+            
+            .row
+                .col
+                    h5 Telefone
+                    input(type="text" ng-model='user_telefone')
+            
+
+    #retirada-dados(ng-show="entrega == 'balcao'")
+        h5.titulo Dados para Retirada
+
+        .container
+            .row
+                .col
+                    h5 Nome
+                    input(type="text" ng-model='user_name')
+            .row
+                .col
+                    h5 Telefone
+                    input(type="text" ng-model='user_telefone')
+        
+
+
+
+    // escolha a massa
+    .space-bottom
+    a(ui-sref='pagamento')
+        .fixed-button
+            p FORMA DE PAGAMENTO
