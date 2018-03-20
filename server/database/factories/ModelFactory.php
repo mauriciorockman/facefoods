@@ -10,10 +10,20 @@
 | database. Just tell the factory how a default model should look.
 |
 */
+$dummyData = Faker\Factory::create();
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Agency::class, function ($dummyData) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
+        'name' => 'Agência do '.$dummyData->firstNameMale
+    ];
+});
+
+$factory->define(App\User::class, function ($dummyData) {
+    return [
+        'name' => $dummyData->firstNameMale .' '. $dummyData->lastName,
+        'email' => strtolower($dummyData->firstNameMale).'@example.com',
+        'password' => app('hash')->make('12345'),
+        'agency_id' => factory(App\Agency::class)->create()->id,
+        'remember_token' => str_random(10),
     ];
 });
