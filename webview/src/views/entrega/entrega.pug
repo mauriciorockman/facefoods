@@ -1,4 +1,4 @@
-section   
+section 
 
     .fixed-button-top
         .row.align-vertical
@@ -6,7 +6,7 @@ section
                 a(ng-click="doTheBack()")
                     i.fa.fa-arrow-left
             .col-10.text-left
-                 |Pizza Gigante
+                 |Forma de Entrega
     .space-top
 
 
@@ -30,28 +30,28 @@ section
             .row
                 .col
                     h5 Nome
-                    input(type="text" ng-model='user_nome')
+                    input(type="text" ng-model='pedido.user.nome')
             .row
                 .col
                     h5 CEP 
-                    input(type="text" ng-model='user_cep' ng-blur="check_cep(user_cep)")
+                    input(type="text" ng-model='pedido.user.cep' ng-blur="check_cep(user_cep)")
                     h6 {{cep_msg}}
             .row    
                 .col-8
                     h5 Rua
-                    input(type="text" ng-model='user_rua')
+                    input(type="text" ng-model='pedido.user.rua')
                 .col-4
                     h5 Nº
-                    input(type="text" ng-model='user_numero_casa')
+                    input(type="text" ng-model='pedido.user.numero')
             .row
                 .col
                     h5 Complemento
-                    input(type="text" ng-model='user_complemento')
+                    input(type="text" ng-model='pedido.user.complemento')
             
             .row
                 .col
                     h5 Telefone
-                    input(type="text" ng-model='user_telefone')
+                    input(type="text" ng-model='pedido.user.telefone')
             
 
     #retirada-dados(ng-show="entrega == 'balcao'")
@@ -61,11 +61,11 @@ section
             .row
                 .col
                     h5 Nome
-                    input(type="text" ng-model='user_name')
+                    input(type="text" ng-model='pedido.user.nome')
             .row
                 .col
                     h5 Telefone
-                    input(type="text" ng-model='user_telefone')
+                    input(type="text" ng-model='pedido.user.telefone')
         
 
 

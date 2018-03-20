@@ -7,19 +7,21 @@ app.controller('MenuCtrl', ['$scope', '$rootScope', 'toaster', function($scope, 
     
     
     $scope.combos = $rootScope.pizzaData.combos;
-    $scope.pizzas = $rootScope.pizzaData.pizzas[0].tamanhos;
-    $scope.sabores_salgados = $rootScope.pizzaData.pizzas[2].sabores_salgados;
-    $scope.sabores_doces = $rootScope.pizzaData.pizzas[3].sabores_doces;
+    $scope.pizzas = $rootScope.MenuData.menu.pizzas.tamanhos;
+    $scope.sabores_salgados = $rootScope.MenuData.menu.pizzas.sabores.Salgada;
+    $scope.sabores_doces = $rootScope.MenuData.menu.pizzas.sabores.doce;
     $scope.bebidas = $rootScope.pizzaData.bebidas;
 
-    $scope.bordas = $rootScope.pizzaData.pizzas[1].opcoes[0].bordas;
+    $scope.bordas = $rootScope.MenuData.menu.pizzas.extras.borda;
     //[{"borda":"Catupiry", "preco": "R$ 5", "id": "1"}, {"borda":"Cheddar", "preco": "R$ 5", "id": "2"},{"borda":"Sem Borda", "preco": "", "id": "3"}];
-    $scope.massas =  $rootScope.pizzaData.pizzas[1].opcoes[1].massas;
+    $scope.massas =  $rootScope.MenuData.menu.pizzas.extras.massa;
    // [{"massa":"Fina", "preco": "", "id": "1"}, {"massa":"Normal", "preco": "", "id": "2"},{"massa":"Grossa", "preco": "R$ 2", "id": "3"}]; 
+
+   $categorias = $rootScope.MenuData.menu.geral;
     
     
     $rootScope.$on("limparSabores", function() {
-        $scope.limparSabores()
+        $scope.limparSabores();
     });
     
     $scope.limparSabores = function() {

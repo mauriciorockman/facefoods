@@ -38,39 +38,39 @@ section
 					h1 Doces
 	
    
-	// lista de sabores   
-	
-	#sabores-salgados.container(ng-show="salgado_doce == 'salgado'")
-		div(ng-repeat='sabor in sabores_salgados')
-			input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
-			label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
-				.row
-					.col-2
-					.col-10
-						.row
-							.col-9
-								.sabor-pizza {{sabor.sabor}}
-							.col-3
-								.preco-pizza {{sabor.preco}}
-						.row
-							.descricao-pizza {{sabor.descricao}}
-			hr
+		// lista de sabores   
+		
+		#sabores-salgados.container(ng-show="salgado_doce == 'salgado'")
+			div(ng-repeat='sabor in sabores_salgados')
+				input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
+				label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
+					.row
+						.col-2
+						.col-10
+							.row
+								.col-9
+									.sabor-pizza {{sabor.sabor}}
+								.col-3
+									.preco-pizza(ng-if="sabor.preco>0") {{sabor.preco}}
+							.row
+								.descricao-pizza {{sabor.descricao}}
+				
 
-	#sabores-salgados.container(ng-show="salgado_doce == 'doce'")
-		div(ng-repeat='sabor in sabores_doces')
-			input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
-			label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
-				.row
-					.col-2
-					.col-10
-						.row
-							.col-9
-								.sabor-pizza {{sabor.sabor}}
-							.col-3
-								.preco-pizza {{sabor.preco}}
-						.row
-							.descricao-pizza {{sabor.descricao}}
-			hr
+		#sabores-salgados.container(ng-show="salgado_doce == 'doce'")
+			div(ng-repeat='sabor in sabores_doces')
+				input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
+				label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
+					.row
+						.col-2
+						.col-10
+							.row
+								.col-9
+									.sabor-pizza {{sabor.sabor}}
+								.col-3
+									.preco-pizza(ng-if="sabor.preco>0") {{sabor.preco}}
+							.row
+								.descricao-pizza {{sabor.descricao}}
+			
 	// escolha a massa
 	.space-bottom
 	a(ui-sref='resumoPedido' ng-show="nSaboresSelec == nSaboresLimit")

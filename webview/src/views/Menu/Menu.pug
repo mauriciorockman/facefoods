@@ -1,9 +1,7 @@
-section.container.marca
-	button(ng-click="pop()")
-		| Show a Toaster
+section.container(style=" background: linear-gradient(to right, #0 , #0);")
 	article
 		h2.titulo Promoções
-		.row.over-item(ng-repeat='combo in combos')
+		.row.card-prato(ng-repeat='combo in combos')
 			.col-3
 				img(ng-src='img/{{combo.imagem}}')
 			.col-9
@@ -13,23 +11,24 @@ section.container.marca
 			hr
 	article
 		h2.titulo
-			i.em.em-pizza
 			| Pizzas
 		a(ui-sref="pizzaoptions" ng-repeat='pizza in pizzas' ng-click="addPizza(pizza)")
-			.row.over-item
-				.col
-					h2.prato-titulo.mt-3.mb-0 {{pizza.titulo}}
-					p.prato-descricao.ml-1 {{pizza.descricao}}
-				.col.text-right.mt-3.mb-0
+			.row.card-prato
+				.col-10
+					h2.prato-titulo {{pizza.titulo}}
+					p.prato-descricao {{pizza.descricao}}
+				.col-2.text-left.nopadding
 					p.prato-preco R${{pizza.preco}}
-			hr
-	article
+			
+
+	article(ng-repeat="categoria in MenuData.menu.geral")
 		h2.titulo
-			i.em.em-tropical_drink
-			| Bebidas
-		.row.over-item(ng-repeat='bebida in bebidas')
-			.col
-				h2.prato-titulo.mt-3 {{bebida.titulo}}
-			.col.text-right.mt-3
-				p.prato-preco R${{bebida.preco}}
+			| {{categoria.categoria}}
+		.row.card-prato(ng-repeat='produto in categoria.produtos' ng-click="addProduct(produto)")
+			.col-10
+				h2.prato-titulo {{produto.name}}
+				p.prato-descricao {{produto.description}}
+			.col-2.text-left.nopadding
+				p.prato-preco R${{produto.price}}
 			hr
+

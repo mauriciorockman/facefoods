@@ -19,12 +19,12 @@ section
 				
 				div(ng-repeat="borda in bordas")
 					input(type="radio" name="borda" id="b_{{borda.id}}" class="hidden radio-label rb")
-					label(for="b_{{borda.id}}" class="button-label" ng-click = "setBorda(borda)")
+					label(for="b_{{borda.id}}" class="button-label-extra" style="padding-top: 15px; padding-bottom: 15px;" ng-click = "setBorda(borda)")
 						.row
 							.col-9.text-left
-								h1 {{borda.nome}}
+								h6 {{borda.nome}}
 							.col-3.text-left
-								h1.prato-preco  {{borda.preco}}
+								h1.prato-preco(ng-if="borda.preco>0")  {{borda.preco}}
 
 
 		.info-container(ng-show = "issetBorda")
@@ -33,12 +33,12 @@ section
 			div.button-wrap
 				div(ng-repeat="massa in massas")
 					input(type="radio" name="massa" id="m_{{massa.id}}" class="hidden radio-label rb")
-					label(for="m_{{massa.id}}" class="button-label" ng-click = "setMassa(massa)")
+					label(for="m_{{massa.id}}" class="button-label-extra" style="padding-top: 15px; padding-bottom: 15px;" ng-click = "setMassa(massa)")
 						.row
 							.col-8.text-left
-								h1 {{massa.nome}}
+								h6 {{massa.nome}}
 							.col-4.text-left
-								h1.prato-preco {{massa.preco}}
+								h1.prato-preco(ng-if="massa.preco>0") {{massa.preco}}
 
 
 

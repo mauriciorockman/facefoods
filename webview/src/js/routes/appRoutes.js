@@ -38,4 +38,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'resumoPedido/resumoPedido.html',
             controller: 'MenuCtrl' 
         })
-});
+
+
+        .state('extraGeral', {
+            url: '/extra',
+            templateUrl: 'extraGeral/extraGeral.html',
+            controller: 'MenuCtrl' 
+        })
+}); 
