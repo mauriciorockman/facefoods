@@ -1,9 +1,9 @@
 faceFoods.factory('userFactory', ['$http', '$resource', 'apiURL', function($http, $resource, apiURL) {
     var userFactory = {};
-    var baseURL = apiURL.get()+'/api/user/'; 
+    var baseURL = apiURL.get()+'api/auth/'; 
 
-    userFactory.loadData = $resource(baseURL+'data');
-    userFactory.isAuthed = $resource(baseURL+'authed');
+    userFactory.loadData = $resource(baseURL+'user');
+    // userFactory.isAuthed = $resource(baseURL+'authed');
 
     return userFactory;
 }]);

@@ -7,23 +7,7 @@ header.app-header
       button.app-search__button
         i.fa.fa-search
     notification-menu
-    //- TODO: Transformar em diretiva
-    li.dropdown
-      a.app-nav__item(href='#', data-toggle='dropdown', aria-label='Open Profile Menu')
-        i.fa.fa-user.fa-lg
-      ul.dropdown-menu.settings-menu.dropdown-menu-right
-        li
-          a.dropdown-item(href='page-user.html')
-            i.fa.fa-cog.fa-lg
-            |  Settings
-        li
-          a.dropdown-item(href='page-user.html')
-            i.fa.fa-user.fa-lg
-            |  Profile
-        li
-          a.dropdown-item(href='page-login.html')
-            i.fa.fa-sign-out.fa-lg
-            |  Logout
+    user-button
 .app-sidebar__overlay(data-toggle='sidebar')    
 sidebar(user='userData')
 .loading-bro(ng-hide='loaded')

@@ -21,7 +21,7 @@ aside.app-sidebar
       .app-sidebar__user
         img.app-sidebar__user-avatar(ng-src='{{user.photo}}', alt='User Image')
         div
-          p.app-sidebar__user-name {{user.name}}
+          p.app-sidebar__user-name {{user.firstName}}
           p.app-sidebar__user-designation {{user.bio}}
       ul.app-menu
         li(ng-repeat="module in sideBar", ng-class="{'treeview': module.isTree, 'is-expanded': active}", ng-click="active=!active && user.availableModules[$index]")
