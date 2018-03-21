@@ -43,7 +43,13 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
+<<<<<<< HEAD
 $app->withFacades();
+=======
+// $app->withFacades();
+
+// $app->withEloquent();
+>>>>>>> 6c0ecea2e7b46e3a2d9af954e35681b84c1b3441
 
 $app->withEloquent();
 /*
@@ -97,10 +103,11 @@ $app->middleware([
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+    $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\GuardServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+<<<<<<< HEAD
 
 // Dingo Adapter for Lumen
 $app->register(Zeek\LumenDingoAdapter\Providers\LumenDingoAdapterServiceProvider::class);
@@ -108,6 +115,9 @@ $app->register(Zeek\LumenDingoAdapter\Providers\LumenDingoAdapterServiceProvider
 // Lumen Generator disabled it on production if you want
 $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
+=======
+    $app->register('Wn\Generators\CommandsServiceProvider');
+>>>>>>> 6c0ecea2e7b46e3a2d9af954e35681b84c1b3441
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
