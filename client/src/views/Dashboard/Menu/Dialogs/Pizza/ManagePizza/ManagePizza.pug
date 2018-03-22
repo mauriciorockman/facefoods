@@ -1,0 +1,69 @@
+.dialog-contents
+    .div
+        h1.display 
+            i.em.em-pizza
+            | - Pizzas
+        hr
+    section
+        h3.display
+            | Tamanhos
+        new-size.float-left(name="'Pizza'")
+        table.table.table-bordered.table-hover(ng-table='tablePizzaSizes')
+            tbody
+                tr(ng-repeat='pizzaSize in $data')
+                    td(class="col-sm-1", title="'Nome'", ng-attr-title="{{pizzaSize.name}}", sortable="'name'")
+                        | {{pizzaSize.name}}
+                    td(class="col-sm-1", title="'Fatias'", ng-attr-title="{{pizzaSize.slices}}", sortable="'slices'")
+                        | {{pizzaSize.slices}}
+                    td(class="col-sm-1", title="'Raio'", ng-attr-title="{{pizzaSize.radius}}", sortable="'radius'")
+                        | {{pizzaSize.radius}}cm
+                    td(class="col-sm-1", title="'Preço'", ng-attr-title="{{pizzaSize.price}}", sortable="'price'")
+                        | R${{pizzaSize.price}}                    
+                    td(class="col-sm-1")
+                        .btn-group.float-right
+                            button.btn.btn-primary(type='button')
+                                i.fas.fa-pencil-alt
+                            button.btn.btn-secondary(type='button', ng-click="delete(pizzaSize)")
+                                i.fas.fa-trash
+    section
+        h3.display
+            | Bordas
+        new-border.float-left
+        table.table.table-bordered.table-hover(ng-table='tablePizzaBorders')
+            tbody
+                tr(ng-repeat='pizzaBorder in $data')
+                    td(class="col-sm-1", title="'Nome'", ng-attr-title="{{pizzaBorder.name}}", sortable="'name'")
+                        | {{pizzaBorder.name}}
+                    td(class="col-sm-1", title="'Preço'", ng-attr-title="{{pizzaBorder.price}}", sortable="'price'")
+                        | R${{pizzaBorder.price}}                  
+                    td(class="col-sm-1")
+                        .btn-group.float-right
+                            button.btn.btn-primary(type='button')
+                                i.fas.fa-pencil-alt
+                            button.btn.btn-secondary(type='button', ng-click="delete(pizzaBorder)")
+                                i.fas.fa-trash
+    section
+        h3.display
+            | Sabores
+        new-flavor.float-left(name="'Pizza'")
+        table.table.table-bordered.table-hover(ng-table='tablePizzaFlavors')
+            tbody
+                tr(ng-repeat='pizzaFlavors in $data')
+                    td(class="col-sm-1", title="'Nome'", ng-attr-title="{{pizzaFlavors.name}}", sortable="'name'")
+                        dl
+                            dt 
+                                | {{pizzaFlavors.name}}
+                            dd
+                                small.text-muted
+                                    | {{pizzaFlavors.desc}}
+                    td(class="col-sm-1", title="'Preço'", ng-attr-title="{{pizzaFlavors.price}}", sortable="'price'", class="text-center")
+                        | {{pizzaFlavors.price || '--'}}
+                    td(class="col-sm-1", title="'Especial?'", ng-attr-title="{{pizzaFlavors.special}}", sortable="'special'", class="text-center")
+                        i.em.em-x(ng-if="!pizzaFlavors.special")
+                        i.em.em-heavy_check_mark(ng-if="pizzaFlavors.special")
+                    td(class="col-sm-1")
+                        .btn-group.float-right
+                            button.btn.btn-primary(type='button')
+                                i.fas.fa-pencil-alt
+                            button.btn.btn-secondary(type='button', ng-click="delete(pizzaFlavors)")
+                                i.fas.fa-trash
