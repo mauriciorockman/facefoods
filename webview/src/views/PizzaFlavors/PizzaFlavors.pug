@@ -9,8 +9,6 @@ section
 				// item selecionado
 				|{{currentPizza}}
 	.space-top
-
-
 	//seleção da quantidade de sabores
 	h2.titulo(ng-if='nsabores.length>1') Quantos Sabores?
 	h2.titulo(ng-if='nsabores.length==1') Qual Sabor?
@@ -21,9 +19,6 @@ section
 					input.hidden.radio-label.rb(type='radio', name='nsabores', id='n_{{x}}')
 					label.button-label(for='n_{{x}}', ng-click='setNSabores(x)')
 						h1 {{x}}
-	
-
-
 	// filtro de sabores (salgado, doce)
 	#selecao-sabores(ng-show='issetNSabores || nsabores.length == 1')
 		h2.titulo(ng-if='nsabores.length>1')  Escolha os sabores
@@ -36,12 +31,9 @@ section
 				input#sd_2.hidden.radio-label.rb(type='radio', name='salgado_doce', value='doce', ng-model='salgado_doce')
 				label.button-label(for='sd_2')
 					h1 Doces
-	
-   
 		// lista de sabores   
-		
 		#sabores-salgados.container(ng-show="salgado_doce == 'salgado'")
-			div(ng-repeat='sabor in sabores_salgados')
+			article(ng-repeat='sabor in sabores_salgados')
 				input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
 				label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
 					.row
@@ -54,10 +46,8 @@ section
 									.preco-pizza(ng-if="sabor.preco>0") {{sabor.preco}}
 							.row
 								.descricao-pizza {{sabor.descricao}}
-				
-
 		#sabores-salgados.container(ng-show="salgado_doce == 'doce'")
-			div(ng-repeat='sabor in sabores_doces')
+			article(ng-repeat='sabor in sabores_doces')
 				input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
 				label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
 					.row
@@ -70,7 +60,6 @@ section
 									.preco-pizza(ng-if="sabor.preco>0") {{sabor.preco}}
 							.row
 								.descricao-pizza {{sabor.descricao}}
-			
 	// escolha a massa
 	.space-bottom
 	a(ui-sref='resumoPedido' ng-show="nSaboresSelec == nSaboresLimit")

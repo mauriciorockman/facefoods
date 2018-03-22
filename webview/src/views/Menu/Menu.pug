@@ -1,4 +1,4 @@
-section.container(style=" background: linear-gradient(to right, #0 , #0);")
+section.container(style="background: linear-gradient(to right, #0 , #0);")
 	article
 		h2.titulo Promoções
 		.row.card-prato(ng-repeat='combo in combos')
@@ -19,8 +19,6 @@ section.container(style=" background: linear-gradient(to right, #0 , #0);")
 					p.prato-descricao {{pizza.descricao}}
 				.col-2.text-left.nopadding
 					p.prato-preco R${{pizza.preco}}
-			
-
 	article(ng-repeat="categoria in MenuData.menu.geral")
 		h2.titulo
 			| {{categoria.categoria}}

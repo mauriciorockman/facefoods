@@ -1,5 +1,4 @@
-section   
-
+section
 	.fixed-button-top
 		.row.align-vertical
 			.col-2
@@ -8,11 +7,7 @@ section
 			.col-10.text-left
 				| Resumo do seu pedido
 	.space-top
-
-
-
 	h4.titulo Resumo Do Seu Pedido
-	
 	.container
 		.row(ng-repeat="pizza in pedido.pizzas")
 			.col.container-pedido(ng-hide="pedido.pizzas[pizza.index].qtd<=0")
@@ -29,39 +24,32 @@ section
 									.prato-qtd {{pedido.pizzas[pizza.index].qtd}}
 									button.btn-qtd(ng-click="pedido.pizzas[pizza.index].qtd = pedido.pizzas[pizza.index].qtd -1; atualizaTotalPizza(pizza.index)")
 										i.fa.fa-minus
-									
 								.col-9
 									.row
 										.col-9
 											.title-resumo {{pizza.nome}}
 										.col-3.text-left.nopadding
 											.title-preco R${{pizza.preco}}
-									
 									.row
 										.col-9
 											.desc-resumo {{pizza.borda.nome}}
 										.col-3.text-left.nopadding
 											.resumo-preco(ng-if="pizza.borda.preco>0") +R${{pizza.borda.preco}}
-									
 									.row
 										.col-9
 											.desc-resumo {{pizza.massa.nome}}
 										.col-3.text-left.nopadding
 											.resumo-preco(ng-if="pizza.massa.preco>0") +R${{pizza.massa.preco}}
-									
-									div(ng-repeat="sabor in pizza.sabores")
-										.row
-											.col-9
-												.desc-resumo {{sabor.nome}}
-											.col-3.nopadding
-												.resumo-preco(ng-if="sabor.preco>0") +R${{sabor.preco}}
+									.row(ng-repeat="sabor in pizza.sabores")
+										.col-9
+											.desc-resumo {{sabor.nome}}
+										.col-3.nopadding
+											.resumo-preco(ng-if="sabor.preco>0") +R${{sabor.preco}}
 									.row
 										.col-9
 											.total-produto Subtotal
 										.col-3.text-left.nopadding
 											.total-produto-preco R${{pizza.total}}
-
-		
 		//PRATOS GERAIS
 		.row(ng-repeat="prato in pedido.geral")
 			.col.container-pedido(ng-hide="pedido.geral[prato.index].qtd<=0")
@@ -78,35 +66,26 @@ section
 									.prato-qtd {{pedido.geral[prato.index].qtd}}
 									button.btn-qtd(ng-click="pedido.geral[prato.index].qtd = pedido.geral[prato.index].qtd -1; atualizaTotalPrato(prato.index)")
 										i.fa.fa-minus
-									
 								.col-9
 									.row
 										.col-9
 											.title-resumo {{prato.nome}}
 										.col-3.text-left.nopadding
 											.title-preco R${{prato.preco}}
-									
-									div(ng-repeat="extra in pizza.prato.extras")
-										.row
-											.col-9
-												.desc-resumo {{extra.name}}
-											.col-3.nopadding
-												.resumo-preco(ng-if="sabor.preco>0") +R${{extra.price}}
+									.row(ng-repeat="extra in pizza.prato.extras")
+										.col-9
+											.desc-resumo {{extra.name}}
+										.col-3.nopadding
+											.resumo-preco(ng-if="sabor.preco>0") +R${{extra.price}}
 									.row
 										.col-9
 											.total-produto Subtotal
 										.col-3.text-left.nopadding
 											.total-produto-preco R${{prato.total}}
-
-		
-
 	.resumo-total.text-center SUBTOTAL DO PEDIDO R${{pedido.total}}
-
 	a(ui-sref='Menu')
 		button.button-label
 			p CONTINUAR COMPRANDO
-
-
 	.space-bottom
 	a(ui-sref='entrega' ng-show="pedido.total>0")
 		.fixed-button

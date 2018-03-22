@@ -1,31 +1,24 @@
 section 
-
     .fixed-button-top
         .row.align-vertical
             .col-2
                 a(ng-click="doTheBack()")
                     i.fa.fa-arrow-left
             .col-10.text-left
-                 |Forma de Entrega
+                | Forma de Entrega
     .space-top
-
-
-
     h3.titulo Entrega ou Retirada?
-
     row.text-center
         .col    
             input(type="radio" name="entrega" id="ent_1" class="hidden radio-label rb" value="entrega" ng-model="entrega" checked)
             label(for="ent_1" class="button-label")
-                        h1 ENTREGA
+                h1 ENTREGA
         .col    
             input(type="radio" name="entrega" id="ent_2" value="balcao" ng-model="entrega" class="hidden radio-label rb")
             label(for="ent_2" class="button-label")
-                        h1 RETIRADA NO BALCÃO
-
+                h1 RETIRADA NO BALCÃO
     #entrega-dados(ng-show="entrega == 'entrega'")
         h5.titulo Dados Para Entrega
-
         .container
             .row
                 .col
@@ -47,16 +40,12 @@ section
                 .col
                     h5 Complemento
                     input(type="text" ng-model='pedido.user.complemento')
-            
             .row
                 .col
                     h5 Telefone
                     input(type="text" ng-model='pedido.user.telefone')
-            
-
     #retirada-dados(ng-show="entrega == 'balcao'")
         h5.titulo Dados para Retirada
-
         .container
             .row
                 .col
@@ -66,10 +55,6 @@ section
                 .col
                     h5 Telefone
                     input(type="text" ng-model='pedido.user.telefone')
-        
-
-
-
     // escolha a massa
     .space-bottom
     a(ui-sref='pagamento')

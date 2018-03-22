@@ -1,5 +1,4 @@
 section   
-
 	.fixed-button-top
 		.row.align-vertical
 			.col-2
@@ -8,16 +7,12 @@ section
 			.col-10.text-left
 				|{{currentPizza}}
 	.space-top
-
 	.page-container
-
 		.info-container
 			h2.titulo  Escolha a borda
-
 			.container
-			div.button-wrap
-				
-				div(ng-repeat="borda in bordas")
+			section.button-wrap
+				article(ng-repeat="borda in bordas")
 					input(type="radio" name="borda" id="b_{{borda.id}}" class="hidden radio-label rb")
 					label(for="b_{{borda.id}}" class="button-label-extra" style="padding-top: 15px; padding-bottom: 15px;" ng-click = "setBorda(borda)")
 						.row
@@ -25,13 +20,11 @@ section
 								h6 {{borda.nome}}
 							.col-3.text-left
 								h1.prato-preco(ng-if="borda.preco>0")  {{borda.preco}}
-
-
 		.info-container(ng-show = "issetBorda")
 			h2.titulo  Escolha a Massa
 			.container
-			div.button-wrap
-				div(ng-repeat="massa in massas")
+			section.button-wrap
+				article(ng-repeat="massa in massas")
 					input(type="radio" name="massa" id="m_{{massa.id}}" class="hidden radio-label rb")
 					label(for="m_{{massa.id}}" class="button-label-extra" style="padding-top: 15px; padding-bottom: 15px;" ng-click = "setMassa(massa)")
 						.row
@@ -39,12 +32,6 @@ section
 								h6 {{massa.nome}}
 							.col-4.text-left
 								h1.prato-preco(ng-if="massa.preco>0") {{massa.preco}}
-
-
-
-
-
-	
 	// escolha a massa
 	.space-bottom
 	a(ui-sref='pizza-sabores' ng-show="issetBorda && issetMassa")
