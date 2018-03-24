@@ -1,39 +1,32 @@
 section   
-	.fixed-button-top
-		.row.align-vertical
-			.col-2
-				a(ng-click="doTheBack()")
-					i.fa.fa-arrow-left
-			.col-10.text-left
-				|{{currentPizza}}
+	go-back(dish="pizzaOrder.name")
 	.space-top
 	.page-container
-		.info-container
-			h2.titulo  Escolha a borda
+		.info-container(ng-if="menu.pizzas.extras.crust")
+			h2.titulo Escolha a borda
 			.container
 			section.button-wrap
-				article(ng-repeat="borda in bordas")
-					input(type="radio" name="borda" id="b_{{borda.id}}" class="hidden radio-label rb")
-					label(for="b_{{borda.id}}" class="button-label-extra" style="padding-top: 15px; padding-bottom: 15px;" ng-click = "setBorda(borda)")
+				article(ng-repeat="crust in menu.pizzas.extras.crust")
+					input(type="radio", name="crust", id="c_{{crust.id}}", class="hidden radio-label rb")
+					label(for="c_{{crust.id}}", class="button-label-extra", style="padding-top: 15px; padding-bottom: 15px;", ng-click="setCrust(crust)")
 						.row
 							.col-9.text-left
-								h6 {{borda.nome}}
+								h6 {{crust.name}}
 							.col-3.text-left
-								h1.prato-preco(ng-if="borda.preco>0")  {{borda.preco}}
-		.info-container(ng-show = "issetBorda")
-			h2.titulo  Escolha a Massa
+								h1.prato-preco(ng-if="crust.price>0") {{crust.price}}
+		.info-container(ng-if="issetCrust")
+			h2.titulo Escolha a Massa
 			.container
 			section.button-wrap
-				article(ng-repeat="massa in massas")
-					input(type="radio" name="massa" id="m_{{massa.id}}" class="hidden radio-label rb")
-					label(for="m_{{massa.id}}" class="button-label-extra" style="padding-top: 15px; padding-bottom: 15px;" ng-click = "setMassa(massa)")
+				article(ng-repeat="dough in menu.pizzas.extras.dough")
+					input(type="radio", name="dough", id="m_{{dough.id}}", class="hidden radio-label rb")
+					label(for="m_{{dough.id}}", class="button-label-extra", style="padding-top: 15px; padding-bottom: 15px;", ng-click="setDough(dough)")
 						.row
 							.col-8.text-left
-								h6 {{massa.nome}}
+								h6 {{dough.name}}
 							.col-4.text-left
-								h1.prato-preco(ng-if="massa.preco>0") {{massa.preco}}
-	// escolha a massa
+								h1.prato-preco(ng-if="dough.price>0") {{dough.price}}
 	.space-bottom
-	a(ui-sref='pizza-sabores' ng-show="issetBorda && issetMassa")
+	a(ui-sref='PizzaFlavors', ng-if="issetCrust && issetDough")
 		.fixed-button
 			p ESCOLHA OS SABORES

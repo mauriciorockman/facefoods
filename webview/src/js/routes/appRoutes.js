@@ -1,5 +1,5 @@
 app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/Menu');
+    // $urlRouterProvider.otherwise('/Menu');
     
     $stateProvider
         
@@ -9,40 +9,39 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'MenuCtrl' 
         })
 
-        .state('pizzaoptions', {
-            url: '/pizzaoptions',
-            templateUrl: 'pizzaExtra/pizzaoptions.html',
-            controller: 'MenuCtrl' 
+        .state('PizzaOptions', {
+            url: '/PizzaOptions',
+            templateUrl: 'PizzaOptions/PizzaOptions.html',
+            controller: 'PizzaOptionsCtrl' 
         })
 
-        .state('pizza-sabores', {
-            url: '/pizza-sabores',
-            templateUrl: 'pizza-sabores/sabores.html',
-            controller: 'MenuCtrl' 
+        .state('PizzaFlavors', {
+            url: '/PizzaFlavors',
+            templateUrl: 'PizzaFlavors/PizzaFlavors.html',
+            controller: 'PizzaFlavorsCtrl' 
         })
 
-        .state('entrega', {
-            url: '/entrega',
-            templateUrl: 'entrega/entrega.html',
-            controller: 'MenuCtrl' 
+        .state('Delivery', {
+            url: '/Delivery',
+            templateUrl: 'Delivery/Delivery.html',
+            controller: 'DeliveryCtrl' 
         })
 
-        .state('pagamento', {
-            url: '/pagamento',
-            templateUrl: 'pagamento/pagamento.html',
-            controller: 'MenuCtrl' 
+        .state('Payment', {
+            url: '/Payment',
+            templateUrl: 'Payment/Payment.html',
+            controller: 'PaymentCtrl' 
         })
 
-        .state('resumoPedido', {
-            url: '/resumoPedido',
-            templateUrl: 'resumoPedido/resumoPedido.html',
-            controller: 'MenuCtrl' 
+        .state('OrderReview', {
+            url: '/OrderReview',
+            templateUrl: 'OrderReview/OrderReview.html',
+            controller: 'OrderReviewCtrl' 
         })
 
-
-        .state('extraGeral', {
-            url: '/extra',
-            templateUrl: 'extraGeral/extraGeral.html',
-            controller: 'MenuCtrl' 
+        .state('ExtraGeneral', {
+            url: '/ExtraGeneral',
+            templateUrl: 'ExtraGeneral/ExtraGeneral.html',
+            controller: 'ExtraGeneralCtrl' 
         })
 }); 

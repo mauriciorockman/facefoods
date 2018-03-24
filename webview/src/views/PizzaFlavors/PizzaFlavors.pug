@@ -1,67 +1,62 @@
 section
-	.fixed-button-top
-		.row.align-vertical
-			.col-2
-				//botão de voltar
-				a(ng-click="doTheBack()") 
-					i.fa.fa-arrow-left
-			.col-10.text-left
-				// item selecionado
-				|{{currentPizza}}
+	go-back(dish="pizzaOrder.name")
 	.space-top
-	//seleção da quantidade de sabores
-	h2.titulo(ng-if='nsabores.length>1') Quantos Sabores?
-	h2.titulo(ng-if='nsabores.length==1') Qual Sabor?
-	.container(ng-if='nsabores.length>1')
+	h2.titulo
+		| {{(pizzaOrder.maxFlavors > 1) ? 'Quantos Sabores?' : 'Qual Sabor?'}}
+	.container(ng-if='pizzaOrder.maxFlavors > 1')
 		.button-wrap
 			.row
-				.col(ng-repeat='x in nsabores')
-					input.hidden.radio-label.rb(type='radio', name='nsabores', id='n_{{x}}')
-					label.button-label(for='n_{{x}}', ng-click='setNSabores(x)')
-						h1 {{x}}
+				.col(ng-repeat='i in pizzaOrder.maxFlavors | range')
+					//- FIXME: Botões continuam ativos				
+					input.hidden.radio-label.rb(type='radio', id='n_{{i}}')
+					label.button-label(for='n_{{i}}', ng-click='setUserMax(i)')
+						h1 {{i}}
 	// filtro de sabores (salgado, doce)
-	#selecao-sabores(ng-show='issetNSabores || nsabores.length == 1')
-		h2.titulo(ng-if='nsabores.length>1')  Escolha os sabores
+	#selecao-sabores(ng-show='issetUserMax || pizzaOrder.maxFlavors == 1')
+		h2.titulo(ng-if='pizzaOrder.maxFlavors > 1') Escolha os sabores
 		.row.text-center
 			.col
-				input#sd_1.hidden.radio-label.rb(type='radio', name='salgado_doce', value='salgado', ng-model='salgado_doce', ng-checked='true')
+				//- FIXME: Botões continuam ativos
+				input#sd_1.hidden.radio-label.rb(type='radio', ng-click="selected = 'savory'")
 				label.button-label(for='sd_1')
 					h1 Salgadas
 			.col
-				input#sd_2.hidden.radio-label.rb(type='radio', name='salgado_doce', value='doce', ng-model='salgado_doce')
+				//- FIXME: Botões continuam ativos			
+				input#sd_2.hidden.radio-label.rb(type='radio', ng-click="selected = 'sweet'")
 				label.button-label(for='sd_2')
 					h1 Doces
 		// lista de sabores   
-		#sabores-salgados.container(ng-show="salgado_doce == 'salgado'")
-			article(ng-repeat='sabor in sabores_salgados')
-				input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
-				label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
+		#sabores-salgados.container(ng-show="selected == 'savory'")
+			article(ng-repeat='savory in menu.pizzas.flavors.savory')
+				//- FIXME: Checkbox fora do retângulo da opção
+				input.cb(type='checkbox', ng-checked='selectedFlavors.ids[savory.id]')
+				label.cb-label(ng-click='addFlavor(savory)')
 					.row
 						.col-2
 						.col-10
 							.row
 								.col-9
-									.sabor-pizza {{sabor.sabor}}
+									.sabor-pizza {{savory.flavor}}
 								.col-3
-									.preco-pizza(ng-if="sabor.preco>0") {{sabor.preco}}
+									.preco-pizza(ng-if="savory.price>0") {{savory.price}}
 							.row
 								.descricao-pizza {{sabor.descricao}}
-		#sabores-salgados.container(ng-show="salgado_doce == 'doce'")
-			article(ng-repeat='sabor in sabores_doces')
-				input.cb(type='checkbox', id='sb_{{sabor.id}}', ng-model='sabor.selected', ng-change='addSaborPizza(sabor.selected)', ng-disabled='nSaboresSelec == nSaboresLimit && sabor.selected == false')
-				label.cb-label(for='sb_{{sabor.id}}', ng-click='addSabor(sabor)')
+		#sabores-salgados.container(ng-show="selected == 'sweet'")
+			article(ng-repeat='sweet in menu.pizzas.flavors.sweet')
+				//- FIXME: Checkbox fora do retângulo da opção
+				input.cb(type='checkbox', ng-checked='selectedFlavors.ids[sweet.id]')
+				label.cb-label(ng-click='addFlavor(sweet)')
 					.row
 						.col-2
 						.col-10
 							.row
 								.col-9
-									.sabor-pizza {{sabor.sabor}}
+									.sabor-pizza {{sweet.flavor}}
 								.col-3
-									.preco-pizza(ng-if="sabor.preco>0") {{sabor.preco}}
+									.preco-pizza(ng-if="sweet.price>0") {{sweet.price}}
 							.row
-								.descricao-pizza {{sabor.descricao}}
-	// escolha a massa
+								.descricao-pizza {{sweet.description}}
 	.space-bottom
-	a(ui-sref='resumoPedido' ng-show="nSaboresSelec == nSaboresLimit")
+	a(ng-if="pizzaOrder.flavors.userMax && selectedFlavors.size == pizzaOrder.flavors.userMax")
 		.fixed-button
 			p PRÓXIMO

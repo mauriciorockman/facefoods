@@ -42,7 +42,8 @@
 
 //   v1.0 2018-03-10, Marlon:
 //     - Versão inicial.
-
+//   v1.1 2018-03-22, Marlon:
+//     - Adição de tarefa para controle de JSON e ngResource no Vendor 
 
 
 // Licença: GPL.
@@ -94,6 +95,10 @@ var path = {
     'src/js/**/*.js',
     'src/views/**/*.js'
   ],
+  // Arquivos com dados de teste que devem ser modidos para dist/js/*.json
+  JSON: [
+    'src/js/configs/*.json'
+  ],
   // Arquivos css que devem ser minificados, concatenados e movidos para a 
   // /dist/css/styles.css
   CSS: [
@@ -113,6 +118,7 @@ var path = {
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
     'node_modules/angular-touch/angular-touch.min.js',
     'node_modules/angularjs-toaster/toaster.js',
+    'node_modules/angular-resource/angular-resource.min.js'
   ],
   // Pasta de destino dos arquivos que passam por tarefas de minificação,
   // compressão, concatenação, conversão, ou simplesmente troca de diretório
@@ -167,6 +173,13 @@ gulp.task('js', function () {
     .pipe(reload({stream:true})); // Atualiza a aba do browser (caso existente)
 });
 
+// Move arquvios JSON para dist/js/*.json
+gulp.task('json', function () {
+  gulp.src(path.JSON) // Seleciona arquivos
+    .pipe(gulp.dest(path.DIST + '/js')) // Move arquivos para dist/js/
+    .pipe(reload({stream:true})); // Atualiza a aba do browser (caso existente)
+});
+
 // Concatena todas as bibliotecas de terceiros da variavel path.VENDOR, minifica 
 // e move para dist/js/vendor.js, atualiza a aba do browser (caso existente)
 gulp.task('vendor', function () {
@@ -206,9 +219,10 @@ gulp.task('watch', function () {
   gulp.watch(path.CSS, ['css']);
   gulp.watch(path.VENDOR, ['vendor']);
   gulp.watch(path.TEMPLATING.concat(path.JS), ['js']);
+  gulp.watch(path.JSON, ['json'])
   gulp.watch(path.FILES.concat(path.INDEX), ['files']);
 });
 
 // Definição de 'bundle' de tarefas
-gulp.task('default', ['css', 'js', 'vendor', 'files', 'img']);
+gulp.task('default', ['css', 'js', 'vendor', 'files', 'img', 'json']);
 gulp.task('serve', ['watch', 'browserSync']);

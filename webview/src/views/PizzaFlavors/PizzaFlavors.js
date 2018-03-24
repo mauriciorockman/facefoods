@@ -1,3 +1,23 @@
-app.controller('PizzaFlavorsCtrl', ['$scope', '$rootScope', 'toaster', function($scope, $rootScope, toaster) {
+app.controller('PizzaFlavorsCtrl', ['$scope', 'pizzaOrderFactory', 'toaster', function($scope, pizzaOrderFactory, toaster) {
+    $scope.selectedFlavors = {ids:[], size:0};
+    
+    $scope.setUserMax = function(max){
+        $scope.issetUserMax = pizzaOrderFactory.setUserMax(max);
+    }
 
+    $scope.addFlavor = function(flavor){
+        switch (pizzaOrderFactory.addFlavor(flavor)) {
+            case true:
+                $scope.selectedFlavors.ids[flavor.id] = true;
+                $scope.selectedFlavors.size++;
+                break;
+            case false:
+                $scope.selectedFlavors.ids.splice(flavor.id, 1);
+                $scope.selectedFlavors.size--;                
+                break;
+            case 'full':
+                toaster.pop('info', 'Cheio', 'Foi escolhido sabores demais.')
+                break;
+        }
+    }
 }]);

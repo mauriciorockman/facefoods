@@ -78,7 +78,6 @@ section{
 	padding: 5px;
 	text-align: center !important;
 	background: linear-gradient(to bottom, #e52d27 , #b31217);
-	border-top: 3px solid white;
 }
 
 .fixed-button:hover{
