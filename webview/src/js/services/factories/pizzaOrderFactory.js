@@ -34,29 +34,33 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
         $rootScope.pizzaOrder.name = pizza.name;
         $rootScope.pizzaOrder.price = pizza.price;
         $rootScope.pizzaOrder.maxFlavors = pizza.maxFlavors;
+        // Setar o UserMax ao adicionar a pizza, corrigindo o bug quando o maxFlavors==1
+        pizzaOrderFactory.setUserMax(pizza.maxFlavors);
     };
 
     pizzaOrderFactory.setCrust = function (crust) {
         $rootScope.pizzaOrder.crust.id = crust.id;
         $rootScope.pizzaOrder.crust.name = crust.name;
         $rootScope.pizzaOrder.crust.price = crust.price;
-        return true
+        return true;
     };
 
     pizzaOrderFactory.setDough = function (dough) {
         $rootScope.pizzaOrder.dough.id = dough.id;
         $rootScope.pizzaOrder.dough.name = dough.name;
         $rootScope.pizzaOrder.dough.price = dough.price;
-        return true
+        return true;
     };
 
     pizzaOrderFactory.setUserMax = function (max) {
         $rootScope.pizzaOrder.flavors.userMax = max;
-        return true
+        return true;
     }
 
     pizzaOrderFactory.addFlavor = function (flavor) {
         var intFlavors = $rootScope.pizzaOrder.flavors.selected.length;
+
+        console.log($rootScope.pizzaOrder);
 
         // Checa se sabor já não foi adicionado, se já, remove da lista de sabores.
         // Encerra a função.        
@@ -64,7 +68,7 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
             for(i = 0; i < intFlavors; i++){
                 if($rootScope.pizzaOrder.flavors.selected[i].id == flavor.id){
                     $rootScope.pizzaOrder.flavors.selected.splice(i, 1);
-                    return false
+                    return false;
                 }
             }    
         }
@@ -85,6 +89,8 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
         }else{
             return 'full';
         }
+
+        console.log(intFlavors);
     };
 
     pizzaOrderFactory.finish = function () {

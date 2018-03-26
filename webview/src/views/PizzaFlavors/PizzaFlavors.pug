@@ -8,27 +8,31 @@ section
 			.row
 				.col(ng-repeat='i in pizzaOrder.maxFlavors | range')
 					//- FIXME: Botões continuam ativos				
-					input.hidden.radio-label.rb(type='radio', id='n_{{i}}')
+					input.hidden.radio-label.rb(type='radio', id='n_{{i}}' name="qty_flavors")
 					label.button-label(for='n_{{i}}', ng-click='setUserMax(i)')
 						h1 {{i}}
+
+
 	// filtro de sabores (salgado, doce)
 	#selecao-sabores(ng-show='issetUserMax || pizzaOrder.maxFlavors == 1')
 		h2.titulo(ng-if='pizzaOrder.maxFlavors > 1') Escolha os sabores
 		.row.text-center
 			.col
-				//- FIXME: Botões continuam ativos
-				input#sd_1.hidden.radio-label.rb(type='radio', ng-click="selected = 'savory'")
+
+				input#sd_1.hidden.radio-label.rb(type='radio', ng-click="selected = 'savory'" name='salgado_doce')
 				label.button-label(for='sd_1')
 					h1 Salgadas
 			.col
-				//- FIXME: Botões continuam ativos			
-				input#sd_2.hidden.radio-label.rb(type='radio', ng-click="selected = 'sweet'")
+		
+				input#sd_2.hidden.radio-label.rb(type='radio', ng-click="selected = 'sweet'" name='salgado_doce')
 				label.button-label(for='sd_2')
 					h1 Doces
+
+
 		// lista de sabores   
 		#sabores-salgados.container(ng-show="selected == 'savory'")
 			article(ng-repeat='savory in menu.pizzas.flavors.savory')
-				//- FIXME: Checkbox fora do retângulo da opção
+				
 				input.cb(type='checkbox', ng-checked='selectedFlavors.ids[savory.id]')
 				label.cb-label(ng-click='addFlavor(savory)')
 					.row
@@ -40,10 +44,10 @@ section
 								.col-3
 									.preco-pizza(ng-if="savory.price>0") {{savory.price}}
 							.row
-								.descricao-pizza {{sabor.descricao}}
+								.descricao-pizza {{savory.description}}
 		#sabores-salgados.container(ng-show="selected == 'sweet'")
 			article(ng-repeat='sweet in menu.pizzas.flavors.sweet')
-				//- FIXME: Checkbox fora do retângulo da opção
+
 				input.cb(type='checkbox', ng-checked='selectedFlavors.ids[sweet.id]')
 				label.cb-label(ng-click='addFlavor(sweet)')
 					.row

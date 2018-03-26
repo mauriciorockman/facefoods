@@ -12,12 +12,18 @@ app.controller('PizzaFlavorsCtrl', ['$scope', 'pizzaOrderFactory', 'toaster', fu
                 $scope.selectedFlavors.size++;
                 break;
             case false:
-                $scope.selectedFlavors.ids.splice(flavor.id, 1);
+                $scope.selectedFlavors.ids[flavor.id] = false;
                 $scope.selectedFlavors.size--;                
                 break;
             case 'full':
                 toaster.pop('info', 'Cheio', 'Foi escolhido sabores demais.')
                 break;
         }
+
+        // console.log("selectedFlavors: ");
+        // console.log($scope.selectedFlavors);
+        // console.log("flavor: ");
+        // console.log(flavor);
+       
     }
 }]);
