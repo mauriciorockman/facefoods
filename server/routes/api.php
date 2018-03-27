@@ -19,6 +19,10 @@ $api->version('v1', function ($api) {
         'uses' => 'App\Http\Controllers\Auth\AuthController@postLogin',
     ]);
 
+    $api->get('botman', 'App\Http\Controllers\BotManController@handle');
+
+    $api->post('botman', 'App\Http\Controllers\BotManController@handle');
+
     $api->group(['middleware' => 'api.auth',], function ($api) {
 //        $api->get('/', [
 //            'uses' => 'App\Http\Controllers\APIController@getIndex',
@@ -36,5 +40,7 @@ $api->version('v1', function ($api) {
             'uses' => 'App\Http\Controllers\Auth\AuthController@deleteInvalidate',
             'as' => 'api.auth.invalidate'
         ]);
+
+
     });
 });
