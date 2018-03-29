@@ -21,6 +21,13 @@ $api->version('v1', function ($api) {
 
     $api->get('botman', 'App\Http\Controllers\BotManController@handle');
 
+    $api->get('orders', function (){
+
+        $orders = App\Order::all();
+
+        return view('orders', compact('orders'));
+    });
+
     $api->post('botman', 'App\Http\Controllers\BotManController@handle');
 
     $api->group(['middleware' => 'api.auth',], function ($api) {

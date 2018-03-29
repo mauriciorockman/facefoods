@@ -27,10 +27,13 @@ class CreateClientsTable extends Migration
             $table->double('total_spent', 8, 2);
             $table->integer('bot_status');
 
+
             $table->timestamps();
 
             $table->foreign('restaurant_id')->references('id')->on('restaurants');
         });
+
+
     }
 
     /**
