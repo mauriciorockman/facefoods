@@ -4,6 +4,7 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
     var pizzaOrderFactory = {};
     var template = {
         id: 0,
+        type: "pizza",
         name: "",
         price: 0,
         qty: 1,
@@ -60,8 +61,6 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
     pizzaOrderFactory.addFlavor = function (flavor) {
         var intFlavors = $rootScope.pizzaOrder.flavors.selected.length;
 
-        console.log($rootScope.pizzaOrder);
-
         // Checa se sabor já não foi adicionado, se já, remove da lista de sabores.
         // Encerra a função.        
         if(intFlavors != 0){
@@ -94,7 +93,7 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
     };
 
     pizzaOrderFactory.finish = function () {
-        shopCartFactory.addPizza($rootScope.pizzaOrder);
+        shopCartFactory.addOrder($rootScope.pizzaOrder);
         pizzaOrderFactory.reset();
     }
 

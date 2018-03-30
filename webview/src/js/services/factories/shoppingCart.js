@@ -14,25 +14,79 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
                 complemento: "",
                 phone: "996910811"
             },
-            pizzas: [],
-            general: []
+            orders: []
         };
     }
 
-    shopCartFactory.addPizza = function (pizza) {
-        $rootScope.shoppingCart.pizzas.push(pizza);
+    function searchOrderByID(id){
+        var found
+        $rootScope.shoppingCart.orders.forEach( function(order, i){
+            if(order.id == id){
+                found = i;
+            }
+        })
+        return found
     }
 
-    shopCartFactory.addProduct = function (product) {
-        $rootScope.shoppingCart.general.push({
-            name: product.name,
-            price: product.price,
-            qty: 1,
-            id: product.id,
-            availableExtras: product.extras,
-            extras: []
-        })
+    shopCartFactory.addOrder = function (dish) {
+        $rootScope.shoppingCart.orders.push(dish);
     }
+
+    shopCartFactory.deleteOrder = function(id){
+        var index = searchOrderByID(id)
+        if(index != undefined){
+            $rootScope.shoppingCart.orders.splice(index, 1);
+        }
+    }
+
+    shopCartFactory.decrementOrder = function(id){
+        var index = searchOrderByID(id)
+        if(index != undefined && $rootScope.shoppingCart.orders[index].qty>1){
+            $rootScope.shoppingCart.orders[index].qty--;
+        }
+    }
+
+    shopCartFactory.incrementOrder = function(id){
+        var index = searchOrderByID(id)
+        if(index != undefined){
+            $rootScope.shoppingCart.orders[index].qty++;
+        }
+    }
+
+    shopCartFactory.subTotal = function(order){
+        if(order.type == 'pizza'){
+            var totalFlavors = 0;
+
+            order.flavors.selected.forEach( function(flavor){
+                totalFlavors += parseFloat(flavor.price);                
+            })
+            
+            return((totalFlavors+parseFloat(order.dough.price)+parseFloat(order.crust.price)+parseFloat(order.price))*order.qty);
+        }
+
+    }
+
+    shopCartFactory.total = function(){
+        total = 0;
+
+        $rootScope.shoppingCart.orders.forEach( function(order){
+            total += shopCartFactory.subTotal(order)
+        });
+
+        return total;
+    }
+
+    // shopCartFactory.addProduct = function (product) {
+    //     $rootScope.shoppingCart.orders.push({
+    //         type: 'general',
+    //         name: product.name,
+    //         price: product.price,
+    //         qty: 1,
+    //         id: product.id,
+    //         availableExtras: product.extras,
+    //         extras: []
+    //     })
+    // }
 
     return shopCartFactory;
 }]);

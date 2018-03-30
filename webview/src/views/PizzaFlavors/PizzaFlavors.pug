@@ -1,5 +1,5 @@
 section
-	go-back(dish="pizzaOrder.name")
+	go-back(message="pizzaOrder.name")
 	.space-top
 	h2.titulo
 		| {{(pizzaOrder.maxFlavors > 1) ? 'Quantos Sabores?' : 'Qual Sabor?'}}
@@ -61,6 +61,6 @@ section
 							.row
 								.descricao-pizza {{sweet.description}}
 	.space-bottom
-	a(ng-if="pizzaOrder.flavors.userMax && selectedFlavors.size == pizzaOrder.flavors.userMax")
+	a(ng-click='finish()', ng-if="pizzaOrder.flavors.userMax && selectedFlavors.size == pizzaOrder.flavors.userMax")
 		.fixed-button
-			p PRÓXIMO
+			p CHECAR PEDIDO

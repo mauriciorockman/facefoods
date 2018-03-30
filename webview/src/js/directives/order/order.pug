@@ -1,0 +1,27 @@
+section
+    .row
+        .col-9
+            .title-resumo {{order.name}}
+        .col-3.text-left.nopadding
+            .title-preco R${{order.price}}
+    .row(ng-repeat="extra in order.extras" ng-if="order.type=='general'")
+        .col-9
+            .desc-resumo {{extra.name}}
+        .col-3.nopadding
+            .resumo-preco(ng-if="extra.price>0") +R${{extra.price}}
+    article(ng-if="order.type=='pizza'")
+        .row
+            .col-9
+                .desc-resumo {{order.crust.name}}
+            .col-3.text-left.nopadding
+                .resumo-preco(ng-if="order.crust.price>0") +R${{order.crust.price}}
+        .row
+            .col-9
+                .desc-resumo {{order.dough.name}}
+            .col-3.text-left.nopadding
+                .resumo-preco(ng-if="order.dough.price>0") +R${{order.dough.price}}
+        .row(ng-repeat="flavor in order.flavors")
+            .col-9
+                .desc-resumo {{flavor.name}}
+            .col-3.nopadding
+                .resumo-preco(ng-if="flavor.price>0") +R${{flavor.price}}

@@ -1,4 +1,4 @@
-app.controller('PizzaFlavorsCtrl', ['$scope', 'pizzaOrderFactory', 'toaster', function($scope, pizzaOrderFactory, toaster) {
+app.controller('PizzaFlavorsCtrl', ['$scope', 'pizzaOrderFactory', 'toaster', '$state', function($scope, pizzaOrderFactory, toaster, $state) {
     $scope.selectedFlavors = {ids:[], size:0};
     
     $scope.setUserMax = function(max){
@@ -25,5 +25,10 @@ app.controller('PizzaFlavorsCtrl', ['$scope', 'pizzaOrderFactory', 'toaster', fu
         // console.log("flavor: ");
         // console.log(flavor);
        
+    }
+
+    $scope.finish = function(){
+        pizzaOrderFactory.finish();
+        $state.go('OrderReview')
     }
 }]);

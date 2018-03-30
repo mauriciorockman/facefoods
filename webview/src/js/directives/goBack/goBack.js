@@ -4,7 +4,7 @@ app.directive('goBack', function(){
         templateUrl: 'directives/goBack/goBack.html',
         replace: true,
         scope: {
-            dish: '=dish'
+            message: '=message'
         },
         controller: function($scope){
             $scope.goBack = function(){
