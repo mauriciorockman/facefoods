@@ -5,13 +5,13 @@
                 "image": "img1.jpg",
                 "name": "PIZZA GRANDE SALGADA + PIZZA DOCE PEQUENA + REFRIGERANTE 2L",
                 "description": "Descrição dessa promoção",
-                "price": "65"
+                "price": 65
             },
             {
                 "image": "img1.jpg",
                 "name": "PIZZA GIGANTE SALGADA + PIZZA DOCE PEQUENA + REFRIGERANTE 2L",
                 "description": "Descrição dessa promoção",
-                "price": "75"
+                "price": 75
             }
         ],
         "pizzas": {
@@ -19,36 +19,36 @@
                 {
                     "name": "Pizza Broto",
                     "description": "25cm e 4 fatias",
-                    "price": "18",
-                    "id": "1",
+                    "price": 18,
+                    "id": 1,
                     "maxFlavors": 1
                 },
                 {
                     "name": "Pizza Pequena",
                     "description": "30 cm e 6 fatias",
-                    "price": "22",
-                    "id": "2",
+                    "price": 22,
+                    "id": 2,
                     "maxFlavors": 1
                 },
                 {
                     "name": "Pizza Média",
                     "description": "35 cm e 8 fatias",
-                    "price": "27",
-                    "id": "3",
+                    "price": 27,
+                    "id": 3,
                     "maxFlavors": 2
                 },
                 {
                     "name": "Pizza Grande",
                     "description": "40 cm e 12 fatias",
-                    "price": "34",
-                    "id": "4",
+                    "price": 34,
+                    "id": 4,
                     "maxFlavors": 3
                 },
                 {
                     "name": "Pizza Gigante",
                     "description": "45 cm e 16 fatias",
-                    "price": "38",
-                    "id": "5",
+                    "price": 38,
+                    "id": 5,
                     "maxFlavors": 4
                 }
             ],
@@ -57,40 +57,40 @@
                     {
                         "name": "Borda de Catupiry",
                         "description": "",
-                        "price": "5",
-                        "id": "1"
+                        "price": 5,
+                        "id": 1
                     },
                     {
                         "name": "Borda de Cheddar",
                         "description": "",
-                        "price": "5",
-                        "id": "2"
+                        "price": 5,
+                        "id": 2
                     },
                     {
                         "name": "Sem Borda",
                         "description": "",
-                        "price": "0",
-                        "id": "3"
+                        "price": 0,
+                        "id": 3
                     }
                 ],
                 "dough": [
                     {
                         "name": "Massa fina",
                         "description": "",
-                        "price": "0",
-                        "id": "1"
+                        "price": 0,
+                        "id": 1
                     },
                     {
                         "name": "Massa Média",
                         "description": "",
-                        "price": "0",
-                        "id": "2"
+                        "price": 0,
+                        "id": 2
                     },
                     {
                         "name": "Massa Grossa",
                         "description": "",
-                        "price": "1",
-                        "id": "3"
+                        "price": 1,
+                        "id": 3
                     }
                 ]
             },
@@ -99,99 +99,99 @@
                     {
                         "flavor": "ALHO E ÓLEO",
                         "description": "feita com alho frito e molho de alho.",
-                        "price": "0",
-                        "id": "1",
+                        "price": 0,
+                        "id": 1,
                         "selected": false
                     },
                     {
                         "flavor": "AIPIM COM BACON",
                         "description": "molho, purê de aipim e bacon",
-                        "price": "0",
-                        "id": "2",
+                        "price": 0,
+                        "id": 2,
                         "selected": false
                     },
                     {
                         "flavor": "BACON",
                         "description": "molho, mussarela e bacon.",
-                        "price": "0",
-                        "id": "9",
+                        "price": 0,
+                        "id": 9,
                         "selected": false
                     },
                     {
                         "flavor": "BAIANA",
                         "description": "molho, mussarela, calabresa, molho de pimenta, ovos e cebola.",
-                        "price": "0",
-                        "id": "10",
+                        "price": 0,
+                        "id": 10,
                         "selected": false
                     },
                     {
                         "flavor": "BOLONHESA",
                         "description": "coxão mole moído sem nenhuma gordura, milho e parmesão.",
-                        "price": "0",
-                        "id": "11",
+                        "price": 0,
+                        "id": 11,
                         "selected": false
                     },
                     {
                         "flavor": "BRASILEIRA",
                         "description": "frango, presunto, tomate e queijo minas.",
-                        "price": "0",
-                        "id": "12",
+                        "price": 0,
+                        "id": 12,
                         "selected": false
                     },
                     {
                         "flavor": "BRÓCOLIS",
                         "description": "com bacon ou alho.",
-                        "price": "0",
-                        "id": "13",
+                        "price": 0,
+                        "id": 13,
                         "selected": false
                     },
                     {
                         "flavor": "CAMARÃO",
                         "description": "camarões médios com ou sem Catupiry®.",
-                        "price": "5",
-                        "id": "3",
+                        "price": 5,
+                        "id": 3,
                         "selected": false
                     },
                     {
                         "flavor": "CATARINENSE",
                         "description": "lombo, bacon, palmito e Catupiry®.",
-                        "price": "5",
-                        "id": "4",
+                        "price": 5,
+                        "id": 4,
                         "selected": false
                     },
                     {
                         "flavor": "CATARINENSE",
                         "description": "lombo, bacon, palmito e Catupiry®.",
-                        "price": "3",
-                        "id": "14",
+                        "price": 3,
+                        "id": 14,
                         "selected": false
                     },
                     {
                         "flavor": "ESCONDIDINHO DE CARNE SECA",
                         "description": "molho, mussarela, purê de aipim, carne seca desfiada.",
-                        "price": "3",
-                        "id": "15",
+                        "price": 3,
+                        "id": 15,
                         "selected": false
                     },
                     {
                         "flavor": "ESTROGONOFE DE CAMARÃO",
                         "description": "camarões médios com molho especial de estrogonofe e batata palha.",
-                        "price": "4",
-                        "id": "16",
+                        "price": 4,
+                        "id": 16,
                         "selected": false
                     },
                     {
                         "flavor": "ESTROGONOFE DE MIGNON",
                         "description": "mignon com molho especial de estrogonofe e batata palha.",
-                        "price": "3",
-                        "id": "17",
+                        "price": 3,
+                        "id": 17,
                         "selected": false
                     },
                     {
                         "flavor": "FRANCESA",
                         "description": "peperoni com palmito.",
-                        "price": "3",
-                        "id": "18",
+                        "price": 3,
+                        "id": 18,
                         "selected": false
                     }
                 ],
@@ -199,64 +199,64 @@
                     {
                         "flavor": "BANANA COM CHOCOLATE:",
                         "description": "banana, chocolate preto ou branco.",
-                        "price": "1",
-                        "id": "5",
+                        "price": 1,
+                        "id": 5,
                         "selected": false
                     },
                     {
                         "flavor": "CAPUCCINO",
                         "description": "chocolate preto ou branco com café.",
-                        "price": "1",
-                        "id": "6",
+                        "price": 1,
+                        "id": 6,
                         "selected": false
                     },
                     {
                         "flavor": "AMAZÔNIA",
                         "description": "açaí com leite condensado.",
-                        "price": "0",
-                        "id": "19",
+                        "price": 0,
+                        "id": 19,
                         "selected": false
                     },
                     {
                         "flavor": "BANANA AO RUN",
                         "description": "banana, chocolate preto ou branco e licor de run.",
-                        "price": "1",
-                        "id": "20",
+                        "price": 1,
+                        "id": 20,
                         "selected": false
                     },
                     {
                         "flavor": "BANANA COM CANELA",
                         "description": "banana e canela",
-                        "price": "1",
-                        "id": "21",
+                        "price": 1,
+                        "id": 21,
                         "selected": false
                     },
                     {
                         "flavor": "BANANA COM CHOCOLATE",
                         "description": "banana, chocolate preto ou branco.",
-                        "price": "0",
-                        "id": "22",
+                        "price": 0,
+                        "id": 22,
                         "selected": false
                     },
                     {
                         "flavor": "BANANA NEVADA",
                         "description": "banana caramelada e claras em neve.",
-                        "price": "0",
-                        "id": "23",
+                        "price": 0,
+                        "id": 23,
                         "selected": false
                     },
                     {
                         "flavor": "JAPONESA",
                         "description": " chocolate preto ou branco com cerejas e calda de cereja.",
-                        "price": "5",
-                        "id": "7",
+                        "price": 5,
+                        "id": 7,
                         "selected": false
                     },
                     {
                         "flavor": "TRUFAS",
                         "description": "chocolate preto com licor de cacau.",
-                        "price": "6",
-                        "id": "8",
+                        "price": 6,
+                        "id": 8,
                         "selected": false
                     }
                 ]
@@ -269,29 +269,29 @@
                     {
                         "name": "Coca Cola 2L",
                         "description": "",
-                        "price": "9",
-                        "id": "1",
+                        "price": 9,
+                        "id": 1,
                         "extras": []
                     },
                     {
                         "name": "Kuat 2L",
                         "description": "",
-                        "price": "7",
-                        "id": "2",
+                        "price": 7,
+                        "id": 2,
                         "extras": []
                     },
                     {
                         "name": "Sprite 2L",
                         "description": "",
-                        "price": "8",
-                        "id": "3",
+                        "price": 8,
+                        "id": 3,
                         "extras": []
                     },
                     {
                         "name": "Fanta Laranja 1,5L",
                         "description": "",
-                        "price": "7",
-                        "id": "4",
+                        "price": 7,
+                        "id": 4,
                         "extras": []
                     }
                 ]
@@ -302,29 +302,29 @@
                     {
                         "name": "RISOTO DE ALHO PORÓ, 1 PESSOA",
                         "description": "Arroz arbóreo, Alho poró, alho fresco triturado, queijo parmesão, cebola picada, salsinha fresca, vinho branco e temperos",
-                        "price": "34",
-                        "id": "5",
+                        "price": 34,
+                        "id": 5,
                         "extras": []
                     },
                     {
                         "name": "RISOTO DE ALHO PORÓ, 2 PESSOAS",
                         "description": "Arroz arbóreo, Alho poró, alho fresco triturado, queijo parmesão, cebola picada, salsinha fresca, vinho branco e temperos",
-                        "price": "55",
-                        "id": "6",
+                        "price": 55,
+                        "id": 6,
                         "extras": []
                     },
                     {
                         "name": "RISOTO DE LINGUIÇA BLUMENAL, 1 PESSOA",
                         "description": "Arroz arbóreo, Alho poró, alho fresco triturado, queijo parmesão, cebola picada, salsinha fresca, vinho branco e temperos",
-                        "price": "34",
-                        "id": "7",
+                        "price": 34,
+                        "id": 7,
                         "extras": []
                     },
                     {
                         "name": "RISOTO DE LINGUIÇA BLUMENAL, 2 PESSOAS",
                         "description": "Arroz arbóreo, Alho poró, alho fresco triturado, queijo parmesão, cebola picada, salsinha fresca, vinho branco e temperos",
-                        "price": "54",
-                        "id": "8",
+                        "price": 54,
+                        "id": 8,
                         "extras": []
                     }
                 ]
@@ -335,77 +335,77 @@
                     {
                         "name": "Fetuccine, 1 Pessoa",
                         "description": "Porção para 1 pessoa (aprox. 450 gramas)",
-                        "price": "29",
-                        "id": "9",
+                        "price": 29,
+                        "id": 9,
                         "extras": [
-                            "1",
-                            "2"
+                            1,
+                            2
                         ]
                     },
                     {
                         "name": "Fetuccine, 2 Pessoas",
                         "description": "Porção para 2 pessoas (aprox. 900 gramas)",
-                        "price": "50",
-                        "id": "10",
+                        "price": 50,
+                        "id": 10,
                         "extras": [
-                            "1",
-                            "2"
+                            1,
+                            2
                         ]
                     },
                     {
                         "name": "Nhoque, 1 Pessoa",
                         "description": "Massa Nhoque com molho preferencial para 1 pessoa (450 gramas aproximadamente)",
-                        "price": "29",
-                        "id": "11",
+                        "price": 29,
+                        "id": 11,
                         "extras": []
                     },
                     {
                         "name": "Nhoque, 2 Pessoas",
                         "description": "Massa Nhoque com molho preferencial para 2 pessoas (900 gramas aproximadamente)",
-                        "price": "50",
-                        "id": "12",
+                        "price": 50,
+                        "id": 12,
                         "extras": []
                     },
                     {
                         "name": "Pappardelle, 1 pessoa",
                         "description": "Porção para 1 pessoa. (450 gramas aproximadamente)",
-                        "price": "30",
-                        "id": "13",
+                        "price": 30,
+                        "id": 13,
                         "extras": []
                     },
                     {
                         "name": "Pappardelle, 2 pessoas",
                         "description": "Porção para 2 pessoas. (900 gramas aproximadamente)",
-                        "price": "40",
-                        "id": "14",
+                        "price": 40,
+                        "id": 14,
                         "extras": []
                     },
                     {
                         "name": "Penne, 1 Pessoa",
                         "description": "Porção para 1 pessoa. (450 gramas aproximadamente)",
-                        "price": "30",
-                        "id": "15",
+                        "price": 30,
+                        "id": 15,
                         "extras": []
                     },
                     {
                         "name": "Penne, 2 pessoas",
                         "description": "Porção para 2 pessoas. (900 gramas aproximadamente)",
-                        "price": "50",
-                        "id": "16",
+                        "price": 50,
+                        "id": 16,
                         "extras": []
                     },
                     {
                         "name": "Spaghetti, 1 pessoa",
                         "description": "Porção para 1 pessoa. (450 gramas aproximadamente)",
-                        "price": "30",
-                        "id": "17",
+                        "price": 30,
+                        "id": 17,
                         "extras": []
                     },
                     {
                         "name": "Spaghetti, 2 pessoas",
                         "description": "Porção para 2 pessoas. (900 gramas aproximadamente)",
-                        "price": "50",
-                        "id": "18",
+                        "price": 50,
+                        "id": 18,
                         "extras": []
                     }
                 ]
@@ -416,15 +416,15 @@
                     {
                         "name": "Açaí tigela 360g",
                         "description": "escolha seus acompanhamentos",
-                        "price": "11",
-                        "id": "19",
+                        "price": 11,
+                        "id": 19,
                         "extras": []
                     },
                     {
                         "name": "Açaí, tigela 480g",
                         "description": "escolha seus acompanhamentos",
-                        "price": "14",
-                        "id": "20",
+                        "price": 14,
+                        "id": 20,
                         "extras": []
                     }
                 ]
@@ -433,54 +433,54 @@
         "extras": [
             {
                 "name": "Complemento Fettuccine",
-                "id": "1",
-                "type": "1",
+                "id": 1,
+                "type": 1,
                 "options": [
                     {
                         "name": "Alho e óleo",
                         "description": "Alho fresco triturado, óleo de soja, salsinha fresca e temperos",
-                        "price": "0",
-                        "id": "1",
+                        "price": 0,
+                        "id": 1,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "2",
+                        "price": 0,
+                        "id": 2,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "3",
+                        "price": 0,
+                        "id": 3,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "4",
+                        "price": 0,
+                        "id": 4,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "5",
+                        "price": 0,
+                        "id": 5,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "6",
+                        "price": 0,
+                        "id": 6,
                         "selected": false,
                         "qty": 0
                     }
@@ -488,56 +488,56 @@
             },
             {
                 "name": "Complemento Fettuccine 2",
-                "id": "2",
-                "type": "2",
-                "qty_max": "10",
-                "qty_min": "1",
+                "id": 2,
+                "type": 2,
+                "qty_max": 10,
+                "qty_min": 1,
                 "options": [
                     {
                         "name": "Alho e óleo",
                         "description": "Alho fresco triturado, óleo de soja, salsinha fresca e temperos",
-                        "price": "0",
-                        "id": "7",
+                        "price": 0,
+                        "id": 7,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "8",
+                        "price": 0,
+                        "id": 8,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "9",
+                        "price": 0,
+                        "id": 9,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "10",
+                        "price": 0,
+                        "id": 10,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "11",
+                        "price": 0,
+                        "id": 11,
                         "selected": false,
                         "qty": 0
                     },
                     {
                         "name": "Bolonhesa",
                         "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
-                        "price": "0",
-                        "id": "12",
+                        "price": 0,
+                        "id": 12,
                         "selected": false,
                         "qty": 0
                     }

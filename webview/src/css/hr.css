@@ -1,0 +1,16 @@
+.hrCool { 
+    padding: 0;
+    border: none; 
+    border-top: medium double #e94141; 
+    color: #dd0606; 
+    text-align: center; 
+} 
+.hrCool:after { 
+    content: "//"; 
+    display: inline-block; 
+    position: relative; 
+    top: -0.7em; 
+    font-size: 1.5em; 
+    padding: 0 0.25em; 
+    background: #fff; 
+}

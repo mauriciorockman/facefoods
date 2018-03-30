@@ -1,45 +1,41 @@
 section
-	.fixed-button-top
-		.row.align-vertical
-			.col-2
-				a(ng-click="doTheBack()")
-					i.fa.fa-arrow-left
-			.col-10.text-left
-				| {{currentProductName}}
+	go-back(message='generalOrder.name')
 	.space-top
-	.extra-container(ng-show="extra_disponivel == curr_extra_id", ng-repeat="extra_disponivel in pedido.geral[curr_dish_index].extras_disponiveis")
-		section(ng-repeat="extra in MenuData.menu.extras", ng-if="extra.id == extra_disponivel && extra.tipo == 1" )
-			h4.titulo {{extra.nome}}
-			article(ng-repeat="extra_detalhes in extra.opcoes")
-				input(type="radio" name="extra" id="ex_{{extra_detalhes.id}}" class="hidden radio-label rb")
-				label(for="ex_{{extra_detalhes.id}}" class="button-label-extra" ng-click = "")
-					.row
-						.col-10
-							.sabor-pizza {{extra_detalhes.name}}
-						.col-2
-							.preco-pizza(ng-if="sabor.preco>0") {{extra_detalhes.price}}
-					.row
-						.descricao-pizza {{extra_detalhes.description}}
-		section(ng-repeat="extra in MenuData.menu.extras" ng-if="extra.id == extra_disponivel && extra.tipo == 2" )
-			h5.titulo {{extra.nome}}
-			p mín {{extra.qtd_min}}, máx {{extra.qtd_max}}
-			article(ng-repeat="extra_detalhes in extra.opcoes")
-				.row
-					.col-3
-						button.btn-qtd(ng-click="extraChangeQty(extra_detalhes, 'mais', extra.qtd_max, extra.qtd_min ) ")
-							i.fa.fa-plus
-						.prato-qtd {{extra_detalhes.qtd}}
-						button.btn-qtd(ng-click="extraChangeQty(extra_detalhes, 'menos', extra.qtd_max, extra.qtd_min)")
-							i.fa.fa-minus
-					.col-9
+	.extra-container(ng-repeat="availableExtra in generalOrder.availableExtras")
+		//- TODO: Tornar diretiva 
+		section(ng-repeat="extra in menu.extras", ng-if="extra.id == availableExtra")
+			article(ng-if="extra.type == 1")
+				h4.titulo {{extra.name}}
+				div(ng-repeat="details in extra.options")
+					input(type="radio" id="options-{{details.id}}" name="extra" class="hidden radio-label rb")
+					label(for="options-{{details.id}}" class="button-label-extra")
 						.row
-							.col-9
-								.sabor-pizza {{extra_detalhes.name}}
-							.col-3
-								.preco-pizza(ng-if="sabor.preco>0") {{extra_detalhes.price}}
+							.col-10
+								.sabor-pizza {{details.name}}
+							.col-2
+								.preco-pizza(ng-if="details.price>0") {{details.price}}
 						.row
-							.descricao-pizza {{extra_detalhes.description}}
-				hr
+							.descricao-pizza {{details.description}}
+			article(ng-if="extra.type == 2")
+				h5.titulo {{extra.name}}
+				p.text-center mín {{extra.qty_min}}, máx {{extra.qty_max}}
+				article(ng-repeat="details in extra.options")
+					.row
+						.col-3
+							button.btn-qtd(ng-click="")
+								i.fa.fa-plus
+							.prato-qtd {{details.qty}}
+							button.btn-qtd(ng-click="")
+								i.fa.fa-minus
+						.col-9
+							.row
+								.col-9
+									.sabor-pizza {{details.name}}
+								.col-3
+									.preco-pizza(ng-if="details.price>0") {{details.price}}
+							.row
+								.descricao-pizza {{details.description}}
+					hr
 	.space-bottom
 		.fixed-button(ng-click="nextExtra()")
 			p PRÓXIMO

@@ -12,13 +12,12 @@ section.container(style="background: linear-gradient(to right, #0 , #0);")
 	article
 		h2.titulo
 			| Pizzas
-		a(ui-sref="pizzaoptions" ng-repeat='pizza in menu.pizzas.sizes' ng-click="addPizza(pizza)")
-			.row.card-prato
-				.col-10
-					h2.prato-titulo {{pizza.name}}
-					p.prato-descricao {{pizza.description}}
-				.col-2.text-left.nopadding
-					p.prato-preco R${{pizza.price}}
+		.row.card-prato(ng-repeat='pizza in menu.pizzas.sizes' ng-click="addPizza(pizza)")
+			.col-10
+				h2.prato-titulo {{pizza.name}}
+				p.prato-descricao {{pizza.description}}
+			.col-2.text-left.nopadding
+				p.prato-preco R${{pizza.price}}
 	article(ng-repeat="category in menu.general")
 		h2.titulo
 			| {{category.category}}

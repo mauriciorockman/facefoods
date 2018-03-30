@@ -1,13 +1,11 @@
 section
-	go-back(dish="Resumo do seu pedido")
-	.space-top
 	h4.titulo Resumo Do Seu Pedido
 	.container
 		.row(ng-repeat="order in shoppingCart.orders")
 			.col.container-pedido
 				.row
 					.col.text-right
-						//- TODO: Apagar pedido 
+						//- TODO: Animação de apagar pedido 
 						.btn-apagar-prato.fa.fa-times-circle(ng-click="deleteOrder(order.id)")
 				.row
 					.col
@@ -26,11 +24,14 @@ section
 											.total-produto Subtotal
 										.col-3.text-left.nopadding
 											.total-produto-preco R${{subTotal(order)}}
-	.resumo-total.text-center TOTAL DO PEDIDO R${{total()}}
-	a(ui-sref='Menu')
-		button.button-label
-			p CONTINUAR COMPRANDO
-	.space-bottom
-	a(ui-sref='entrega' ng-show="pedido.total>0")
-		.fixed-button
-			p CONFIRMAR PEDIDO
+	.container.mt-4
+		hr.hrCool
+		.row
+			.col
+				h4.display.text-center Total: R${{total()}}
+		.row
+			.col
+				button.ml-5.keepBuying.red(ui-sref="Menu", type="button") Continue comprando
+				p.text-center.my-1 ou
+				button.ml-5.keepBuying.gray(type="button") Confirme o Pedido
+				

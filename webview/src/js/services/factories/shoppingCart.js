@@ -58,10 +58,18 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
             var totalFlavors = 0;
 
             order.flavors.selected.forEach( function(flavor){
-                totalFlavors += parseFloat(flavor.price);                
+                totalFlavors += flavor.price;                
             })
             
-            return((totalFlavors+parseFloat(order.dough.price)+parseFloat(order.crust.price)+parseFloat(order.price))*order.qty);
+            return((totalFlavors+order.dough.price+order.crust.price+order.price)*order.qty);
+        }else{
+            var totalExtras = 0;
+
+            order.extras.forEach( function(extras){
+                totalExtras += extras.price
+            })
+            
+            return (totalExtras+order.price)*order.qty;
         }
 
     }
