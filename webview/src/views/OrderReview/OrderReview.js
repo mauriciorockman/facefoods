@@ -1,6 +1,4 @@
-app.controller('OrderReviewCtrl', ['$scope', '$rootScope', 'toaster', 'shopCartFactory', '$state', function($scope, $rootScope, toaster, shopCartFactory, $state) {
-    console.log($rootScope.shoppingCart);
-    
+app.controller('OrderReviewCtrl', ['$scope', '$rootScope', 'toaster', 'shopCartFactory', '$state', function($scope, $rootScope, toaster, shopCartFactory, $state) {    
     $scope.deleteOrder = function(id){
         shopCartFactory.deleteOrder(id);
         

@@ -21,7 +21,7 @@ section.container(style="background: linear-gradient(to right, #0 , #0);")
 	article(ng-repeat="category in menu.general")
 		h2.titulo
 			| {{category.category}}
-		.row.card-prato(ng-repeat='product in category.products' ng-click="addProduct(product)")
+		.row.card-prato(ng-repeat='product in category.products track by $id($index)' ng-click="addProduct(product)")
 			.col-10
 				h2.prato-titulo {{product.name}}
 				p.prato-descricao {{product.description}}

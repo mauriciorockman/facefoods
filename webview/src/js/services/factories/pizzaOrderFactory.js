@@ -88,8 +88,6 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
         }else{
             return 'full';
         }
-
-        console.log(intFlavors);
     };
 
     pizzaOrderFactory.finish = function () {

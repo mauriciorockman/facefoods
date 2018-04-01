@@ -29,6 +29,7 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
     }
 
     shopCartFactory.addOrder = function (dish) {
+        dish = JSON.parse(angular.toJson(dish));
         $rootScope.shoppingCart.orders.push(dish);
     }
 
@@ -54,6 +55,7 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
     }
 
     shopCartFactory.subTotal = function(order){
+        console.log(order);
         if(order.type == 'pizza'){
             var totalFlavors = 0;
 
@@ -64,9 +66,9 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
             return((totalFlavors+order.dough.price+order.crust.price+order.price)*order.qty);
         }else{
             var totalExtras = 0;
-
-            order.extras.forEach( function(extras){
-                totalExtras += extras.price
+            
+            order.extras.forEach( function(extra){
+                totalExtras += extra.price
             })
             
             return (totalExtras+order.price)*order.qty;
