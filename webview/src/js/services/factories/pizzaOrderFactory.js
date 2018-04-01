@@ -26,7 +26,7 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
     };
 
     pizzaOrderFactory.reset = function () {
-        $rootScope.pizzaOrder = template;
+        $rootScope.pizzaOrder = JSON.parse(angular.toJson(template));
     };
 
     pizzaOrderFactory.addPizza = function (pizza) {

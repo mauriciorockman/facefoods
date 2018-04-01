@@ -20,7 +20,7 @@ section
                 .desc-resumo {{order.dough.name}}
             .col-3.text-left.nopadding
                 .resumo-preco(ng-if="order.dough.price>0") +R${{order.dough.price}}
-        .row(ng-repeat="flavor in order.flavors")
+        .row(ng-repeat="flavor in order.flavors.selected")
             .col-9
                 .desc-resumo {{flavor.name}}
             .col-3.nopadding

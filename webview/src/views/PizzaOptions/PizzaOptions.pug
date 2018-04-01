@@ -13,7 +13,7 @@ section
 							.col-9.text-left
 								h6 {{crust.name}}
 							.col-3.text-left
-								h1.prato-preco(ng-if="crust.price>0") {{crust.price}}
+								h1.prato-preco(ng-if="crust.price>0") R${{crust.price}}
 		.info-container(ng-if="issetCrust")
 			h2.titulo Escolha a Massa
 			.container
@@ -22,10 +22,10 @@ section
 					input(type="radio", name="dough", id="m_{{dough.id}}", class="hidden radio-label rb")
 					label(for="m_{{dough.id}}", class="button-label-extra", style="padding-top: 15px; padding-bottom: 15px;", ng-click="setDough(dough)")
 						.row
-							.col-8.text-left
+							.col-9.text-left
 								h6 {{dough.name}}
-							.col-4.text-left
-								h1.prato-preco(ng-if="dough.price>0") {{dough.price}}
+							.col-3.text-left
+								h1.prato-preco(ng-if="dough.price>0") R${{dough.price}}
 	.space-bottom
 	a(ui-sref='PizzaFlavors', ng-if="issetCrust && issetDough")
 		.fixed-button

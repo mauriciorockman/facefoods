@@ -19,12 +19,6 @@ app.controller('PizzaFlavorsCtrl', ['$scope', 'pizzaOrderFactory', 'toaster', '$
                 toaster.pop('info', 'Cheio', 'Foi escolhido sabores demais.')
                 break;
         }
-
-        // console.log("selectedFlavors: ");
-        // console.log($scope.selectedFlavors);
-        // console.log("flavor: ");
-        // console.log(flavor);
-       
     }
 
     $scope.finish = function(){

@@ -11,7 +11,7 @@ app.factory('generalOrderFactory', ['$rootScope', 'shopCartFactory', function ($
     }
 
     generalOrderFactory.reset = function(){
-        $rootScope.generalOrder = template;
+        $rootScope.generalOrder = JSON.parse(angular.toJson(template));
     }
 
     generalOrderFactory.addProduct = function(product){

@@ -29,8 +29,25 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
     }
 
     shopCartFactory.addOrder = function (dish) {
-        dish = JSON.parse(angular.toJson(dish));
-        $rootScope.shoppingCart.orders.push(dish);
+        var ID;
+        dish = angular.toJson(dish);
+
+        $rootScope.shoppingCart.orders.forEach(function(order){
+            parsedOrder = JSON.parse(angular.toJson(order))
+            parsedOrder.qty = 1
+            parsedOrder = JSON.stringify(parsedOrder);
+
+            if(parsedOrder == dish){
+                ID = order.id;
+            }
+        })
+        
+        if(ID!=undefined){
+            shopCartFactory.incrementOrder(ID);
+        }else{
+            dish = JSON.parse(dish);            
+            $rootScope.shoppingCart.orders.push(dish);
+        }
     }
 
     shopCartFactory.deleteOrder = function(id){
@@ -55,7 +72,6 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
     }
 
     shopCartFactory.subTotal = function(order){
-        console.log(order);
         if(order.type == 'pizza'){
             var totalFlavors = 0;
 
