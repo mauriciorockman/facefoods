@@ -29,9 +29,13 @@ section
 		.row
 			.col
 				h4.display.text-center Total: R${{total()}}
-		.row
+	.container
+		.row.text-center
 			.col
-				button.ml-5.keepBuying.red(ui-sref="Menu", type="button") Continue comprando
-				p.text-center.my-1 ou
-				button.ml-5.keepBuying.gray(type="button") Confirme o Pedido
-				
+				button.keepBuying.red(ui-sref="Menu", type="button", style="float: none; margin: 0 auto;") Continue comprando
+			.w-100
+			.col
+				p.my-1 ou
+			.w-100
+			.col
+				button.keepBuying.gray(type="button", style="float: none; margin: 0 auto;") Confirme o Pedido
