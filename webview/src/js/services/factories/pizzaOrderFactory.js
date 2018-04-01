@@ -60,7 +60,6 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
 
     pizzaOrderFactory.addFlavor = function (flavor) {
         var intFlavors = $rootScope.pizzaOrder.flavors.selected.length;
-
         // Checa se sabor já não foi adicionado, se já, remove da lista de sabores.
         // Encerra a função.        
         if(intFlavors != 0){
@@ -80,7 +79,7 @@ app.factory('pizzaOrderFactory', ['$rootScope', 'shopCartFactory', function ($ro
             
             $rootScope.pizzaOrder.flavors.selected.push({
                 id: flavor.id,
-                name: flavor.flavor,
+                name: flavor.name,
                 price: flavor.price,
             })
             return true;

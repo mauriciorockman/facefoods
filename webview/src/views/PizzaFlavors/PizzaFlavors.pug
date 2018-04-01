@@ -31,7 +31,7 @@ section
 						.col-10
 							.row
 								.col-9
-									.sabor-pizza {{savory.flavor}}
+									.sabor-pizza {{savory.name}}
 								.col-3
 									.preco-pizza(ng-if="savory.price>0") R${{savory.price}}
 							.row
@@ -45,7 +45,7 @@ section
 						.col-10
 							.row
 								.col-9
-									.sabor-pizza {{sweet.flavor}}
+									.sabor-pizza {{sweet.name}}
 								.col-3
 									.preco-pizza(ng-if="sweet.price>0") R${{sweet.price}}
 							.row

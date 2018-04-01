@@ -97,98 +97,98 @@
             "flavors": {
                 "savory": [
                     {
-                        "flavor": "ALHO E ÓLEO",
+                        "name": "ALHO E ÓLEO",
                         "description": "feita com alho frito e molho de alho.",
                         "price": 0,
                         "id": 1,
                         "selected": false
                     },
                     {
-                        "flavor": "AIPIM COM BACON",
+                        "name": "AIPIM COM BACON",
                         "description": "molho, purê de aipim e bacon",
                         "price": 0,
                         "id": 2,
                         "selected": false
                     },
                     {
-                        "flavor": "BACON",
+                        "name": "BACON",
                         "description": "molho, mussarela e bacon.",
                         "price": 0,
                         "id": 9,
                         "selected": false
                     },
                     {
-                        "flavor": "BAIANA",
+                        "name": "BAIANA",
                         "description": "molho, mussarela, calabresa, molho de pimenta, ovos e cebola.",
                         "price": 0,
                         "id": 10,
                         "selected": false
                     },
                     {
-                        "flavor": "BOLONHESA",
+                        "name": "BOLONHESA",
                         "description": "coxão mole moído sem nenhuma gordura, milho e parmesão.",
                         "price": 0,
                         "id": 11,
                         "selected": false
                     },
                     {
-                        "flavor": "BRASILEIRA",
+                        "name": "BRASILEIRA",
                         "description": "frango, presunto, tomate e queijo minas.",
                         "price": 0,
                         "id": 12,
                         "selected": false
                     },
                     {
-                        "flavor": "BRÓCOLIS",
+                        "name": "BRÓCOLIS",
                         "description": "com bacon ou alho.",
                         "price": 0,
                         "id": 13,
                         "selected": false
                     },
                     {
-                        "flavor": "CAMARÃO",
+                        "name": "CAMARÃO",
                         "description": "camarões médios com ou sem Catupiry®.",
                         "price": 5,
                         "id": 3,
                         "selected": false
                     },
                     {
-                        "flavor": "CATARINENSE",
+                        "name": "CATARINENSE",
                         "description": "lombo, bacon, palmito e Catupiry®.",
                         "price": 5,
                         "id": 4,
                         "selected": false
                     },
                     {
-                        "flavor": "CATARINENSE",
+                        "name": "CATARINENSE",
                         "description": "lombo, bacon, palmito e Catupiry®.",
                         "price": 3,
                         "id": 14,
                         "selected": false
                     },
                     {
-                        "flavor": "ESCONDIDINHO DE CARNE SECA",
+                        "name": "ESCONDIDINHO DE CARNE SECA",
                         "description": "molho, mussarela, purê de aipim, carne seca desfiada.",
                         "price": 3,
                         "id": 15,
                         "selected": false
                     },
                     {
-                        "flavor": "ESTROGONOFE DE CAMARÃO",
+                        "name": "ESTROGONOFE DE CAMARÃO",
                         "description": "camarões médios com molho especial de estrogonofe e batata palha.",
                         "price": 4,
                         "id": 16,
                         "selected": false
                     },
                     {
-                        "flavor": "ESTROGONOFE DE MIGNON",
+                        "name": "ESTROGONOFE DE MIGNON",
                         "description": "mignon com molho especial de estrogonofe e batata palha.",
                         "price": 3,
                         "id": 17,
                         "selected": false
                     },
                     {
-                        "flavor": "FRANCESA",
+                        "name": "FRANCESA",
                         "description": "peperoni com palmito.",
                         "price": 3,
                         "id": 18,
@@ -197,63 +197,63 @@
                 ],
                 "sweet": [
                     {
-                        "flavor": "BANANA COM CHOCOLATE:",
+                        "name": "BANANA COM CHOCOLATE:",
                         "description": "banana, chocolate preto ou branco.",
                         "price": 1,
                         "id": 5,
                         "selected": false
                     },
                     {
-                        "flavor": "CAPUCCINO",
+                        "name": "CAPUCCINO",
                         "description": "chocolate preto ou branco com café.",
                         "price": 1,
                         "id": 6,
                         "selected": false
                     },
                     {
-                        "flavor": "AMAZÔNIA",
+                        "name": "AMAZÔNIA",
                         "description": "açaí com leite condensado.",
                         "price": 0,
                         "id": 19,
                         "selected": false
                     },
                     {
-                        "flavor": "BANANA AO RUN",
+                        "name": "BANANA AO RUN",
                         "description": "banana, chocolate preto ou branco e licor de run.",
                         "price": 1,
                         "id": 20,
                         "selected": false
                     },
                     {
-                        "flavor": "BANANA COM CANELA",
+                        "name": "BANANA COM CANELA",
                         "description": "banana e canela",
                         "price": 1,
                         "id": 21,
                         "selected": false
                     },
                     {
-                        "flavor": "BANANA COM CHOCOLATE",
+                        "name": "BANANA COM CHOCOLATE",
                         "description": "banana, chocolate preto ou branco.",
                         "price": 0,
                         "id": 22,
                         "selected": false
                     },
                     {
-                        "flavor": "BANANA NEVADA",
+                        "name": "BANANA NEVADA",
                         "description": "banana caramelada e claras em neve.",
                         "price": 0,
                         "id": 23,
                         "selected": false
                     },
                     {
-                        "flavor": "JAPONESA",
+                        "name": "JAPONESA",
                         "description": " chocolate preto ou branco com cerejas e calda de cereja.",
                         "price": 5,
                         "id": 7,
                         "selected": false
                     },
                     {
-                        "flavor": "TRUFAS",
+                        "name": "TRUFAS",
                         "description": "chocolate preto com licor de cacau.",
                         "price": 6,
                         "id": 8,
