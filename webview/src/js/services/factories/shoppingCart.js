@@ -91,6 +91,14 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
         }
 
     }
+    
+    shopCartFactory.zeroOrder = function(id){
+        var index = searchOrderByID(id)
+        if(index != undefined){
+            $rootScope.shoppingCart.orders[index].qty=0;
+        }
+    }
+
 
     shopCartFactory.total = function(){
         total = 0;
