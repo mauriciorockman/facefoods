@@ -1,0 +1,10 @@
+.repeat-item.ng-leave.ng-leave-active {
+	/* background-color: white; */
+	/* color: white !important; */
+    left: -100%;
+    width: -100%;
+    /* opacity: 0; */
+}
+.repeat-item {
+	transition: all linear 0.5s;
+}

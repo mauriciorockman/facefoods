@@ -1,7 +1,7 @@
 section
 	h4.titulo Resumo Do Seu Pedido
 	.container
-		.row(ng-repeat="order in shoppingCart.orders")
+		.row.repeat-item(ng-repeat="order in shoppingCart.orders")
 			.col.container-pedido
 				.row
 					.col.text-right
