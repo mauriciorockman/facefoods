@@ -2,7 +2,7 @@ section
 	h4.titulo Resumo Do Seu Pedido
 	.container
 		.row.repeat-item(ng-repeat="order in shoppingCart.orders")
-			.col.container-pedido
+			.col.container-pedido(ng-hide="order.qty <= 0")
 				.row
 					.col.text-right
 						//- TODO: Animação de apagar pedido 

@@ -16,11 +16,11 @@
 }
 
 .keepBuying.red{
-  background-color: #e52d27;
+  background: linear-gradient(to bottom, #e52d27 , #b31217);
 }
 
 .keepBuying.gray{
-  background-color: #5c5c5c;
+  background: linear-gradient(to bottom, #5e5e5e , #2c2c2c);
 }
 
 .keepBuying:hover:not(:disabled) {
