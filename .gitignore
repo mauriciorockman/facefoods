@@ -4,7 +4,9 @@
 ### Angular ###
 ## Angular ##
 # compiled output
-/dist
+webview/dist/**/*
+client/dist/**/*
+workspaceWebview.code-workspace
 /tmp
 /app/**/*.js
 /app/**/*.js.map
