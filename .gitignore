@@ -12,11 +12,15 @@ workspaceWebview.code-workspace
 /app/**/*.js.map
 
 # dependencies
-/node_modules
-/bower_components
+client/node_modules/
+client/bower_components/
+client/.vscode/*
+webview/node_modules/
+webview/bower_components/
+.vscode/*
 
 # IDEs and editors
-/.idea
+server/.idea/
 
 # misc
 /.sass-cache
@@ -35,20 +39,19 @@ testem.log
 .DS_Store
 
 ### Laravel ###
-/vendor
-node_modules/
+server/vendor/
+server/node_modules/
+server/storage/logs/*
 
 # Laravel 4 specific
 bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
-public/storage
-public/hot
-storage/*.key
-.env.*.php
-.env.php
-.env
+storage/log/
+server/.env.*.php
+server/.env.php
+server/.env
 Homestead.yaml
 Homestead.json
 
