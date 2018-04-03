@@ -1,9 +1,12 @@
 .repeat-item.ng-leave.ng-leave-active {
-	/* background-color: white; */
-	/* color: white !important; */
-    left: -100%;
-    width: -100%;
-    /* opacity: 0; */
+	background-color: white;
+	color: white !important;
+    /* left: -100%; */
+    /* width: -100%; */
+    opacity: 0;
+}
+.repeat-item.ng-enter.ng-enter-active {
+    opacity: 100%;
 }
 .repeat-item {
 	transition: all linear 0.5s;
