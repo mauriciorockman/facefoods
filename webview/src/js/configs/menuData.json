@@ -441,47 +441,41 @@
                         "description": "Alho fresco triturado, óleo de soja, salsinha fresca e temperos",
                         "price": 0,
                         "id": 1,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "Queijo",
+                        "description": "queijo",
                         "price": 0,
                         "id": 2,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "Carne",
+                        "description": "carne",
                         "price": 0,
                         "id": 3,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "Bata",
+                        "description": "batata",
                         "price": 0,
                         "id": 4,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "espinafre",
+                        "description": "espinafre",
                         "price": 0,
                         "id": 5,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "ervilha",
+                        "description": "ervilha",
                         "price": 0,
                         "id": 6,
-                        "selected": false,
                         "qty": 0
                     }
                 ]
@@ -494,51 +488,45 @@
                 "qty_min": 1,
                 "options": [
                     {
-                        "name": "Alho e óleo",
-                        "description": "Alho fresco triturado, óleo de soja, salsinha fresca e temperos",
+                        "name": "alface",
+                        "description": "alface",
                         "price": 0,
                         "id": 7,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "tomate",
+                        "description": "tomate",
                         "price": 0,
                         "id": 8,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "pimenta",
+                        "description": "pimenta",
                         "price": 0,
                         "id": 9,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "frango",
+                        "description": "frango",
                         "price": 0,
                         "id": 10,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "carne moída",
+                        "description": "carne moída",
                         "price": 0,
                         "id": 11,
-                        "selected": false,
                         "qty": 0
                     },
                     {
-                        "name": "Bolonhesa",
-                        "description": "Molho de Tomate Especial, carne moída, tomate, vinho tinto e temperos",
+                        "name": "tempero",
+                        "description": "tempero",
                         "price": 0,
                         "id": 12,
-                        "selected": false,
                         "qty": 0
                     }
                 ]

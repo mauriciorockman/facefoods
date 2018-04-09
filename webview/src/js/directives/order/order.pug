@@ -6,7 +6,7 @@ section
             .title-preco R${{order.price}}
     .row(ng-repeat="extra in order.extras" ng-if="order.type=='general'")
         .col-9
-            .desc-resumo {{extra.name}}
+            .desc-resumo {{extra.name}} {{(extra.qty > 0 ) ? '('+extra.qty+'x)' : ''}}
         .col-3.nopadding
             .resumo-preco(ng-if="extra.price>0") +R${{extra.price}}
     article(ng-if="order.type=='pizza'")

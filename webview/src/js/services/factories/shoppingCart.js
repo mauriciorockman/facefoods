@@ -43,32 +43,24 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
         })
         
         if(ID!=undefined){
-            shopCartFactory.incrementOrder(ID);
+            index = searchOrderByID(ID)
+            shopCartFactory.incrementOrder(index);
         }else{
             dish = JSON.parse(dish);            
             $rootScope.shoppingCart.orders.push(dish);
         }
     }
 
-    shopCartFactory.deleteOrder = function(id){
-        var index = searchOrderByID(id)
-        if(index != undefined){
-            $rootScope.shoppingCart.orders.splice(index, 1);
-        }
+    shopCartFactory.deleteOrder = function(index){
+        $rootScope.shoppingCart.orders.splice(index, 1);
     }
 
-    shopCartFactory.decrementOrder = function(id){
-        var index = searchOrderByID(id)
-        if(index != undefined && $rootScope.shoppingCart.orders[index].qty>1){
-            $rootScope.shoppingCart.orders[index].qty--;
-        }
+    shopCartFactory.decrementOrder = function(index){
+        $rootScope.shoppingCart.orders[index].qty--;
     }
 
-    shopCartFactory.incrementOrder = function(id){
-        var index = searchOrderByID(id)
-        if(index != undefined){
-            $rootScope.shoppingCart.orders[index].qty++;
-        }
+    shopCartFactory.incrementOrder = function(index){
+        $rootScope.shoppingCart.orders[index].qty++;
     }
 
     shopCartFactory.subTotal = function(order){
@@ -92,11 +84,8 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
 
     }
     
-    shopCartFactory.zeroOrder = function(id){
-        var index = searchOrderByID(id)
-        if(index != undefined){
-            $rootScope.shoppingCart.orders[index].qty=0;
-        }
+    shopCartFactory.zeroOrder = function(index){
+        $rootScope.shoppingCart.orders[index].qty=0;
     }
 
 
@@ -109,18 +98,6 @@ app.factory('shopCartFactory', ['$rootScope', function ($rootScope) {
 
         return total;
     }
-
-    // shopCartFactory.addProduct = function (product) {
-    //     $rootScope.shoppingCart.orders.push({
-    //         type: 'general',
-    //         name: product.name,
-    //         price: product.price,
-    //         qty: 1,
-    //         id: product.id,
-    //         availableExtras: product.extras,
-    //         extras: []
-    //     })
-    // }
 
     return shopCartFactory;
 }]);

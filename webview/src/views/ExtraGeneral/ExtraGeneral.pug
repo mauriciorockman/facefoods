@@ -4,38 +4,38 @@ section
 	.extra-container(ng-repeat="availableExtra in generalOrder.availableExtras")
 		//- TODO: Tornar diretiva 
 		section(ng-repeat="extra in menu.extras", ng-if="extra.id == availableExtra")
-			article(ng-if="extra.type == 1")
+			article(ng-if="extra.type == 1 && !secondExtra")
 				h4.titulo {{extra.name}}
-				div(ng-repeat="details in extra.options")
-					input(type="radio" id="options-{{details.id}}" name="extra" class="hidden radio-label rb")
-					label(for="options-{{details.id}}" class="button-label-extra")
+				div(ng-repeat="detail in extra.options")
+					input(type="radio" id="options-{{$index}}" name="extra" class="hidden radio-label rb" ng-click="addExtra(detail, extra.id)")
+					label(for="options-{{$index}}" class="button-label-extra")
 						.row
 							.col-10
-								.sabor-pizza {{details.name}}
+								.sabor-pizza {{detail.name}}
 							.col-2
-								.preco-pizza(ng-if="details.price>0") {{details.price}}
+								.preco-pizza(ng-if="detail.price>0") {{detail.price}}
 						.row
-							.descricao-pizza {{details.description}}
-			article(ng-if="extra.type == 2")
+							.descricao-pizza {{detail.description}}
+			article(ng-if="extra.type == 2 && secondExtra")
 				h5.titulo {{extra.name}}
 				p.text-center mín {{extra.qty_min}}, máx {{extra.qty_max}}
-				article(ng-repeat="details in extra.options")
+				article(ng-repeat="detail in extra.options")
 					.row
 						.col-3
-							button.btn-qtd(ng-click="")
+							button.btn-qtd(ng-click="incrementQty(detail, extra.qty_max, extra.id)")
 								i.fa.fa-plus
-							.prato-qtd {{details.qty}}
-							button.btn-qtd(ng-click="")
+							.prato-qtd {{selectQty(detail.id)}}
+							button.btn-qtd(ng-click="decrementQty(detail.id, extra.qty_min)")
 								i.fa.fa-minus
 						.col-9
 							.row
 								.col-9
-									.sabor-pizza {{details.name}}
+									.sabor-pizza {{detail.name}}
 								.col-3
-									.preco-pizza(ng-if="details.price>0") {{details.price}}
+									.preco-pizza(ng-if="detail.price>0") {{detail.price}}
 							.row
-								.descricao-pizza {{details.description}}
+								.descricao-pizza {{detail.description}}
 					hr
-	.space-bottom
-		.fixed-button(ng-click="nextExtra()")
+	.space-bottom(ng-if="firstExtra")
+		.fixed-button(ng-click="next()")
 			p PRÓXIMO

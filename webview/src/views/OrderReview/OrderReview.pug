@@ -6,16 +6,16 @@ section
 				.row
 					.col.text-right
 						//- TODO: Animação de apagar pedido 
-						.btn-apagar-prato.fa.fa-times-circle(ng-click="deleteOrder(order.id)")
+						.btn-apagar-prato.fa.fa-times-circle(ng-click="deleteOrder($index)")
 				.row
 					.col
 						.card-pedido
 							.row
 								.col-3
-									button.btn-qtd(ng-click="incrementOrder(order.id)")
+									button.btn-qtd(ng-click="incrementOrder($index)")
 										i.fa.fa-plus
 									.prato-qtd {{order.qty}}
-									button.btn-qtd(ng-click="decrementOrder(order.id)")
+									button.btn-qtd(ng-click="decrementOrder($index)")
 										i.fa.fa-minus
 								.col-9
 									order(order='order')

@@ -10,7 +10,7 @@ html
 		link(href='https://fonts.googleapis.com/css?family=Lora', rel='stylesheet')
 		link(href='css/styles.css', rel='stylesheet')
 	body(ng-app='webviewApp')
-		<toaster-container toaster-options="{'limit':1}"></toaster-container>
+		<toaster-container toaster-options="{'limit':1}", position-class="toast-top-center"></toaster-container>
 		div(ng-controller='indexCtrl')
 			.loading-bro(ng-if='!loaded && !error')
 				svg#load(x='0px', y='0px', viewbox='0 0 150 150')
